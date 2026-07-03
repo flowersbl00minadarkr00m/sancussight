@@ -1,0 +1,220 @@
+// Synthetic demo registry. Dates are generated relative to "now" so the
+// hosted demo stays meaningful forever. The content is modeled on a real
+// personal AI stack (vault context, portable skills, shared memory, agent
+// controls) plus the finance-analysis worked example from the design notes —
+// but every name, path and owner here is synthetic. No private data.
+
+import type { Registry } from "./types.ts";
+
+function daysAgo(n: number): string {
+  const d = new Date(Date.now() - n * 24 * 60 * 60 * 1000);
+  return d.toISOString().slice(0, 10);
+}
+
+function daysAhead(n: number): string {
+  return daysAgo(-n);
+}
+
+export function demoRegistry(): Registry {
+  return {
+    platforms: ["claude", "codex", "chatgpt", "local-llm"],
+    updatedAt: new Date().toISOString(),
+    assets: [
+      {
+        id: "ctx-voice",
+        name: "Voice & context pack",
+        kind: "context",
+        format: "markdown",
+        location: "vault/wiki/context-pack.md",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(6),
+        coverage: [
+          { platform: "claude", lastVerified: daysAgo(3) },
+          { platform: "codex", lastVerified: daysAgo(9) },
+          { platform: "chatgpt" },
+        ],
+        providerDependencies: [],
+        evidence: [{ label: "retrieval spot-check, 5/5 answers grounded", date: daysAgo(9) }],
+      },
+      {
+        id: "ctx-style-gpt",
+        name: "Client style guide (custom GPT)",
+        kind: "context",
+        format: "proprietary",
+        location: "chatgpt/custom-gpt-config",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(80),
+        coverage: [{ platform: "chatgpt", lastVerified: daysAgo(80) }],
+        providerDependencies: [
+          { provider: "chatgpt", capability: "custom GPT instruction store" },
+        ],
+        evidence: [],
+      },
+      {
+        id: "ctx-memory",
+        name: "Shared memory export",
+        kind: "context",
+        format: "json",
+        location: "vault/system/memory-export.json",
+        owner: "henry",
+        sensitivity: "sensitive",
+        lastReviewed: daysAgo(58),
+        coverage: [
+          { platform: "claude", lastVerified: daysAgo(12) },
+          { platform: "codex", lastVerified: daysAgo(12) },
+        ],
+        providerDependencies: [],
+        evidence: [{ label: "round-trip import test", date: daysAgo(12) }],
+      },
+      {
+        id: "skill-pipeline",
+        name: "Post Pipeline runbook",
+        kind: "skill",
+        format: "markdown",
+        location: "vault/system/skills/post-pipeline.md",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(10),
+        coverage: [
+          { platform: "claude", lastVerified: daysAgo(4) },
+          { platform: "codex", lastVerified: daysAgo(21) },
+        ],
+        providerDependencies: [],
+        evidence: [{ label: "clean-environment run, all gates green", date: daysAgo(21) }],
+      },
+      {
+        id: "skill-ingest",
+        name: "Research ingest skill",
+        kind: "skill",
+        format: "yaml",
+        location: "vault/system/skills/ingest.yaml",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(30),
+        coverage: [{ platform: "claude", lastVerified: daysAgo(14) }],
+        providerDependencies: [],
+        evidence: [],
+      },
+      {
+        id: "ctrl-loop",
+        name: "Loop contract policy",
+        kind: "control",
+        format: "yaml",
+        location: "vault/system/policies/loop-contract.yaml",
+        owner: "risk (self)",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(15),
+        coverage: [
+          { platform: "claude", lastVerified: daysAgo(15) },
+          { platform: "codex", lastVerified: daysAgo(15) },
+        ],
+        providerDependencies: [],
+        evidence: [{ label: "budget/stop conditions enforced in 3/3 test loops", date: daysAgo(15) }],
+      },
+      {
+        id: "ctrl-kill",
+        name: "Kill-switch procedure",
+        kind: "control",
+        format: "markdown",
+        location: "vault/system/policies/kill-switch.md",
+        owner: "risk (self)",
+        sensitivity: "internal",
+        lastReviewed: undefined,
+        coverage: [{ platform: "claude" }, { platform: "codex" }],
+        providerDependencies: [],
+        evidence: [],
+      },
+      {
+        id: "eval-post-qa",
+        name: "Post QA eval fixtures",
+        kind: "evaluation",
+        format: "json",
+        location: "vault/system/evals/post-qa.json",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(20),
+        coverage: [
+          { platform: "claude", lastVerified: daysAgo(20) },
+          { platform: "codex", lastVerified: daysAgo(20) },
+        ],
+        providerDependencies: [],
+        evidence: [{ label: "v3 fixtures, 24 cases, all graded", date: daysAgo(20) }],
+      },
+      {
+        id: "wf-post",
+        name: "Weekly post production",
+        kind: "workflow",
+        format: "markdown",
+        location: "vault/system/workflows/weekly-post.md",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(10),
+        coverage: [],
+        providerDependencies: [],
+        evidence: [],
+        dependsOn: ["ctx-voice", "skill-pipeline", "ctrl-loop", "eval-post-qa"],
+        primaryProvider: "claude",
+        fallbackProvider: "codex",
+        lastSubstitutionDrill: daysAgo(19),
+      },
+      {
+        id: "wf-finance",
+        name: "Finance analysis brief",
+        kind: "workflow",
+        format: "markdown",
+        location: "vault/system/workflows/finance-analysis.md",
+        owner: "finance systems",
+        sensitivity: "sensitive",
+        lastReviewed: daysAgo(35),
+        coverage: [],
+        providerDependencies: [
+          { provider: "claude", capability: "private retrieval connector" },
+        ],
+        evidence: [],
+        dependsOn: ["ctx-memory", "skill-ingest"],
+        primaryProvider: "claude",
+        fallbackProvider: "local-llm",
+        lastSubstitutionDrill: undefined,
+      },
+      {
+        id: "wf-network",
+        name: "Network analysis refresh",
+        kind: "workflow",
+        format: "markdown",
+        location: "vault/system/workflows/network-refresh.md",
+        owner: undefined,
+        sensitivity: "sensitive",
+        lastReviewed: daysAgo(70),
+        coverage: [],
+        providerDependencies: [],
+        evidence: [],
+        dependsOn: ["ctx-style-gpt"],
+        primaryProvider: "chatgpt",
+        fallbackProvider: undefined,
+        lastSubstitutionDrill: undefined,
+      },
+      {
+        id: "ctx-transcripts",
+        name: "Interview transcripts pack",
+        kind: "context",
+        format: "proprietary",
+        location: "vendor/notebook-product",
+        owner: "henry",
+        sensitivity: "internal",
+        lastReviewed: daysAgo(25),
+        coverage: [{ platform: "chatgpt", lastVerified: daysAgo(25) }],
+        providerDependencies: [
+          { provider: "chatgpt", capability: "vendor notebook store", fallback: "markdown export in vault" },
+        ],
+        evidence: [],
+        acceptedRisk: {
+          note: "Vendor notebook UX worth the lock-in for this quarter; markdown export tested monthly",
+          owner: "henry",
+          expires: daysAhead(60),
+        },
+      },
+    ],
+  };
+}

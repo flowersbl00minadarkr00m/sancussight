@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f2efe6;
+  --color-card: #fbf9f2;
+  --color-card-strong: #ffffff;
+  --color-line: #d9d2c0;
+  --color-line-strong: #b8ad92;
+  --color-ink: #22303c;
+  --color-muted: #6c7a86;
+  --color-navy: #23405c;
+  --color-moss: #2e7d5b;
+  --color-moss-soft: #e2efe7;
+  --color-amber: #9a6d13;
+  --color-amber-soft: #f5ead0;
+  --color-rust: #a83c26;
+  --color-rust-soft: #f6e0da;
+  --color-slate: #5a6b7d;
+  --color-slate-soft: #e4e8ec;
+  --color-accept: #3d5a80;
+  --color-accept-soft: #dfe7f2;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(35, 64, 92, 0.05), transparent 220px),
+    var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+@layer components {
+  .card {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px rgba(34, 48, 60, 0.05);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 0.25rem;
+    background: var(--color-card-strong);
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    border-color: var(--color-navy);
+    color: var(--color-navy);
+  }
+
+  .btn-primary {
+    background: var(--color-navy);
+    border-color: var(--color-navy);
+    color: #fdfcf8;
+  }
+
+  .btn-primary:hover {
+    background: #2e5378;
+    color: #ffffff;
+  }
+}
