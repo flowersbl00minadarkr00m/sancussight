@@ -2,6 +2,8 @@
 
 A local-first registry of everything your AI stack depends on — context, skills, workflows, evaluations — that shows you what breaks if a provider disappears tomorrow.
 
+[**Live demo**](https://sancussight.vercel.app) — ships with a synthetic registry, no data needed
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ![SancusSight overview](docs/assets/hero.png)
