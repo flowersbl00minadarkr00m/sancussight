@@ -1,17 +1,48 @@
 # SancusSight
 
-SancusSight is a local-first AI governance registry for portability, continuity, control coverage, ownership, and evidence freshness. Its findings are deterministic checks of recorded facts, not a compliance opinion or security guarantee.
+A local-first AI governance registry for portability, continuity, control
+coverage, ownership, and evidence freshness. It helps you build that
+registry by scanning your own environment, then surfaces what's stale,
+unverified, or locked in — deterministic checks of recorded facts, not a
+compliance opinion or security guarantee.
+
+[**Live demo**](https://sancussight.vercel.app) — ships with a synthetic registry, no data needed
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+![SancusSight overview](docs/assets/hero.png)
+
+## Features
+
+- **Registry** — inventory AI assets as metadata only; prompts, context bodies, and credentials never enter the tool
+- **Local collector** — an optional loopback-only companion that polls explicitly configured local sources and builds the registry for you, instead of requiring manual entry
+- **Coverage matrix** — assets × platforms, showing where each asset is shared, verified, stale, or absent
+- **Asset Passport** — every finding carries its evidence, the required action, dependencies, and a decision/history trail — not a single opaque score
+- **Deterministic checks** — explicit conditions, same registry in, same signals out; no model calls
+- **Exit test** — pick a workflow and a target platform, get survives / degrades / breaks, item by item
+- **Governance ledgers** — five ledgers (inventory, activity, controls, decisions, outcomes) with evidence-backed lineage over bounded evidence
+- **Remediation queue** — everything that needs a human, worst first, with named owners and expiring accepted risks
+- **Local registry compiler** — a standalone CLI that proposes a starter registry from your own project/skill/workflow metadata, reviewed before you accept it
+- **Share card** — a privacy-safe aggregate you can post without publishing your stack inventory
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+npm test
+```
+
+Registry data lives locally (browser storage in hosted mode, or the
+collector's own data directory in local-collector mode). Export/import the
+registry as JSON to version it in git — which is itself the point. Deploys
+as a standard Vite static app; a synthetic demo registry ships with it.
 
 ## Operating modes
 
 ### Hosted mode
 
 The static Vite build provides the registry, persistent local-file connector where supported, manual evidence snapshots, deterministic checks, exit tests, and export. It does not probe localhost or connect to a collector automatically.
-
-```bash
-npm install
-npm run dev
-```
 
 ### Local collector mode
 
@@ -24,6 +55,19 @@ The optional companion serves the same built frontend and `/api/v1` from one loo
 - Sanitized RAMPART operational reports and authorization-bound completed AIMap exports.
 
 Source tools remain independently installed and operated. SancusSight does not install them, start them, trigger scans, modify policies, execute commands, or write their artifacts.
+
+```bash
+npm install
+npm run build
+npm run collector:start
+```
+
+Open `http://127.0.0.1:43117`. Configure each source from the Evidence sources rail using its local artifact directory or packet path.
+
+Configuration:
+
+- `SANCUSSIGHT_PORT`: loopback port, default `43117`.
+- `SANCUSSIGHT_DATA_DIR`: collector-owned data directory, default `%USERPROFILE%/.sancussight/collector-data` on Windows.
 
 ### Windows/WSL runtime telemetry
 
@@ -38,19 +82,6 @@ pi install ./operations/telemetry
 Remove the user-scoped package with `pi remove ./operations/telemetry`; retained telemetry evidence is not deleted automatically.
 
 Pi may use Bash to invoke fixed approved setup and upstream verification commands. That delegated execution stays in the operator domain; SancusSight receives only sanitized action/event metadata and exposes no Pi, Bash, installer, or generic command route.
-
-```bash
-npm install
-npm run build
-npm run collector:start
-```
-
-Open `http://127.0.0.1:43117`. Configure each source from the Evidence sources rail using its local artifact directory or packet path.
-
-Configuration:
-
-- `SANCUSSIGHT_PORT`: loopback port, default `43117`.
-- `SANCUSSIGHT_DATA_DIR`: collector-owned data directory, default `%USERPROFILE%/.sancussight/collector-data` on Windows.
 
 ### Local registry compiler (Windows)
 
@@ -74,6 +105,10 @@ Sensitive and ambiguous records are skipped with bounded reasons; refresh keeps
 disappeared records as `missing` rather than deleting them. See
 `packages/registry-compiler/README.md` for output locations, exit codes, and
 portable-export privacy details.
+
+## Scope
+
+Passing an exit test proves the *conditions* of portability — formats, coverage, verification, fallbacks — not equivalent model behavior on the target platform. It is not a compliance opinion. The registry itself is a sensitive inventory; it stays local by design.
 
 ## Security boundary
 
@@ -123,3 +158,13 @@ The collector tests cover envelope identity, restart deduplication, rotation, pa
 ## Deployment
 
 The hosted site deploys the generated `dist/` directory. The collector is a separate opt-in local process and is not part of the static deployment.
+
+## Architecture
+
+`src/lib/` holds framework-free domain logic (registry evaluation, evidence, session handling) with its own tests; `src/components/` imports from `src/lib/`. The collector (`collector/`) is a separate Node service. Checks can run headless — e.g., as a CI step over a committed `registry.json`.
+
+*Named for Sancus, the Roman god of trust and oaths: sight over the conditions of trust, not a certification of it.*
+
+## License
+
+[MIT](LICENSE)
