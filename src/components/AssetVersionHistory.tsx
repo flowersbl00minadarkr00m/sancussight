@@ -7,6 +7,7 @@ import {
   browserSha256,
   buildAssetVersionEvidencePacket,
 } from '../lib/evidence-packet'
+import { formatRecordedTimestamp } from '../lib/format'
 import { EvidencePacketExport } from './EvidencePacketExport'
 
 const ALIAS_SUGGESTIONS = ['preferred', 'fallback', 'testing', 'deprecated']
@@ -226,8 +227,7 @@ function basisLabel(basis: 'recorded-fact' | 'deterministic-check'): string {
 }
 
 function formatTimestamp(value: string): string {
-  const timestamp = new Date(value)
-  return Number.isNaN(timestamp.valueOf()) ? value : timestamp.toLocaleString()
+  return formatRecordedTimestamp(value, value)
 }
 
 function errorMessage(error: unknown): string {

@@ -15,7 +15,8 @@ interface Props {
   onSelectAsset: (id: string) => void
   onOpenQueue: () => void
   onBind: (envelope: EvidenceEnvelopeV1, assetId: string) => void
-  onOpenSources: () => void
+  /** Omitted while the sample workspace has no evidence sources to open. */
+  onOpenSources?: () => void
 }
 
 export function EvidenceLedger({ registry, rollups, groups, signals, evidence, onSelectAsset, onOpenQueue, onBind, onOpenSources }: Props) {
@@ -35,7 +36,7 @@ export function EvidenceLedger({ registry, rollups, groups, signals, evidence, o
       <header className="ledger-heading">
         <div><span className="eyebrow">Evidence ledger</span><h1>Trust conditions requiring attention</h1></div>
         <div className="ledger-heading-actions">
-          <button type="button" className="mobile-source-command" onClick={onOpenSources}><Database size={15} />Sources</button>
+          {onOpenSources && <button type="button" className="mobile-source-command" onClick={onOpenSources}><Database size={15} />Sources</button>}
           <button type="button" className="text-command" onClick={onOpenQueue}>Open full queue</button>
         </div>
       </header>

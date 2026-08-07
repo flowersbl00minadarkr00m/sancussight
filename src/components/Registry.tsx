@@ -7,6 +7,7 @@ import {
   type AssetCatalogEntry,
   type CatalogFacetKey,
 } from '../lib/asset-catalog'
+import { ABSENT_FIELD, formatRecordedTimestamp } from '../lib/format'
 import { getCoverageGlyph } from '../lib/registry'
 import { AssetVersionHistory } from './AssetVersionHistory'
 import { Card, Eyebrow, StatusBadge } from './Shared'
@@ -235,7 +236,6 @@ export function Registry({
                 <thead>
                   <tr>
                     <th>Asset</th>
-                    <th>State</th>
                     <th>Kind</th>
                     {registry.platforms.map(platform => <th key={platform}>{platform}</th>)}
                   </tr>
@@ -259,7 +259,6 @@ export function Registry({
                             {asset.name}
                           </button>
                         </td>
-                        <td className="selection-cell">{isSelected ? <strong>Selected</strong> : '—'}</td>
                         <td className="kind-cell">{asset.kind}</td>
                         {registry.platforms.map(platform => {
                           const coverage = getCoverageGlyph(asset, platform, today)
@@ -367,6 +366,8 @@ function AssetPassport({
     + Number(Boolean(asset.actionControl))
     + Number(Boolean(asset.acceptedAsset))
     + Number(Boolean(asset.candidateTool))
+  const flaggedSignals = signals.filter(signal => signal.status !== 'pass')
+  const verdict = worstSignalStatus(signals)
 
   return (
     <article aria-labelledby="asset-passport-heading">
@@ -374,6 +375,11 @@ function AssetPassport({
         <div>
           <Eyebrow>Asset Passport / {asset.kind}</Eyebrow>
           <h2 id="asset-passport-heading" ref={headingRef} tabIndex={-1}>{asset.name}</h2>
+          <div className="asset-detail-verdict">
+            {verdict ? <StatusBadge status={verdict} /> : <span className="asset-detail-verdict-absent">No deterministic findings</span>}
+            <span>{flaggedSignals.length} finding{flaggedSignals.length === 1 ? '' : 's'} needing attention</span>
+            <span>{signals.length} evaluated</span>
+          </div>
           <p>Selected asset: {asset.id}</p>
         </div>
         {isNarrow ? (
@@ -419,7 +425,7 @@ function AssetPassport({
         </div>
       </DetailSection>
 
-      <DetailSection title="Portability" truthClass="Recorded facts + deterministic findings" key={`${asset.id}:portability`}>
+      <DetailSection title="Portability" truthClass="Recorded facts + deterministic findings" key={`${asset.id}:portability`} defaultOpen>
         <DetailGrid entries={[
           ['Deterministic portability state', catalogFacetState(catalogEntry, 'portability')],
         ]} />
@@ -432,7 +438,7 @@ function AssetPassport({
                 return (
                   <li key={entry.platform}>
                     <strong>{entry.platform}</strong>
-                    <span>{coverage.title}; last verified {entry.lastVerified ?? 'Never recorded'}</span>
+                    <span>{coverage.title} · Last verified: {entry.lastVerified ?? ABSENT_FIELD}</span>
                     {asset.kind !== 'workflow' && (
                       <button type="button" className="text-command" onClick={() => onVerify(asset.id, entry.platform)}>Record verification</button>
                     )}
@@ -455,7 +461,7 @@ function AssetPassport({
             {asset.providerDependencies.map((dependency, index) => (
               <li key={`${dependency.provider}-${dependency.capability}-${index}`}>
                 <strong>{dependency.provider}</strong>
-                <span>{dependency.capability}; fallback {dependency.fallback ?? 'None recorded'}</span>
+                <span>{dependency.capability} · Fallback: {dependency.fallback ?? ABSENT_FIELD}</span>
               </li>
             ))}
           </ul>
@@ -538,16 +544,16 @@ function AssetPassport({
           onRemoveAlias={name => onRemoveVersionAlias(asset.id, name)}
         />
         <DetailGrid entries={[
-          ['Registry source updated', registry.updatedAt || 'Never recorded'],
-          ['Last review', asset.lastReviewed ?? 'Never recorded'],
-          ['Last substitution drill', asset.lastSubstitutionDrill ?? 'Never recorded'],
+          ['Registry source updated', formatRecordedTimestamp(registry.provenance?.sourceUpdatedAt ?? registry.updatedAt)],
+          ['Last review', asset.lastReviewed ?? ABSENT_FIELD],
+          ['Last substitution drill', asset.lastSubstitutionDrill ?? ABSENT_FIELD],
         ]} />
         {asset.coverage.length > 0 ? (
           <ul className="passport-record-list">
             {asset.coverage.map(entry => (
               <li key={entry.platform}>
                 <strong>{entry.platform} verification</strong>
-                <span>{entry.lastVerified ?? 'Never recorded'}</span>
+                <span>Last verified: {entry.lastVerified ?? ABSENT_FIELD}</span>
               </li>
             ))}
           </ul>
@@ -578,7 +584,31 @@ function DetailSection({ title, truthClass, defaultOpen = false, children }: {
   )
 }
 
+const UNRECORDED_VALUES = new Set(['Not recorded', 'None recorded', 'Missing / unavailable', ABSENT_FIELD])
+
+/**
+ * Recorded facts render first. Fields with no recorded value collapse into a
+ * single counted group so the Passport reads as the facts it actually holds,
+ * without hiding that the gaps exist (spec 017 FR-005).
+ */
 function DetailGrid({ entries }: { entries: Array<[string, string]> }) {
+  const recorded = entries.filter(([, value]) => !UNRECORDED_VALUES.has(value))
+  const unrecorded = entries.filter(([, value]) => UNRECORDED_VALUES.has(value))
+
+  return (
+    <>
+      {recorded.length > 0 && <DetailGridList entries={recorded} />}
+      {unrecorded.length > 0 && (
+        <details className="detail-unrecorded">
+          <summary>Unrecorded ({unrecorded.length})</summary>
+          <DetailGridList entries={unrecorded} />
+        </details>
+      )}
+    </>
+  )
+}
+
+function DetailGridList({ entries }: { entries: Array<[string, string]> }) {
   return (
     <dl className="detail-grid">
       {entries.map(([label, value]) => (
@@ -589,6 +619,11 @@ function DetailGrid({ entries }: { entries: Array<[string, string]> }) {
       ))}
     </dl>
   )
+}
+
+function worstSignalStatus(signals: Signal[]): Signal['status'] | undefined {
+  const order: Signal['status'][] = ['fail', 'warn', 'unknown', 'accepted', 'pass']
+  return order.find(status => signals.some(signal => signal.status === status))
 }
 
 function SignalList({ signals, empty, onOpenCheck }: { signals: Signal[]; empty: string; onOpenCheck: (signal: Signal) => void }) {
@@ -603,7 +638,11 @@ function SignalList({ signals, empty, onOpenCheck }: { signals: Signal[]; empty:
             <span className="signal-truth-class">{signalTruthClass(signal)}</span>
           </div>
           <p>{signal.finding}</p>
-          <div className="signal-evidence">Evidence: {signal.evidence || 'Missing / unavailable'} / observed {signal.observedAt ?? 'Never recorded'} / owner: {signal.owner || 'Not recorded'}</div>
+          <dl className="signal-evidence">
+            <div><dt>Evidence</dt><dd>{signal.evidence || ABSENT_FIELD}</dd></div>
+            <div><dt>Observed</dt><dd>{signal.observedAt ?? ABSENT_FIELD}</dd></div>
+            <div><dt>Owner</dt><dd>{signal.owner || ABSENT_FIELD}</dd></div>
+          </dl>
           {signal.action && <div className="signal-action">Action: {signal.action}</div>}
           <button type="button" className="text-command signal-check-command" onClick={() => onOpenCheck(signal)}>
             Open check explanation

@@ -82,6 +82,7 @@ const EXPECTED_BUILD_INPUTS = [
   'src/lib/evidence.ts',
   'src/lib/file-connector.ts',
   'src/lib/findings.ts',
+  'src/lib/format.ts',
   'src/lib/governance-client.ts',
   'src/lib/governance-snapshot-store.ts',
   'src/lib/in-toto-statement.ts',

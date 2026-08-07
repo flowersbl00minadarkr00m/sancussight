@@ -21,7 +21,9 @@ test('Evidence Sources owns one conditional Standards Interoperability main work
   ])
 
   assert.equal((app.match(/<StandardsInteroperability/g) ?? []).length, 1)
-  assert.match(app, /evidenceSourcesActive\s*\?\s*\(/)
+  // Spec 017 FR-007 gates the same single conditional behind sample mode.
+  assert.match(app, /showEvidenceSources\s*\?\s*\(/)
+  assert.match(app, /const showEvidenceSources = evidenceSourcesActive && !sampleMode/)
   assert.match(app, /evidence=\{collector\.state\.evidence\}/)
   assert.match(app, /<EvidenceSources/)
   assert.doesNotMatch(evidenceSources, /StandardsInteroperability/)

@@ -15,10 +15,10 @@ function daysFromNow(n: number): string {
   return new Date(Date.now() + n * 86400000).toISOString().slice(0, 10)
 }
 
-export const DEMO_REGISTRY: Registry = {
+const DEMO_REGISTRY_SEED: Registry = {
   schemaVersion: 2,
   platforms: ['claude', 'codex', 'chatgpt', 'local-llm'],
-  updatedAt: new Date().toISOString(),
+  updatedAt: '',
   assets: [
     {
       id: 'ctx-voice',
@@ -356,6 +356,27 @@ export const DEMO_REGISTRY: Registry = {
       directBundleTradeoff: 'Direct pytest use minimizes integration lag; SancusSight can later normalize results and track remediation over time.',
     }),
   ],
+}
+
+// The demo registry's "updated" timestamp is the newest fact actually recorded
+// in the fixture, never the moment the page was loaded (spec 017 FR-002).
+function latestRecordedDate(assets: Registry['assets']): string {
+  const dates = assets.flatMap(asset => [
+    asset.lastReviewed,
+    asset.lastSubstitutionDrill,
+    ...asset.coverage.map(entry => entry.lastVerified),
+    ...asset.evidence.map(point => point.date),
+  ]).filter((value): value is string => typeof value === 'string' && value.length > 0)
+  const newest = dates.sort().at(-1)
+  return newest ? `${newest}T00:00:00.000Z` : new Date(0).toISOString()
+}
+
+const DEMO_SOURCE_UPDATED_AT = latestRecordedDate(DEMO_REGISTRY_SEED.assets)
+
+export const DEMO_REGISTRY: Registry = {
+  ...DEMO_REGISTRY_SEED,
+  updatedAt: DEMO_SOURCE_UPDATED_AT,
+  provenance: { mode: 'demo', sourceUpdatedAt: DEMO_SOURCE_UPDATED_AT },
 }
 
 interface CandidateToolInput {

@@ -415,22 +415,34 @@ function CheckDetail({
     ? result.kind === 'cataloged' ? result.definition.title : 'Uncataloged observation'
     : definition?.title ?? 'Select a check'
 
+  // Nothing selected: one empty state, not one negation per section (FR-006).
+  if (!definition && !result) {
+    return (
+      <article aria-labelledby="check-detail-heading">
+        <div className="check-detail-empty">
+          <Eyebrow>Check explanation</Eyebrow>
+          <h2 id="check-detail-heading" ref={headingRef} tabIndex={-1}>Select a check</h2>
+          <p>
+            Choose a stable definition or a current attention result to inspect one canonical
+            explanation: the exact rule, the evidence it read, its claim lineage, and what would
+            change it.
+          </p>
+          {isNarrow && <button type="button" className="btn" onClick={onBack}>Back to checks</button>}
+        </div>
+      </article>
+    )
+  }
+
   return (
     <article aria-labelledby="check-detail-heading">
       <div className="check-detail-heading">
         <div>
           <Eyebrow>{result ? 'Current result explanation' : 'Check definition'}</Eyebrow>
           <h2 id="check-detail-heading" ref={headingRef} tabIndex={-1}>{heading}</h2>
-          <p>{result?.checkId ?? definition?.id ?? 'No check or result selected'}</p>
+          <p>{result?.checkId ?? definition?.id ?? 'Uncataloged observation'}</p>
         </div>
         {isNarrow && <button type="button" className="btn" onClick={onBack}>Back to checks</button>}
       </div>
-
-      {!definition && !result && (
-        <p className="check-state">
-          Select a stable definition or a current attention result to inspect one canonical explanation.
-        </p>
-      )}
 
       <CheckDetailSection title="Definition" truthClass="Stable deterministic rule">
         {definition ? (
@@ -446,12 +458,10 @@ function CheckDetail({
               ['Possible outcomes', definition.outcomes.join(', ')],
             ]} />
           </>
-        ) : result ? (
+        ) : (
           <p className="check-state check-state-uncataloged">
             Uncataloged observation. No stable rule, passing condition, lineage contract, or remediation has been invented.
           </p>
-        ) : (
-          <p className="check-state">No definition selected.</p>
         )}
       </CheckDetailSection>
 
@@ -520,17 +530,13 @@ function CheckDetail({
       </CheckDetailSection>
 
       <CheckDetailSection title="Remediation and invalidation" truthClass="Stable check contract">
-        {result || definition ? (
-          <DetailGrid entries={[
-            ['Why do we believe this?', result?.belief ?? 'No result selected; only the stable rule is available.'],
-            ['What is missing?', result?.missingEvidence ?? 'No result selected; current input gaps are unknown.'],
-            ['What would make this pass?', result?.passCondition ?? definition?.passCondition ?? 'No cataloged passing condition is available.'],
-            ['Remediation', result?.remediation ?? definition?.remediation ?? 'No cataloged remediation contract is available.'],
-            ['What would invalidate or change it?', result?.invalidation ?? definition?.invalidation ?? 'No cataloged invalidation contract is available.'],
-          ]} />
-        ) : (
-          <p className="check-state">Select a definition or result to inspect remediation and invalidation.</p>
-        )}
+        <DetailGrid entries={[
+          ['Why do we believe this?', result?.belief ?? 'No result selected; only the stable rule is available.'],
+          ['What is missing?', result?.missingEvidence ?? 'No result selected; current input gaps are unknown.'],
+          ['What would make this pass?', result?.passCondition ?? definition?.passCondition ?? 'No cataloged passing condition is available.'],
+          ['Remediation', result?.remediation ?? definition?.remediation ?? 'No cataloged remediation contract is available.'],
+          ['What would invalidate or change it?', result?.invalidation ?? definition?.invalidation ?? 'No cataloged invalidation contract is available.'],
+        ]} />
       </CheckDetailSection>
     </article>
   )

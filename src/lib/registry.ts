@@ -416,7 +416,8 @@ export function getCoverageGlyph(asset: Asset, platform: string, today: string):
     return { glyph: '·', title: 'Not applicable', tone: 'slate' }
   }
   const cov = asset.coverage.find(c => c.platform === platform)
-  if (!cov) return { glyph: '✕', title: 'Not shared', tone: 'rust' }
+  // Neutral, not a failure colour: rust is reserved for actual fail conditions.
+  if (!cov) return { glyph: '✕', title: 'Not shared', tone: 'slate' }
   if (!cov.lastVerified) return { glyph: '?', title: 'Shared, never verified', tone: 'amber' }
   const d = daysAgo(cov.lastVerified, today)
   if (d > CHECKS_CONFIG.staleVerifyDays) return { glyph: '!', title: `Verified ${d}d ago (stale)`, tone: 'amber' }

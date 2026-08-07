@@ -17,8 +17,11 @@ test('the selected Asset Passport has exactly six native asset-keyed disclosures
   const sections = ['summary', 'portability', 'dependencies', 'evidence', 'decisions', 'history']
 
   assert.equal((registry.match(/<DetailSection\b/g) ?? []).length, 6)
-  assert.equal((registry.match(/<details\b/g) ?? []).length, 1)
-  assert.equal((registry.match(/<summary\b/g) ?? []).length, 1)
+  // One <details> for DetailSection, one for the spec 017 FR-005 "Unrecorded (N)" group.
+  assert.equal((registry.match(/<details\b/g) ?? []).length, 2)
+  assert.equal((registry.match(/<summary\b/g) ?? []).length, 2)
+  assert.match(registry, /<details className="detail-unrecorded">/)
+  assert.match(registry, /Unrecorded \(\{unrecorded\.length\}\)/)
 
   for (const section of sections) {
     assert.ok(
@@ -27,11 +30,17 @@ test('the selected Asset Passport has exactly six native asset-keyed disclosures
     )
   }
 
+  // Spec 017 FR-005 opens Portability by default so the asset's verdict evidence
+  // is visible without a click.
   assert.match(
     registry,
     /<DetailSection title="Summary"[^>]*key=\{`\$\{asset\.id\}:summary`\}[^>]*defaultOpen/,
   )
-  for (const title of ['Portability', 'Dependencies', 'Evidence', 'Decisions', 'History']) {
+  assert.match(
+    registry,
+    /<DetailSection title="Portability"[^>]*key=\{`\$\{asset\.id\}:portability`\}[^>]*defaultOpen/,
+  )
+  for (const title of ['Dependencies', 'Evidence', 'Decisions', 'History']) {
     const openingTag = registry.match(new RegExp(`<DetailSection[^>]*title="${title}"[^>]*>`))?.[0] ?? ''
     assert.ok(openingTag, `missing ${title} disclosure`)
     assert.doesNotMatch(openingTag, /\bdefaultOpen\b/)

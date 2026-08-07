@@ -1,19 +1,28 @@
 import { useRef, useState } from 'react'
 import type { ViewId } from '../types'
-import { ADVANCED_NAV_ITEMS, PRIMARY_NAV_ITEMS } from '../types'
+import { ADVANCED_NAV_ITEMS, COLLECTOR_BACKED_VIEWS, PRIMARY_NAV_ITEMS } from '../types'
 
 interface Props {
   view: ViewId
   queueCount: number
   evidenceSourcesActive: boolean
+  /** True while the synthetic sample workspace is active. */
+  sampleMode: boolean
   onSelect: (view: ViewId) => void
   onOpenEvidenceSources: () => void
 }
 
-export function WorkspaceNavigation({ view, queueCount, evidenceSourcesActive, onSelect, onOpenEvidenceSources }: Props) {
+export function WorkspaceNavigation({ view, queueCount, evidenceSourcesActive, sampleMode, onSelect, onOpenEvidenceSources }: Props) {
   const [advancedOpen, setAdvancedOpen] = useState(false)
   const advancedTrigger = useRef<HTMLButtonElement>(null)
-  const advancedActive = evidenceSourcesActive || ADVANCED_NAV_ITEMS.some(item => item.id === view)
+  // These three views are fed by the local evidence collector, which the sample
+  // workspace has no access to. Rather than show a prospect an empty table under
+  // a populated headline, they are withheld until a real source is connected
+  // (spec 017 FR-007).
+  const advancedItems = sampleMode
+    ? ADVANCED_NAV_ITEMS.filter(item => !COLLECTOR_BACKED_VIEWS.has(item.id))
+    : ADVANCED_NAV_ITEMS
+  const advancedActive = evidenceSourcesActive || advancedItems.some(item => item.id === view)
 
   function closeAdvanced(restoreFocus = false) {
     setAdvancedOpen(false)
@@ -61,7 +70,7 @@ export function WorkspaceNavigation({ view, queueCount, evidenceSourcesActive, o
         </button>
         {advancedOpen && (
           <div id="advanced-nav-menu" className="advanced-nav-menu">
-            {ADVANCED_NAV_ITEMS.map(item => (
+            {advancedItems.map(item => (
               item.id === 'evidence-sources' ? (
                 <button
                   type="button"

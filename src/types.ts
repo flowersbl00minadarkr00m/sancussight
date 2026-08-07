@@ -870,6 +870,16 @@ export const ADVANCED_NAV_ITEMS = [
 
 export const NAV_ITEMS = [...PRIMARY_NAV_ITEMS, ...ADVANCED_VIEW_NAV_ITEMS] as const
 
+/**
+ * Advanced destinations whose content comes from the local evidence collector.
+ * They have nothing to show in the synthetic sample workspace.
+ */
+export const COLLECTOR_BACKED_VIEWS: ReadonlySet<string> = new Set([
+  'evidence-sources',
+  'governance',
+  'release',
+])
+
 export type ViewId = typeof NAV_ITEMS[number]['id']
 
 // ─── Standards interoperability (Feature 011) ───────────────────────────────

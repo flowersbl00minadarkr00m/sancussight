@@ -116,7 +116,7 @@ export function ReleaseEvidence({ mode, evidence, manifest, progress }: Props) {
               <details className="release-source-card" key={source}>
                 <summary className="release-source-title">
                   <div><strong>{SOURCE_LABELS[source]}</strong><span>{records.length === 0 ? 'No qualifying evidence' : (gate.state === 'missing' ? 'No manifest reference' : STATE_LABELS[gate.state])}</span></div>
-                  <em>{gate.verification}</em>
+                  <em>{verificationLabel(gate.state, gate.verification)}</em>
                 </summary>
                 <dl className="release-source-details">
                   <div><dt>Qualification</dt><dd>{latest ? 'Operational record observed' : 'Not available'}</dd></div>
@@ -209,6 +209,15 @@ function unloadedManifest(now: string): ReleaseEvidenceManifestV1 {
     status: 'not-run',
     untestedBoundaries: ['release-manifest-not-loaded'],
   }
+}
+
+/**
+ * Every one of the five source categories is required, so an absent card is
+ * MISSING — the same word Runtime Coverage uses — never "not applicable"
+ * (spec 017 FR-008).
+ */
+function verificationLabel(state: string, verification: string): string {
+  return state === 'missing' ? 'MISSING' : verification
 }
 
 function runtimeStatus(runtime: EvidenceRuntimeId, coverage: readonly EvidenceRuntimeId[], records: readonly EvidenceEnvelopeV1[]): string {

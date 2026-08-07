@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CheckSelectionIntent, ConnectionNotice, EvidenceEnvelopeV1, Registry, RegistrySession, Signal, ViewId, WorkingRegistryCache } from './types'
+import { COLLECTOR_BACKED_VIEWS } from './types'
 import { createDemoRegistry, exportJSON, importJSON } from './lib/storage'
 import { evaluateAll, flaggedSignals, generateShareCard, groupFlaggedByAsset, rollup } from './lib/registry'
 import { APP_HASH, parseAppRoute, type AppRoute } from './lib/route'
@@ -75,6 +76,12 @@ export default function App() {
   const persistentAccessSupported = sourceController.isPersistentAccessSupported()
   const today = new Date().toISOString().slice(0, 10)
   const registry = appState.session?.registry
+  // The sample workspace has no evidence collector behind it, so the
+  // collector-backed Advanced views are withheld rather than shown empty
+  // (spec 017 FR-007).
+  const sampleMode = appState.session?.mode === 'demo'
+  const activeView: ViewId = sampleMode && COLLECTOR_BACKED_VIEWS.has(view) ? 'overview' : view
+  const showEvidenceSources = evidenceSourcesActive && !sampleMode
   const signals: Signal[] = useMemo(() => registry
     ? [...evaluateAll(registry, today), ...evidenceSignals(registry, collector.state.evidence, collector.state.sources)]
     : [], [registry, today, collector.state.evidence, collector.state.sources])
@@ -565,9 +572,10 @@ export default function App() {
           />
 
           <WorkspaceNavigation
-            view={view}
+            view={activeView}
             queueCount={flagged.length}
-            evidenceSourcesActive={evidenceSourcesActive}
+            evidenceSourcesActive={showEvidenceSources}
+            sampleMode={sampleMode}
             onOpenEvidenceSources={handleOpenEvidenceSources}
             onSelect={nextView => {
               setEvidenceSourcesActive(false)
@@ -587,19 +595,19 @@ export default function App() {
             />
           )}
 
-          <div className={view === 'registry' ? 'evidence-workspace-grid evidence-workspace-grid-assets' : 'evidence-workspace-grid'}>
+          <div className={activeView === 'registry' ? 'evidence-workspace-grid evidence-workspace-grid-assets' : 'evidence-workspace-grid'}>
             <main id="workspace-content" className="workspace-content">
-              {evidenceSourcesActive ? (
+              {showEvidenceSources ? (
                 <StandardsInteroperability evidence={collector.state.evidence} />
               ) : (
                 <>
-                  {view === 'overview' && <EvidenceLedger registry={registry} rollups={rolls} groups={findingGroups} signals={signals} evidence={collector.state.evidence} onSelectAsset={handleSelectAsset} onOpenQueue={() => { setCheckIntent(undefined); setEvidenceSourcesActive(false); setView('queue') }} onBind={handleBindEvidence} onOpenSources={handleOpenEvidenceSources} />}
-                  {view === 'governance' && <GovernanceWorkspace model={governance.model} status={governance.status} message={governance.message} bounded={governance.bounded} onRecordDecision={governance.recordDecision} onConfirmBinding={governance.confirmBinding} onImportBundle={governance.importBundle} onExportBundle={governance.exportBundle} onClearBundle={governance.clearBundle} />}
-                  {view === 'release' && <ReleaseEvidence mode={collector.state.mode} evidence={collector.state.evidence} manifest={collector.state.releaseManifest} progress={collector.state.releaseProgress} />}
-                  {view === 'registry' && <RegistryView registry={registry} session={appState.session} sourceWriteFeedback={sourceWriteFeedback} onSaveSource={handleSaveSource} today={today} selectedId={selectedAssetId} signals={signals} onSelect={setSelectedAssetId} onOpenCheck={signal => handleOpenCheck(signal, 'asset-passport')} onReview={handleReview} onVerify={handleVerify} onDrill={handleDrill} onRecordVersion={handleRecordAssetVersion} onAssignVersionAlias={handleAssignAssetVersionAlias} onRemoveVersionAlias={handleRemoveAssetVersionAlias} />}
-                  {view === 'definitions' && <Definitions />}
-                  {view === 'exit' && <ExitTest registry={registry} today={today} signals={signals} onSelectAsset={handleSelectAsset} />}
-                  {view === 'queue' && (
+                  {activeView === 'overview' && <EvidenceLedger registry={registry} rollups={rolls} groups={findingGroups} signals={signals} evidence={collector.state.evidence} onSelectAsset={handleSelectAsset} onOpenQueue={() => { setCheckIntent(undefined); setEvidenceSourcesActive(false); setView('queue') }} onBind={handleBindEvidence} {...(sampleMode ? {} : { onOpenSources: handleOpenEvidenceSources })} />}
+                  {activeView === 'governance' && <GovernanceWorkspace model={governance.model} status={governance.status} message={governance.message} bounded={governance.bounded} onRecordDecision={governance.recordDecision} onConfirmBinding={governance.confirmBinding} onImportBundle={governance.importBundle} onExportBundle={governance.exportBundle} onClearBundle={governance.clearBundle} />}
+                  {activeView === 'release' && <ReleaseEvidence mode={collector.state.mode} evidence={collector.state.evidence} manifest={collector.state.releaseManifest} progress={collector.state.releaseProgress} />}
+                  {activeView === 'registry' && <RegistryView registry={registry} session={appState.session} sourceWriteFeedback={sourceWriteFeedback} onSaveSource={handleSaveSource} today={today} selectedId={selectedAssetId} signals={signals} onSelect={setSelectedAssetId} onOpenCheck={signal => handleOpenCheck(signal, 'asset-passport')} onReview={handleReview} onVerify={handleVerify} onDrill={handleDrill} onRecordVersion={handleRecordAssetVersion} onAssignVersionAlias={handleAssignAssetVersionAlias} onRemoveVersionAlias={handleRemoveAssetVersionAlias} />}
+                  {activeView === 'definitions' && <Definitions />}
+                  {activeView === 'exit' && <ExitTest registry={registry} today={today} signals={signals} onSelectAsset={handleSelectAsset} />}
+                  {activeView === 'queue' && (
                     <Queue
                       registry={registry}
                       signals={signals}
@@ -615,7 +623,7 @@ export default function App() {
                       onHistoryCleared={() => setHistoryRevision(current => current + 1)}
                     />
                   )}
-                  {view === 'activity' && <ActivityLog evidence={collector.state.evidence} />}
+                  {activeView === 'activity' && <ActivityLog evidence={collector.state.evidence} />}
                 </>
               )}
             </main>
