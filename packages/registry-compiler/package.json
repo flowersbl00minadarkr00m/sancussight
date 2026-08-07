@@ -1,0 +1,37 @@
+{
+  "name": "sancussight-registry",
+  "version": "0.1.0",
+  "description": "Metadata-only local registry compiler for SancusSight",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./cli": "./dist/cli.js",
+    "./contracts": "./dist/contracts.js"
+  },
+  "bin": {
+    "sancussight-registry": "./dist/cli.js"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "dist/adapters",
+    "dist/fs",
+    "dist/output",
+    "dist/privacy",
+    "dist/proposals",
+    "dist/refresh",
+    "dist/review",
+    "ui",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/*.test.ts src/__tests__/*.test.ts"
+  }
+}

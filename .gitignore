@@ -2,3 +2,15 @@ node_modules
 dist
 *.local
 .vercel
+.tmp
+tsconfig.tsbuildinfo
+packages/registry-compiler/dist/
+/artifacts/qa/real-tools/
+
+.vercel
+
+# Control-plane/evidence and demo-production byproducts, not source
+/artifacts/
+/output/
+/outputs/
+/.playwright-cli/

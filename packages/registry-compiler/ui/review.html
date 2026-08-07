@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>SancusSight registry review</title>
+    <style>
+      :root { color-scheme: light; font-family: ui-sans-serif, system-ui, sans-serif; background: #f5f1e8; color: #182b3a; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 0; background: #f5f1e8; }
+      main { width: min(1080px, 100%); margin: 0 auto; padding: 28px 20px 42px; }
+      header, section, footer { background: #fffdf8; border: 1px solid #d9d2c6; border-radius: 14px; box-shadow: 0 8px 26px rgba(24,43,58,.06); }
+      header { padding: 24px; }
+      section { margin-top: 16px; padding: 18px; }
+      footer { position: sticky; bottom: 12px; display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px; padding: 12px; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { margin-bottom: 8px; font-size: clamp(1.45rem, 3vw, 2.2rem); letter-spacing: -.02em; }
+      h2 { margin-bottom: 10px; font-size: 1.05rem; }
+      .eyebrow { margin-bottom: 8px; color: #8d4d2f; font-size: .76rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      .muted, .meta { color: #5d6a70; font-size: .9rem; }
+      .scope { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-top: 16px; }
+      .scope-card { padding: 11px; border: 1px solid #e0d9cc; border-radius: 10px; background: #f8f5ee; }
+      .scope-card strong { display: block; margin-bottom: 4px; font-size: .83rem; }
+      .toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+      label { display: grid; gap: 5px; min-width: 170px; color: #42525b; font-size: .84rem; font-weight: 650; }
+      input, select, button { min-height: 42px; border: 1px solid #b9b2a6; border-radius: 9px; font: inherit; }
+      input, select { padding: 8px 10px; background: #fff; color: #182b3a; }
+      button { padding: 8px 15px; cursor: pointer; background: #fff; color: #182b3a; font-weight: 700; }
+      button:hover { border-color: #8d4d2f; }
+      button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid #d59c55; outline-offset: 2px; }
+      button.primary { border-color: #234f58; background: #234f58; color: #fffdf8; }
+      button.danger { border-color: #a6543a; color: #8d3425; }
+      .status { min-height: 1.4em; margin: 12px 0 0; color: #234f58; font-weight: 650; }
+      .group { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5dfd4; }
+      .group:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+      .group-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+      .proposal { display: grid; grid-template-columns: auto 1fr; gap: 11px; padding: 12px; margin-top: 9px; border: 1px solid #e0d9cc; border-radius: 10px; background: #fff; }
+      .proposal input { width: 21px; height: 21px; margin-top: 2px; accent-color: #234f58; }
+      .proposal h3 { margin-bottom: 4px; font-size: .98rem; overflow-wrap: anywhere; }
+      .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+      .chip { padding: 3px 7px; border-radius: 99px; background: #e8eee9; color: #234f58; font-size: .73rem; }
+      .chip.warn { background: #f7ead2; color: #7c4b17; }
+      details { margin-top: 14px; border-top: 1px solid #e5dfd4; padding-top: 12px; }
+      summary { cursor: pointer; font-weight: 700; }
+      li { margin-top: 6px; overflow-wrap: anywhere; }
+      .empty { padding: 18px; border: 1px dashed #b9b2a6; border-radius: 10px; color: #5d6a70; text-align: center; }
+      @media (max-width: 540px) { main { padding: 14px 10px 30px; } header, section { padding: 15px; border-radius: 11px; } footer { bottom: 6px; } footer button { flex: 1; } label { width: 100%; } }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">SancusSight · local registry compiler</p>
+        <h1 id="title" tabindex="-1">Review proposed registry metadata</h1>
+        <p class="muted">Select the bounded metadata you want to connect. No command, prompt, response, reasoning, credential, or raw content is part of this review.</p>
+        <div id="scope" class="scope" aria-label="Confirmed discovery scope"></div>
+        <p id="status" class="status" role="status" aria-live="polite">Loading review bundle…</p>
+      </header>
+      <section aria-labelledby="proposals-heading">
+        <div class="group-heading"><h2 id="proposals-heading">Proposals</h2><span id="count" class="meta"></span></div>
+        <div class="toolbar" aria-label="Proposal filters">
+          <label>Search <input id="search" type="search" autocomplete="off" placeholder="Name, provider, kind"></label>
+          <label>Source or kind <select id="filter"><option value="all">All sources</option></select></label>
+          <button id="select-visible" type="button">Select visible</button>
+        </div>
+        <div id="proposals" aria-live="polite"></div>
+        <details id="skipped-details"><summary>Skipped or unreadable items (<span id="skipped-count">0</span>)</summary><ul id="skipped"></ul></details>
+        <details id="collision-details"><summary>Identity collisions (<span id="collision-count">0</span>)</summary><ul id="collisions"></ul></details>
+        <details id="refresh-details" hidden><summary>Refresh diff</summary><ul id="refresh-diff"></ul></details>
+      </section>
+      <footer>
+        <button id="cancel" class="danger" type="button">Cancel</button>
+        <button id="confirm" class="primary" type="button">Confirm selected metadata</button>
+      </footer>
+    </main>
+    <script>
+      (() => {
+        'use strict';
+        const token = new URLSearchParams(location.search).get('token') || '';
+        const state = { bundle: null, selected: new Set(), proposals: [], visible: [] };
+        const byId = id => document.getElementById(id);
+        const text = value => String(value ?? '');
+        const el = (tag, className, content) => { const node = document.createElement(tag); if (className) node.className = className; if (content !== undefined) node.textContent = content; return node; };
+        const status = message => { byId('status').textContent = message; };
+        const api = (path, options) => fetch(path + (path.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(token), { cache: 'no-store', ...options });
+        function renderScope() {
+          const root = byId('scope'); root.replaceChildren();
+          (state.bundle.roots || []).forEach(item => { const card = el('div', 'scope-card'); card.append(el('strong', '', item.sourceType + ' · ' + item.platform)); card.append(el('span', 'meta', item.portableAlias + ' · ' + item.status)); root.append(card); });
+        }
+        function renderFilters() {
+          const filter = byId('filter'); const values = [...new Set(state.proposals.flatMap(item => [item.kind, ...(item.provenance || []).map(source => source.sourceType)]))].sort();
+          values.forEach(value => filter.append(el('option', '', value)));
+        }
+        function matches(proposal) {
+          const query = byId('search').value.trim().toLowerCase(); const filter = byId('filter').value;
+          const haystack = [proposal.displayName, proposal.kind, proposal.provider, ...(proposal.capabilities || []), ...(proposal.provenance || []).map(source => source.sourceType)].filter(Boolean).join(' ').toLowerCase();
+          const inQuery = !query || haystack.includes(query); const inFilter = filter === 'all' || proposal.kind === filter || (proposal.provenance || []).some(source => source.sourceType === filter);
+          return inQuery && inFilter;
+        }
+        function render() {
+          const target = byId('proposals'); target.replaceChildren(); state.visible = state.proposals.filter(matches); byId('count').textContent = state.visible.length + ' of ' + state.proposals.length + ' shown';
+          if (!state.visible.length) { target.append(el('div', 'empty', 'No proposals match the current filters.')); return; }
+          const groups = new Map(); state.visible.forEach(proposal => { const key = (proposal.provenance?.[0]?.sourceType || 'unknown') + ' · ' + proposal.kind; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(proposal); });
+          [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0])).forEach(([key, proposals]) => { const group = el('div', 'group'); const heading = el('div', 'group-heading'); heading.append(el('h3', '', key)); heading.append(el('span', 'meta', proposals.length + ' proposal' + (proposals.length === 1 ? '' : 's'))); group.append(heading); proposals.forEach(proposal => { const row = el('label', 'proposal'); const input = document.createElement('input'); input.type = 'checkbox'; input.checked = state.selected.has(proposal.proposalId); input.setAttribute('aria-label', 'Select ' + proposal.displayName); input.addEventListener('change', () => input.checked ? state.selected.add(proposal.proposalId) : state.selected.delete(proposal.proposalId)); row.append(input); const body = el('div'); body.append(el('h3', '', proposal.displayName)); const meta = [proposal.stableId || 'no stable ID', proposal.identityConfidence + ' confidence', proposal.sensitivity + ' sensitivity', ...(proposal.platforms || [])].join(' · '); body.append(el('div', 'meta', meta)); const chips = el('div', 'chips'); (proposal.capabilities || []).slice(0, 8).forEach(value => chips.append(el('span', 'chip', value))); (proposal.provenance || []).slice(0, 4).forEach(source => chips.append(el('span', 'chip', source.sourceType + ' · ' + source.platform))); (proposal.warnings || []).forEach(value => chips.append(el('span', 'chip warn', value))); body.append(chips); const locations = proposal.locations || []; if (locations.length) body.append(el('p', 'meta', 'Reference: ' + locations.map(location => location.portableAlias + '/' + location.relativePath).join(', '))); row.append(body); group.append(row); }); target.append(group); });
+        }
+        function renderDiagnostics() { const skipped = byId('skipped'); skipped.replaceChildren(); const items = state.bundle.skipped || []; byId('skipped-count').textContent = items.length; items.forEach(item => { const li = el('li', '', item.sourceType + ' · ' + item.boundedIdentifier + ' · ' + item.category + ' — ' + item.guidance); skipped.append(li); }); const collisions = byId('collisions'); collisions.replaceChildren(); const items2 = state.bundle.collisions || []; byId('collision-count').textContent = items2.length; items2.forEach(item => { const li = el('li', '', item.fallbackKey + ' — ' + item.reason + ' (' + item.proposalIds.length + ' candidates)'); collisions.append(li); }); }
+        function renderRefreshDiff() { const details = byId('refresh-details'); const list = byId('refresh-diff'); const diff = state.bundle?.refreshDiff; const entries = diff ? [['Added', diff.additions || []], ['Changed', diff.modifications || []], ['Disappeared (archived)', diff.disappeared || []], ['Duplicate groups', diff.duplicates || []]] : []; list.replaceChildren(); entries.filter(([, values]) => values.length).forEach(([label, values]) => values.forEach(value => list.append(el('li', '', label + ' · ' + text(value.proposalId || value.stableId || value.fallbackKey || value))))); details.hidden = !entries.some(([, values]) => values.length); }
+        async function load() { try { const response = await api('/api/session'); if (!response.ok) throw new Error('Review session unavailable'); state.bundle = await response.json(); state.proposals = state.bundle.proposals || []; state.proposals.filter(item => item.selectedByDefault).forEach(item => state.selected.add(item.proposalId)); renderScope(); renderFilters(); renderDiagnostics(); renderRefreshDiff(); render(); status(state.proposals.length + ' bounded proposals loaded.'); byId('title').focus(); } catch { status('The review session could not be loaded.'); byId('confirm').disabled = true; } }
+        byId('search').addEventListener('input', render); byId('filter').addEventListener('change', render); byId('select-visible').addEventListener('click', () => { state.visible.forEach(item => state.selected.add(item.proposalId)); render(); });
+        byId('cancel').addEventListener('click', async () => { byId('cancel').disabled = true; try { const response = await api('/api/cancel', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }); status(response.ok ? 'Review cancelled. No files were changed.' : 'Cancellation was rejected.'); } catch { status('Cancellation failed.'); } });
+        byId('confirm').addEventListener('click', async () => { byId('confirm').disabled = true; const decisions = state.proposals.map(item => ({ proposalId: item.proposalId, decision: state.selected.has(item.proposalId) ? 'select' : 'exclude' })); try { const response = await api('/api/confirm', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ decisions }) }); status(response.ok ? 'Review confirmed. The compiler may now write the selected metadata.' : 'Confirmation was rejected.'); } catch { status('Confirmation failed.'); } });
+        load();
+      })();
+    </script>
+  </body>
+</html>

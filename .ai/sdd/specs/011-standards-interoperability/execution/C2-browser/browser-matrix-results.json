@@ -1,0 +1,143 @@
+{
+  "browser": "Google Chrome",
+  "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "origin": "http://127.0.0.1:4175",
+  "fixtureQualification": "All C2 inputs are explicitly synthetic fixtures; they are not production evidence.",
+  "matrixScope": "All four R1 findings, C1 corrections, and fix-caused regressions only.",
+  "results": [
+    {
+      "name": "focus enters the Standards Interoperability workspace",
+      "verdict": "PASS"
+    },
+    {
+      "name": "official base/input/output facet containers are accepted as six exact omissions",
+      "verdict": "PASS",
+      "status": "Sanitized import complete: 1 accepted, 0 rejected, 6 omitted. The bounded preview is stored locally.",
+      "reasonCodeCounts": [
+        {
+          "code": "input-dataset-facets-omitted",
+          "count": 2
+        },
+        {
+          "code": "job-facets-omitted",
+          "count": 1
+        },
+        {
+          "code": "output-dataset-facets-omitted",
+          "count": 2
+        },
+        {
+          "code": "run-facets-omitted",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "hostile unique facet sentinels are absent from current preview, DOM, safe hashes/preimages, console/logs, and IndexedDB",
+      "verdict": "PASS",
+      "facetContainers": 6,
+      "digestPreimagesInspected": 352,
+      "safeHashesInspected": 7
+    },
+    {
+      "name": "Feature 011 clear is isolated and returns useful focus",
+      "verdict": "PASS",
+      "untouchedDatabases": [
+        "sancussight-check-history",
+        "sancussight-evidence",
+        "sancussight-governance"
+      ]
+    },
+    {
+      "name": "two equivalent imports overlap pending persistence and deterministically record then deduplicate",
+      "verdict": "PASS",
+      "operations": 2,
+      "persistedWhileBlocked": 0,
+      "indexedDbAddCalls": 1,
+      "persistedSnapshots": 1,
+      "outcomes": [
+        "recorded",
+        "deduplicated"
+      ]
+    },
+    {
+      "name": "invalid Feature 011 record yields unavailable history, preserves current preview, and leaves unrelated stores unchanged",
+      "verdict": "PASS",
+      "status": "Sanitized import complete: 1 accepted, 0 rejected, 6 omitted. Browser persistence is unavailable; the current in-memory preview remains usable.",
+      "unrelatedDatabases": [
+        "sancussight-check-history",
+        "sancussight-evidence",
+        "sancussight-governance"
+      ]
+    },
+    {
+      "name": "keyboard controls and empty telemetry alignment remain available",
+      "verdict": "PASS",
+      "status": "0 accepted runtime records aligned under pinned profiles. Sanitized alignment summaries are stored locally.",
+      "states": [
+        "missing",
+        "omitted-private"
+      ]
+    },
+    {
+      "name": "valid unsigned Statement validation and local download remain available",
+      "verdict": "PASS",
+      "filename": "sancussight-unsigned-statement-0419d4b5b061.json"
+    },
+    {
+      "name": "profile isolation and 20-per-profile retention remain deterministic",
+      "verdict": "PASS",
+      "total": 80,
+      "retainedByProfile": {
+        "openinference-metadata-preview-1": 20,
+        "otel-genai-metadata-preview-1": 20,
+        "sancussight-in-toto-statement-1": 20,
+        "openlineage-run-event-core-1.0.5": 20
+      }
+    },
+    {
+      "name": "320 CSS pixels preserve one workspace/rail and bounded table overflow",
+      "verdict": "PASS",
+      "viewport": 320,
+      "dpr": 1,
+      "pageScrollWidth": 320,
+      "pageClientWidth": 320,
+      "pageOverflow": 0,
+      "tableScrollWidth": 736,
+      "tableClientWidth": 258,
+      "workspaceCount": 1,
+      "railCount": 1,
+      "heading": "Standards Interoperability"
+    },
+    {
+      "name": "effective-200 reload explicitly reopens and measures Standards Interoperability",
+      "verdict": "PASS",
+      "viewport": 320,
+      "dpr": 2,
+      "pageScrollWidth": 320,
+      "pageClientWidth": 320,
+      "pageOverflow": 0,
+      "tableScrollWidth": 736,
+      "tableClientWidth": 258,
+      "tableOverflow": 478,
+      "workspaceCount": 1,
+      "railCount": 1,
+      "activeHeading": "Standards Interoperability"
+    },
+    {
+      "name": "clean console/page errors and loopback same-origin-only traffic",
+      "verdict": "PASS",
+      "consoleWarningsOrErrors": 0,
+      "pageErrors": 0,
+      "requestCount": 16,
+      "origins": [
+        "http://127.0.0.1:4175"
+      ]
+    },
+    {
+      "name": "IndexedDB-unavailable mode preserves the current sanitized result",
+      "verdict": "PASS",
+      "status": "Sanitized import complete: 1 accepted, 0 rejected, 6 omitted. Browser persistence is unavailable; the current in-memory preview remains usable."
+    }
+  ]
+}

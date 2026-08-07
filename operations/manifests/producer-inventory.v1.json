@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "contract": "OperationalProducerInventoryV1",
+  "scope": "SancusSight user-scoped fixed lifecycle harness",
+  "sources": [
+    {
+      "id": "agent-beacon",
+      "displayName": "Agent Beacon",
+      "evidenceContract": "EvidenceEnvelopeV1",
+      "boundary": "Read metadata-only runtime events from explicitly configured user-owned artifacts.",
+      "officialUrl": "https://github.com/Asymptote-Labs/agent-beacon",
+      "supportedVersions": ["1.0.1"],
+      "lifecycle": {"install": "user-scoped handoff", "configure": "metadata-only source path", "start": "producer-owned", "inspect": "fixed inventory record", "update": "pinned version review", "rollback": "preserve evidence", "stop": "producer-owned", "remove": "explicit source selection"}
+    },
+    {
+      "id": "runtime-telemetry",
+      "displayName": "Runtime telemetry",
+      "evidenceContract": "RuntimeTelemetryEventV1",
+      "boundary": "Read fixed metadata-only Codex, Claude, and Pi JSONL; bridge, extension, and Bash execution remain operator-owned.",
+      "officialUrl": "https://github.com/flowersbl00minadarkr00m/sancussight",
+      "supportedVersions": ["1.0.0"],
+      "lifecycle": {"install": "user-scoped fixed bridge and extension handoff", "configure": "content-disabled native telemetry and allowlist-only Pi metadata", "start": "operator-owned", "inspect": "fixed provider/runtime inventory", "update": "contract/version review", "rollback": "disable bridge or extension and preserve evidence", "stop": "operator-owned", "remove": "explicit source selection"}
+    },
+    {
+      "id": "praxen",
+      "displayName": "Praxen",
+      "evidenceContract": "CanonicalFindingsV2",
+      "boundary": "Read sanitized findings bound to an approved target and Worker Remit hash.",
+      "officialUrl": "https://open-agent-ai-security.github.io/praxen/",
+      "supportedVersions": ["1.1.0"],
+      "lifecycle": {"install": "user-scoped handoff", "configure": "fixed target/remit manifest", "start": "producer-owned", "inspect": "fixed inventory record", "update": "pinned version review", "rollback": "preserve evidence", "stop": "producer-owned", "remove": "explicit source selection"}
+    },
+    {
+      "id": "pipelock",
+      "displayName": "Pipelock",
+      "evidenceContract": "PipelockPacketV0 + PipelockVerificationV1",
+      "boundary": "Read a fixed packet and independent verification sidecar for one approved workflow.",
+      "officialUrl": "https://github.com/luckyPipewrench/pipelock",
+      "supportedVersions": ["3.1.0"],
+      "lifecycle": {"install": "user-scoped handoff", "configure": "one approved workflow", "start": "producer-owned", "inspect": "fixed packet/sidecar record", "update": "pinned version review", "rollback": "preserve evidence", "stop": "producer-owned", "remove": "explicit source selection"}
+    },
+    {
+      "id": "rampart",
+      "displayName": "RAMPART",
+      "evidenceContract": "RampartOperationalReportV1",
+      "boundary": "Read a sanitized report exported by an operator-owned RAMPART run.",
+      "officialUrl": "https://github.com/microsoft/RAMPART",
+      "supportedVersions": ["0.1.0"],
+      "lifecycle": {"install": "pinned version required", "configure": "approved non-destructive suite", "start": "producer-owned", "inspect": "fixed report record", "update": "pinned version review", "rollback": "preserve evidence", "stop": "producer-owned", "remove": "explicit source selection"}
+    },
+    {
+      "id": "aimap",
+      "displayName": "AIMap",
+      "evidenceContract": "AIMapOperationalExportV1",
+      "boundary": "Read a completed scan export bound to an exact authorized operator-owned target.",
+      "officialUrl": "https://github.com/BishopFox/aimap",
+      "supportedVersions": ["65c820cbdad3da449f49aedb70055ca5ed4fa0ce"],
+      "lifecycle": {"install": "pinned version required", "configure": "exact expiring authorization manifest", "start": "producer-owned", "inspect": "fixed completed-export record", "update": "pinned version review", "rollback": "preserve evidence", "stop": "producer-owned", "remove": "explicit source selection"}
+    }
+  ]
+}

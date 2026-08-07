@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "platforms": [
+    "linux",
+    "windows"
+  ],
+  "updatedAt": "2026-07-24T10:00:00.000Z",
+  "assets": [
+    {
+      "id": "skill:portable",
+      "name": "portable skill",
+      "kind": "skill",
+      "format": "json",
+      "location": "project:skill-portable/skills/portable.json",
+      "sensitivity": "internal",
+      "sharedByDesign": true,
+      "coverage": [
+        {
+          "platform": "linux"
+        },
+        {
+          "platform": "windows"
+        }
+      ],
+      "providerDependencies": [],
+      "evidence": [
+        {
+          "label": "skills metadata observation",
+          "date": "2026-07-23"
+        }
+      ],
+      "stableId": "skill:portable",
+      "registryState": "active",
+      "versions": [
+        {
+          "schemaVersion": 1,
+          "recordedAt": "2026-07-23T11:00:00.000Z",
+          "sourceRefHashes": [
+            "1111111111111111111111111111111111111111111111111111111111111111"
+          ],
+          "verificationRefs": [
+            {
+              "checkId": "check:portable",
+              "resultId": "result:one",
+              "status": "pass",
+              "evaluatedAt": "2026-07-23T10:30:00.000Z",
+              "safeEvidenceHash": "2222222222222222222222222222222222222222222222222222222222222222"
+            }
+          ],
+          "snapshot": {
+            "format": "json",
+            "sharedByDesign": true,
+            "registryState": "active",
+            "supportedVersion": "1.0",
+            "coverage": [
+              {
+                "platform": "linux"
+              },
+              {
+                "platform": "windows",
+                "lastVerified": "2026-07-23"
+              }
+            ],
+            "providerDependencies": [
+              {
+                "provider": "local-reference",
+                "capability": "redacted-capability",
+                "fallback": "local-identity"
+              }
+            ],
+            "dependencyIds": [
+              "dependency:portable"
+            ]
+          },
+          "qualification": "portable-projection",
+          "derivedFromVersionId": "av1_209efdd69605f030400391b57b369f55",
+          "id": "av1p_2a49a126724119a92228a96cf118b189"
+        }
+      ],
+      "versionAliases": [
+        {
+          "name": "preferred",
+          "versionId": "av1p_2a49a126724119a92228a96cf118b189"
+        }
+      ],
+      "currentVersionId": "av1p_2a49a126724119a92228a96cf118b189"
+    }
+  ],
+  "provenance": {
+    "mode": "local",
+    "sourceUpdatedAt": "2026-07-24T10:00:00.000Z"
+  }
+}

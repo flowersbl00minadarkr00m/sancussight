@@ -1,0 +1,512 @@
+- generic [ref=e41]:
+  - banner [ref=e42]:
+    - button "Return to SancusSight entry" [ref=e43] [cursor=pointer]:
+      - generic [ref=e44]: SancusSight
+    - generic [ref=e50]:
+      - generic [ref=e51]: Demo data
+      - generic [ref=e52]: Synthetic workspace
+      - generic [ref=e53]: 21 assets / 4 platforms
+    - generic [ref=e54]:
+      - button "Connect file" [ref=e55] [cursor=pointer]
+      - group [ref=e56]:
+        - generic "Utilities" [ref=e57] [cursor=pointer]
+  - navigation "Workspace" [ref=e58]:
+    - generic "Primary workspace views" [ref=e59]:
+      - button "Home" [ref=e60] [cursor=pointer]
+      - button "Assets" [ref=e61] [cursor=pointer]
+      - button "Exit Drills" [ref=e62] [cursor=pointer]
+      - button "Attention 24" [ref=e63] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e64]: "24"
+    - button "Advanced" [ref=e66] [cursor=pointer]
+  - generic [ref=e67]:
+    - main [ref=e68]:
+      - generic [ref=e1534]:
+        - generic [ref=e1535]:
+          - generic [ref=e1536]:
+            - generic [ref=e1537]:
+              - generic [ref=e1538]: Attention / deterministic checks
+              - heading "Check Catalog" [level=2] [ref=e1539]
+            - button "Clear history" [ref=e1540] [cursor=pointer]
+          - paragraph [ref=e1541]: Browse stable rule definitions or inspect a current non-passing result. Definitions and asset results remain separate.
+          - generic [ref=e1542]:
+            - generic [ref=e1543]: Search checks and current results
+            - searchbox "Search checks and current results" [ref=e1544]
+          - paragraph [ref=e1545]: 20 definitions / 24 current attention results
+          - region [ref=e1546]:
+            - heading "Definitions" [level=3] [ref=e1547]
+            - list [ref=e1548]:
+              - listitem [ref=e1549]:
+                - button "Open canonical format asset.open-format.v1 21 current results / worst fail" [ref=e1550] [cursor=pointer]:
+                  - strong [ref=e1551]: Open canonical format
+                  - generic [ref=e1552]: asset.open-format.v1
+                  - generic [ref=e1553]: 21 current results / worst fail
+              - listitem [ref=e1554]:
+                - button "Named owner asset.named-owner.v1 21 current results / worst fail" [ref=e1555] [cursor=pointer]:
+                  - strong [ref=e1556]: Named owner
+                  - generic [ref=e1557]: asset.named-owner.v1
+                  - generic [ref=e1558]: 21 current results / worst fail
+              - listitem [ref=e1559]:
+                - button "Review freshness asset.review-freshness.v1 21 current results / worst warn" [ref=e1560] [cursor=pointer]:
+                  - strong [ref=e1561]: Review freshness
+                  - generic [ref=e1562]: asset.review-freshness.v1
+                  - generic [ref=e1563]: 21 current results / worst warn
+              - listitem [ref=e1564]:
+                - button "Verified platform coverage portability.platform-coverage.v1 12 current results / worst fail" [ref=e1565] [cursor=pointer]:
+                  - strong [ref=e1566]: Verified platform coverage
+                  - generic [ref=e1567]: portability.platform-coverage.v1
+                  - generic [ref=e1568]: 12 current results / worst fail
+              - listitem [ref=e1569]:
+                - button "Provider dependency fallback portability.provider-fallback.v1 3 current results / worst fail" [ref=e1570] [cursor=pointer]:
+                  - strong [ref=e1571]: Provider dependency fallback
+                  - generic [ref=e1572]: portability.provider-fallback.v1
+                  - generic [ref=e1573]: 3 current results / worst fail
+              - listitem [ref=e1574]:
+                - button "Workflow fallback provider continuity.workflow-fallback.v1 3 current results / worst fail" [ref=e1575] [cursor=pointer]:
+                  - strong [ref=e1576]: Workflow fallback provider
+                  - generic [ref=e1577]: continuity.workflow-fallback.v1
+                  - generic [ref=e1578]: 3 current results / worst fail
+              - listitem [ref=e1579]:
+                - button "Substitution drill freshness continuity.substitution-drill.v1 3 current results / worst warn" [ref=e1580] [cursor=pointer]:
+                  - strong [ref=e1581]: Substitution drill freshness
+                  - generic [ref=e1582]: continuity.substitution-drill.v1
+                  - generic [ref=e1583]: 3 current results / worst warn
+              - listitem [ref=e1584]:
+                - button "Durable workflow evidence evidence.workflow-durability.v1 3 current results / worst warn" [ref=e1585] [cursor=pointer]:
+                  - strong [ref=e1586]: Durable workflow evidence
+                  - generic [ref=e1587]: evidence.workflow-durability.v1
+                  - generic [ref=e1588]: 3 current results / worst warn
+              - listitem [ref=e1589]:
+                - button "Action authority controls governance.action-authority.v1 1 current result / worst pass" [ref=e1590] [cursor=pointer]:
+                  - strong [ref=e1591]: Action authority controls
+                  - generic [ref=e1592]: governance.action-authority.v1
+                  - generic [ref=e1593]: 1 current result / worst pass
+              - listitem [ref=e1594]:
+                - button "Action reversibility governance.action-reversibility.v1 No current result" [ref=e1595] [cursor=pointer]:
+                  - strong [ref=e1596]: Action reversibility
+                  - generic [ref=e1597]: governance.action-reversibility.v1
+                  - generic [ref=e1598]: No current result
+              - listitem [ref=e1599]:
+                - button "Accepted asset governance metadata governance.accepted-asset-metadata.v1 1 current result / worst pass" [ref=e1600] [cursor=pointer]:
+                  - strong [ref=e1601]: Accepted asset governance metadata
+                  - generic [ref=e1602]: governance.accepted-asset-metadata.v1
+                  - generic [ref=e1603]: 1 current result / worst pass
+              - listitem [ref=e1604]:
+                - button "Candidate metadata completeness candidate.metadata-completeness.v1 6 current results / worst pass" [ref=e1605] [cursor=pointer]:
+                  - strong [ref=e1606]: Candidate metadata completeness
+                  - generic [ref=e1607]: candidate.metadata-completeness.v1
+                  - generic [ref=e1608]: 6 current results / worst pass
+              - listitem [ref=e1609]:
+                - button "Candidate check mapping candidate.check-mapping.v1 6 current results / worst pass" [ref=e1610] [cursor=pointer]:
+                  - strong [ref=e1611]: Candidate check mapping
+                  - generic [ref=e1612]: candidate.check-mapping.v1
+                  - generic [ref=e1613]: 6 current results / worst pass
+              - listitem [ref=e1614]:
+                - button "Candidate data egress candidate.data-egress.v1 6 current results / worst warn" [ref=e1615] [cursor=pointer]:
+                  - strong [ref=e1616]: Candidate data egress
+                  - generic [ref=e1617]: candidate.data-egress.v1
+                  - generic [ref=e1618]: 6 current results / worst warn
+              - listitem [ref=e1619]:
+                - button "Candidate bundle readiness candidate.bundle-readiness.v1 No current result" [ref=e1620] [cursor=pointer]:
+                  - strong [ref=e1621]: Candidate bundle readiness
+                  - generic [ref=e1622]: candidate.bundle-readiness.v1
+                  - generic [ref=e1623]: No current result
+              - listitem [ref=e1624]:
+                - button "Ontology stable identity ontology.stable-identity.v1 2 current results / worst pass" [ref=e1625] [cursor=pointer]:
+                  - strong [ref=e1626]: Ontology stable identity
+                  - generic [ref=e1627]: ontology.stable-identity.v1
+                  - generic [ref=e1628]: 2 current results / worst pass
+              - listitem [ref=e1629]:
+                - button "Ontology producer and consumers ontology.producer-consumers.v1 2 current results / worst pass" [ref=e1630] [cursor=pointer]:
+                  - strong [ref=e1631]: Ontology producer and consumers
+                  - generic [ref=e1632]: ontology.producer-consumers.v1
+                  - generic [ref=e1633]: 2 current results / worst pass
+              - listitem [ref=e1634]:
+                - button "Ontology evidence survival ontology.evidence-survival.v1 2 current results / worst pass" [ref=e1635] [cursor=pointer]:
+                  - strong [ref=e1636]: Ontology evidence survival
+                  - generic [ref=e1637]: ontology.evidence-survival.v1
+                  - generic [ref=e1638]: 2 current results / worst pass
+              - listitem [ref=e1639]:
+                - button "FindMnemo rename compatibility ontology.findmnemo-rename-compatibility.v1 1 current result / worst pass" [ref=e1640] [cursor=pointer]:
+                  - strong [ref=e1641]: FindMnemo rename compatibility
+                  - generic [ref=e1642]: ontology.findmnemo-rename-compatibility.v1
+                  - generic [ref=e1643]: 1 current result / worst pass
+              - listitem [ref=e1644]:
+                - button "Evidence binding presence evidence.binding-presence.v1 No current result" [ref=e1645] [cursor=pointer]:
+                  - strong [ref=e1646]: Evidence binding presence
+                  - generic [ref=e1647]: evidence.binding-presence.v1
+                  - generic [ref=e1648]: No current result
+          - region [ref=e1649]:
+            - heading "Attention now" [level=3] [ref=e1650]
+            - list [ref=e1651]:
+              - listitem [ref=e1652]:
+                - button "FAIL Client style guide (custom GPT) Canonical form is provider-proprietary (chatgpt/custom-gpt-config) asset.open-format.v1" [ref=e1653] [cursor=pointer]:
+                  - generic [ref=e1654]: FAIL
+                  - generic [ref=e1655]:
+                    - strong [ref=e1656]: Client style guide (custom GPT)
+                    - generic [ref=e1657]: Canonical form is provider-proprietary (chatgpt/custom-gpt-config)
+                    - generic [ref=e1658]: asset.open-format.v1
+              - listitem [ref=e1659]:
+                - 'button "FAIL Client style guide (custom GPT) Locked to chatgpt: custom GPT instruction store has no fallback portability.provider-fallback.v1" [ref=e1660] [cursor=pointer]':
+                  - generic [ref=e1661]: FAIL
+                  - generic [ref=e1662]:
+                    - strong [ref=e1663]: Client style guide (custom GPT)
+                    - generic [ref=e1664]: "Locked to chatgpt: custom GPT instruction store has no fallback"
+                    - generic [ref=e1665]: portability.provider-fallback.v1
+              - listitem [ref=e1666]:
+                - 'button "FAIL Finance analysis brief Locked to claude: private retrieval connector has no fallback portability.provider-fallback.v1" [ref=e1667] [cursor=pointer]':
+                  - generic [ref=e1668]: FAIL
+                  - generic [ref=e1669]:
+                    - strong [ref=e1670]: Finance analysis brief
+                    - generic [ref=e1671]: "Locked to claude: private retrieval connector has no fallback"
+                    - generic [ref=e1672]: portability.provider-fallback.v1
+              - listitem [ref=e1673]:
+                - button "FAIL Kill-switch procedure Shared but never verified anywhere — sharing without a retrieval test is a hope, not a control portability.platform-coverage.v1" [ref=e1674] [cursor=pointer]:
+                  - generic [ref=e1675]: FAIL
+                  - generic [ref=e1676]:
+                    - strong [ref=e1677]: Kill-switch procedure
+                    - generic [ref=e1678]: Shared but never verified anywhere — sharing without a retrieval test is a hope, not a control
+                    - generic [ref=e1679]: portability.platform-coverage.v1
+              - listitem [ref=e1680]:
+                - button "FAIL Network analysis refresh No owner recorded — exceptions on this asset have nowhere to go asset.named-owner.v1" [ref=e1681] [cursor=pointer]:
+                  - generic [ref=e1682]: FAIL
+                  - generic [ref=e1683]:
+                    - strong [ref=e1684]: Network analysis refresh
+                    - generic [ref=e1685]: No owner recorded — exceptions on this asset have nowhere to go
+                    - generic [ref=e1686]: asset.named-owner.v1
+              - listitem [ref=e1687]:
+                - button "FAIL Network analysis refresh Concentrated on chatgpt with no fallback continuity.workflow-fallback.v1" [ref=e1688] [cursor=pointer]:
+                  - generic [ref=e1689]: FAIL
+                  - generic [ref=e1690]:
+                    - strong [ref=e1691]: Network analysis refresh
+                    - generic [ref=e1692]: Concentrated on chatgpt with no fallback
+                    - generic [ref=e1693]: continuity.workflow-fallback.v1
+              - listitem [ref=e1694]:
+                - 'button "WARN Agent Beacon Recorded data egress: unknown; trust boundary: Telemetry producer and collector boundary candidate.data-egress.v1" [ref=e1695] [cursor=pointer]':
+                  - generic [ref=e1696]: WARN
+                  - generic [ref=e1697]:
+                    - strong [ref=e1698]: Agent Beacon
+                    - generic [ref=e1699]: "Recorded data egress: unknown; trust boundary: Telemetry producer and collector boundary"
+                    - generic [ref=e1700]: candidate.data-egress.v1
+              - listitem [ref=e1701]:
+                - 'button "WARN AIMap Recorded data egress: network-required; trust boundary: Tester and explicitly authorized target systems candidate.data-egress.v1" [ref=e1702] [cursor=pointer]':
+                  - generic [ref=e1703]: WARN
+                  - generic [ref=e1704]:
+                    - strong [ref=e1705]: AIMap
+                    - generic [ref=e1706]: "Recorded data egress: network-required; trust boundary: Tester and explicitly authorized target systems"
+                    - generic [ref=e1707]: candidate.data-egress.v1
+              - listitem [ref=e1708]:
+                - button "WARN Client style guide (custom GPT) Stale — last reviewed 80 days ago asset.review-freshness.v1" [ref=e1709] [cursor=pointer]:
+                  - generic [ref=e1710]: WARN
+                  - generic [ref=e1711]:
+                    - strong [ref=e1712]: Client style guide (custom GPT)
+                    - generic [ref=e1713]: Stale — last reviewed 80 days ago
+                    - generic [ref=e1714]: asset.review-freshness.v1
+              - listitem [ref=e1715]:
+                - button "WARN Client style guide (custom GPT) Only verified on chatgpt — single-platform asset portability.platform-coverage.v1" [ref=e1716] [cursor=pointer]:
+                  - generic [ref=e1717]: WARN
+                  - generic [ref=e1718]:
+                    - strong [ref=e1719]: Client style guide (custom GPT)
+                    - generic [ref=e1720]: Only verified on chatgpt — single-platform asset
+                    - generic [ref=e1721]: portability.platform-coverage.v1
+              - listitem [ref=e1722]:
+                - button "WARN Finance analysis brief Never drilled — the fallback is untested paper continuity.substitution-drill.v1" [ref=e1723] [cursor=pointer]:
+                  - generic [ref=e1724]: WARN
+                  - generic [ref=e1725]:
+                    - strong [ref=e1726]: Finance analysis brief
+                    - generic [ref=e1727]: Never drilled — the fallback is untested paper
+                    - generic [ref=e1728]: continuity.substitution-drill.v1
+              - listitem [ref=e1729]:
+                - button "WARN Finance analysis brief No evaluation asset linked and no evidence recorded — outcomes exist only in chat history evidence.workflow-durability.v1" [ref=e1730] [cursor=pointer]:
+                  - generic [ref=e1731]: WARN
+                  - generic [ref=e1732]:
+                    - strong [ref=e1733]: Finance analysis brief
+                    - generic [ref=e1734]: No evaluation asset linked and no evidence recorded — outcomes exist only in chat history
+                    - generic [ref=e1735]: evidence.workflow-durability.v1
+              - listitem [ref=e1736]:
+                - button "WARN Interview transcripts pack Only verified on chatgpt — single-platform asset portability.platform-coverage.v1" [ref=e1737] [cursor=pointer]:
+                  - generic [ref=e1738]: WARN
+                  - generic [ref=e1739]:
+                    - strong [ref=e1740]: Interview transcripts pack
+                    - generic [ref=e1741]: Only verified on chatgpt — single-platform asset
+                    - generic [ref=e1742]: portability.platform-coverage.v1
+              - listitem [ref=e1743]:
+                - 'button "WARN Kiji Privacy Proxy Recorded data egress: network-required; trust boundary: Traffic crosses a local masking proxy before the external AI service candidate.data-egress.v1" [ref=e1744] [cursor=pointer]':
+                  - generic [ref=e1745]: WARN
+                  - generic [ref=e1746]:
+                    - strong [ref=e1747]: Kiji Privacy Proxy
+                    - generic [ref=e1748]: "Recorded data egress: network-required; trust boundary: Traffic crosses a local masking proxy before the external AI service"
+                    - generic [ref=e1749]: candidate.data-egress.v1
+              - listitem [ref=e1750]:
+                - button "WARN Network analysis refresh Stale — last reviewed 70 days ago asset.review-freshness.v1" [ref=e1751] [cursor=pointer]:
+                  - generic [ref=e1752]: WARN
+                  - generic [ref=e1753]:
+                    - strong [ref=e1754]: Network analysis refresh
+                    - generic [ref=e1755]: Stale — last reviewed 70 days ago
+                    - generic [ref=e1756]: asset.review-freshness.v1
+              - listitem [ref=e1757]:
+                - button "WARN Network analysis refresh Never drilled — the fallback is untested paper continuity.substitution-drill.v1" [ref=e1758] [cursor=pointer]:
+                  - generic [ref=e1759]: WARN
+                  - generic [ref=e1760]:
+                    - strong [ref=e1761]: Network analysis refresh
+                    - generic [ref=e1762]: Never drilled — the fallback is untested paper
+                    - generic [ref=e1763]: continuity.substitution-drill.v1
+              - listitem [ref=e1764]:
+                - button "WARN Network analysis refresh No evaluation asset linked and no evidence recorded — outcomes exist only in chat history evidence.workflow-durability.v1" [ref=e1765] [cursor=pointer]:
+                  - generic [ref=e1766]: WARN
+                  - generic [ref=e1767]:
+                    - strong [ref=e1768]: Network analysis refresh
+                    - generic [ref=e1769]: No evaluation asset linked and no evidence recorded — outcomes exist only in chat history
+                    - generic [ref=e1770]: evidence.workflow-durability.v1
+              - listitem [ref=e1771]:
+                - 'button "WARN Pipelock Recorded data egress: network-required; trust boundary: Agent network egress passes through the firewall boundary candidate.data-egress.v1" [ref=e1772] [cursor=pointer]':
+                  - generic [ref=e1773]: WARN
+                  - generic [ref=e1774]:
+                    - strong [ref=e1775]: Pipelock
+                    - generic [ref=e1776]: "Recorded data egress: network-required; trust boundary: Agent network egress passes through the firewall boundary"
+                    - generic [ref=e1777]: candidate.data-egress.v1
+              - listitem [ref=e1778]:
+                - 'button "WARN Praxen Recorded data egress: unknown; trust boundary: Policy declarations, source/deployment evidence, and verifier runtime candidate.data-egress.v1" [ref=e1779] [cursor=pointer]':
+                  - generic [ref=e1780]: WARN
+                  - generic [ref=e1781]:
+                    - strong [ref=e1782]: Praxen
+                    - generic [ref=e1783]: "Recorded data egress: unknown; trust boundary: Policy declarations, source/deployment evidence, and verifier runtime"
+                    - generic [ref=e1784]: candidate.data-egress.v1
+              - listitem [ref=e1785]:
+                - 'button "WARN RAMPART Recorded data egress: unknown; trust boundary: Test runner, agent under test, and configured model/tool services candidate.data-egress.v1" [ref=e1786] [cursor=pointer]':
+                  - generic [ref=e1787]: WARN
+                  - generic [ref=e1788]:
+                    - strong [ref=e1789]: RAMPART
+                    - generic [ref=e1790]: "Recorded data egress: unknown; trust boundary: Test runner, agent under test, and configured model/tool services"
+                    - generic [ref=e1791]: candidate.data-egress.v1
+              - listitem [ref=e1792]:
+                - button "WARN Research ingest skill Only verified on claude — single-platform asset portability.platform-coverage.v1" [ref=e1793] [cursor=pointer]:
+                  - generic [ref=e1794]: WARN
+                  - generic [ref=e1795]:
+                    - strong [ref=e1796]: Research ingest skill
+                    - generic [ref=e1797]: Only verified on claude — single-platform asset
+                    - generic [ref=e1798]: portability.platform-coverage.v1
+              - listitem [ref=e1799]:
+                - button "WARN Shared memory export Stale — last reviewed 58 days ago asset.review-freshness.v1" [ref=e1800] [cursor=pointer]:
+                  - generic [ref=e1801]: WARN
+                  - generic [ref=e1802]:
+                    - strong [ref=e1803]: Shared memory export
+                    - generic [ref=e1804]: Stale — last reviewed 58 days ago
+                    - generic [ref=e1805]: asset.review-freshness.v1
+              - listitem [ref=e1806]:
+                - button "UNKNOWN Kill-switch procedure Never reviewed (no review date recorded) asset.review-freshness.v1" [ref=e1807] [cursor=pointer]:
+                  - generic [ref=e1808]: UNKNOWN
+                  - generic [ref=e1809]:
+                    - strong [ref=e1810]: Kill-switch procedure
+                    - generic [ref=e1811]: Never reviewed (no review date recorded)
+                    - generic [ref=e1812]: asset.review-freshness.v1
+              - listitem [ref=e1813]:
+                - 'button "ACCEPTED Interview transcripts pack Canonical form is provider-proprietary (vendor/notebook-product) — accepted by henry until 2026-09-22: Vendor notebook UX worth the lock-in for this quarter; markdown export tested monthly asset.open-format.v1" [ref=e1814] [cursor=pointer]':
+                  - generic [ref=e1815]: ACCEPTED
+                  - generic [ref=e1816]:
+                    - strong [ref=e1817]: Interview transcripts pack
+                    - generic [ref=e1818]: "Canonical form is provider-proprietary (vendor/notebook-product) — accepted by henry until 2026-09-22: Vendor notebook UX worth the lock-in for this quarter; markdown export tested monthly"
+                    - generic [ref=e1819]: asset.open-format.v1
+          - paragraph [ref=e1820]
+        - article [ref=e1822]:
+          - generic [ref=e1824]:
+            - generic [ref=e1825]: Current result explanation
+            - heading "Provider dependency fallback" [active] [level=2] [ref=e1826]
+            - paragraph [ref=e1827]: portability.provider-fallback.v1
+          - generic [ref=e1828]:
+            - generic [ref=e1829]:
+              - heading "Definition" [level=3] [ref=e1830]
+              - generic [ref=e1831]: Stable deterministic rule
+            - paragraph [ref=e1832]: Does each provider-specific dependency name an approved fallback?
+            - paragraph [ref=e1833]: An explicit fallback bounds provider lock-in.
+            - generic [ref=e1834]:
+              - generic [ref=e1835]:
+                - term [ref=e1836]: Stable ID
+                - definition [ref=e1837]: portability.provider-fallback.v1
+              - generic [ref=e1838]:
+                - term [ref=e1839]: Version
+                - definition [ref=e1840]: "1"
+              - generic [ref=e1841]:
+                - term [ref=e1842]: Dimension
+                - definition [ref=e1843]: continuity
+              - generic [ref=e1844]:
+                - term [ref=e1845]: Exact rule
+                - definition [ref=e1846]: Pass for a dependency with a recorded fallback; otherwise fail.
+              - generic [ref=e1847]:
+                - term [ref=e1848]: Inspected inputs
+                - definition [ref=e1849]: asset.providerDependencies[].provider, asset.providerDependencies[].capability, asset.providerDependencies[].fallback
+              - generic [ref=e1850]:
+                - term [ref=e1851]: Possible outcomes
+                - definition [ref=e1852]: pass, fail, accepted
+          - generic [ref=e1853]:
+            - generic [ref=e1854]:
+              - heading "Current result" [level=3] [ref=e1855]
+              - generic [ref=e1856]: Deterministic finding
+            - generic [ref=e1857]:
+              - generic [ref=e1858]: FAIL
+              - strong [ref=e1859]: Client style guide (custom GPT)
+            - paragraph [ref=e1860]: "Locked to chatgpt: custom GPT instruction store has no fallback"
+            - generic [ref=e1861]:
+              - generic [ref=e1862]:
+                - term [ref=e1863]: Evaluation time
+                - definition [ref=e1864]: 2026-07-24
+              - generic [ref=e1865]:
+                - term [ref=e1866]: Owner
+                - definition [ref=e1867]: henry
+              - generic [ref=e1868]:
+                - term [ref=e1869]: Result identity
+                - definition [ref=e1870]: ctx-style-gpt:dep-chatgpt-custom GPT instruction store
+              - generic [ref=e1871]:
+                - term [ref=e1872]: Result class
+                - definition [ref=e1873]: Cataloged deterministic result
+            - button "Open Asset Passport" [ref=e1874] [cursor=pointer]
+          - generic [ref=e1875]:
+            - generic [ref=e1876]:
+              - heading "Previous result" [level=3] [ref=e1877]
+              - generic [ref=e1878]: Bounded metadata-only local history
+            - paragraph [ref=e1879]: No previous result recorded.
+          - generic [ref=e1880]:
+            - generic [ref=e1881]:
+              - heading "Evidence inspected" [level=3] [ref=e1882]
+              - generic [ref=e1883]: Recorded facts + explicit gaps
+            - list [ref=e1884]:
+              - listitem [ref=e1885]:
+                - strong [ref=e1886]: Registry providerDependencies
+                - generic [ref=e1887]: "Reference: No exact accepted reference"
+                - generic [ref=e1888]: "Observed: Not recorded"
+                - generic [ref=e1889]: "Source state: Not recorded"
+          - generic [ref=e1890]:
+            - generic [ref=e1891]:
+              - heading "Claim lineage" [level=3] [ref=e1892]
+              - generic [ref=e1893]: Bounded typed relationships
+            - generic [ref=e1894]:
+              - paragraph [ref=e1895]: Shortest relevant path / bounded to 8 nodes
+              - list [ref=e1896]:
+                - listitem [ref=e1897]:
+                  - generic [ref=e1898]:
+                    - generic [ref=e1899]:
+                      - generic [ref=e1900]: target
+                      - strong [ref=e1901]: Recorded fact
+                    - paragraph [ref=e1902]: Client style guide (custom GPT)
+                    - code [ref=e1903]: ctx-style-gpt
+                  - generic [ref=e1904]:
+                    - strong [ref=e1905]: Verified relationship
+                    - generic [ref=e1906]: The recorded input is deterministically bound to the named rule and result; this does not independently prove the external fact.
+                - listitem [ref=e1907]:
+                  - generic [ref=e1908]:
+                    - generic [ref=e1909]:
+                      - generic [ref=e1910]: evidence
+                      - strong [ref=e1911]: Recorded fact
+                    - paragraph [ref=e1912]: Registry providerDependencies
+                  - generic [ref=e1913]:
+                    - strong [ref=e1914]: Verified relationship
+                    - generic [ref=e1915]: The recorded input is deterministically bound to the named rule and result; this does not independently prove the external fact.
+                - listitem [ref=e1916]:
+                  - generic [ref=e1917]:
+                    - generic [ref=e1918]:
+                      - generic [ref=e1919]: contract
+                      - strong [ref=e1920]: Recorded fact
+                    - paragraph [ref=e1921]: Pass for a dependency with a recorded fallback; otherwise fail.
+                    - code [ref=e1922]: portability.provider-fallback.v1
+                  - generic [ref=e1923]:
+                    - strong [ref=e1924]: Verified relationship
+                    - generic [ref=e1925]: The recorded input is deterministically bound to the named rule and result; this does not independently prove the external fact.
+                - listitem [ref=e1926]:
+                  - generic [ref=e1927]:
+                    - generic [ref=e1928]:
+                      - generic [ref=e1929]: claim
+                      - strong [ref=e1930]: Deterministic finding
+                    - paragraph [ref=e1931]: "fail: Locked to chatgpt: custom GPT instruction store has no fallback"
+                    - code [ref=e1932]: ctx-style-gpt:dep-chatgpt-custom GPT instruction store
+              - region [ref=e1933]:
+                - heading "Relationship states" [level=4] [ref=e1934]
+                - list [ref=e1935]:
+                  - listitem [ref=e1936]:
+                    - strong [ref=e1937]: Verified
+                    - generic [ref=e1938]: Deterministically bound to the named recorded input and rule; not independent proof of the external fact.
+                  - listitem [ref=e1939]:
+                    - strong [ref=e1940]: Missing
+                    - generic [ref=e1941]: A required accepted input or evidence reference is absent.
+                  - listitem [ref=e1942]:
+                    - strong [ref=e1943]: Inferred
+                    - generic [ref=e1944]: Suggested by metadata without an exact accepted reference.
+                  - listitem [ref=e1945]:
+                    - strong [ref=e1946]: Stale
+                    - generic [ref=e1947]: Retained evidence whose source or freshness is no longer current.
+                  - listitem [ref=e1948]:
+                    - strong [ref=e1949]: Conflicting
+                    - generic [ref=e1950]: Bounded accepted observations make incompatible claims.
+          - generic [ref=e1951]:
+            - generic [ref=e1952]:
+              - heading "Remediation and invalidation" [level=3] [ref=e1953]
+              - generic [ref=e1954]: Stable check contract
+            - generic [ref=e1955]:
+              - generic [ref=e1956]:
+                - term [ref=e1957]: Why do we believe this?
+                - definition [ref=e1958]: SancusSight deterministically applied portability.provider-fallback.v1 to the named recorded inputs. This verifies the rule binding, not the external truth of those inputs.
+              - generic [ref=e1959]:
+                - term [ref=e1960]: What is missing?
+                - definition [ref=e1961]: No required input gap was identified for this recorded result.
+              - generic [ref=e1962]:
+                - term [ref=e1963]: What would make this pass?
+                - definition [ref=e1964]: Every provider-specific dependency records and tests an approved fallback.
+              - generic [ref=e1965]:
+                - term [ref=e1966]: Remediation
+                - definition [ref=e1967]: Record and test an approved fallback for every provider-specific dependency.
+              - generic [ref=e1968]:
+                - term [ref=e1969]: What would invalidate or change it?
+                - definition [ref=e1970]: The result changes when a dependency or its recorded fallback changes.
+    - complementary "Evidence sources" [ref=e650]:
+      - generic [ref=e652]:
+        - text: Evidence sources
+        - strong [ref=e653]: Hosted / manual viewer
+      - generic [ref=e654]:
+        - generic [ref=e655]:
+          - button "Import snapshot" [ref=e656] [cursor=pointer]
+          - button "Export" [disabled] [ref=e660]
+          - button "Clear" [disabled] [ref=e664]
+        - list [ref=e668]:
+          - listitem [ref=e669] [cursor=pointer]:
+            - generic [ref=e671]:
+              - strong [ref=e672]: Agent Beacon
+              - generic [ref=e673]: Runtime and inventory JSONL
+            - emphasis [ref=e674]: Not configured
+          - listitem [ref=e675] [cursor=pointer]:
+            - generic [ref=e677]:
+              - strong [ref=e678]: Runtime telemetry
+              - generic [ref=e679]: Sanitized Codex, Claude, and Pi metadata JSONL
+            - emphasis [ref=e680]: Not configured
+          - listitem [ref=e681] [cursor=pointer]:
+            - generic [ref=e683]:
+              - strong [ref=e684]: Praxen
+              - generic [ref=e685]: Canonical findings JSON 2.0
+            - emphasis [ref=e686]: Not configured
+          - listitem [ref=e687] [cursor=pointer]:
+            - generic [ref=e689]:
+              - strong [ref=e690]: Pipelock
+              - generic [ref=e691]: Audit Packet v0
+            - emphasis [ref=e692]: Not configured
+          - listitem [ref=e693] [cursor=pointer]:
+            - generic [ref=e695]:
+              - strong [ref=e696]: RAMPART
+              - generic [ref=e697]: Sanitized safety test results
+            - emphasis [ref=e698]: Not configured
+          - listitem [ref=e699] [cursor=pointer]:
+            - generic [ref=e701]:
+              - strong [ref=e702]: AIMap
+              - generic [ref=e703]: Authorized completed scan findings
+            - emphasis [ref=e704]: Not configured
+        - region "Agent Beacon source details" [ref=e705]:
+          - generic [ref=e706]:
+            - generic [ref=e707]:
+              - term [ref=e708]: Last accepted
+              - definition [ref=e709]: None
+            - generic [ref=e710]:
+              - term [ref=e711]: Rejected
+              - definition [ref=e712]: "0"
+          - paragraph [ref=e713]: "Viewer only: import a snapshot here. Source files and credentials stay wherever the collector runs."
+        - group [ref=e714]:
+          - generic "Later adapters" [ref=e715] [cursor=pointer]
+  - contentinfo [ref=e323]:
+    - link "https://sancussight.vercel.app" [ref=e324] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

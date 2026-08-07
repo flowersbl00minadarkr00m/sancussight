@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/aimap-authorization-v1.schema.json",
+  "title": "AIMapAuthorizationManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "authorizationId", "owner", "purpose", "target", "validFrom", "validUntil", "releaseRunId"],
+  "properties": {
+    "schemaVersion": { "const": 1 }, "authorizationId": { "type": "string", "maxLength": 160 }, "owner": { "type": "string", "maxLength": 160 }, "purpose": { "type": "string", "maxLength": 320 }, "validFrom": { "type": "string", "format": "date-time" }, "validUntil": { "type": "string", "format": "date-time" }, "releaseRunId": { "type": "string", "maxLength": 160 },
+    "target": { "$ref": "#/$defs/target" }
+  },
+  "$defs": { "target": { "type": "object", "additionalProperties": false, "required": ["host", "port", "protocol", "templates"], "properties": { "host": { "type": "string", "maxLength": 160 }, "port": { "type": "integer", "minimum": 1, "maximum": 65535 }, "protocol": { "enum": ["http", "https"] }, "templates": { "type": "array", "maxItems": 64, "items": { "type": "string", "maxLength": 160 } } } } }
+}

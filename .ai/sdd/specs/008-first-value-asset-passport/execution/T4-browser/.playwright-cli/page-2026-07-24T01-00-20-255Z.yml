@@ -1,0 +1,455 @@
+- generic [ref=e46]:
+  - banner [ref=e47]:
+    - button "Return to SancusSight entry" [ref=e48] [cursor=pointer]:
+      - generic [ref=e49]: SancusSight
+    - generic [ref=e55]:
+      - generic [ref=e56]: Demo data
+      - generic [ref=e57]: Synthetic workspace
+      - generic [ref=e58]: 21 assets / 4 platforms
+    - generic [ref=e59]:
+      - button "Connect file" [ref=e60] [cursor=pointer]
+      - group [ref=e61]:
+        - generic "Utilities" [ref=e62] [cursor=pointer]
+  - navigation "Workspace" [ref=e63]:
+    - generic "Primary workspace views" [ref=e64]:
+      - button "Home" [ref=e65] [cursor=pointer]
+      - button "Assets" [ref=e66] [cursor=pointer]
+      - button "Exit Drills" [ref=e67] [cursor=pointer]
+      - button "Attention 24" [ref=e868] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e69]: "24"
+    - button "Advanced" [ref=e71] [cursor=pointer]
+  - main [ref=e73]:
+    - generic [ref=e2519]:
+      - generic [ref=e2520]:
+        - generic [ref=e2521]:
+          - generic [ref=e2522]:
+            - generic [ref=e2523]: Asset catalog
+            - heading "Coverage matrix" [level=2] [ref=e2524]
+          - button "Clear criteria" [ref=e2948] [cursor=pointer]
+        - generic "Asset catalog criteria" [ref=e2525]:
+          - generic [ref=e2526]:
+            - generic [ref=e2527]: Search assets
+            - searchbox "Search assets" [ref=e2528]
+          - generic [ref=e2529]:
+            - generic [ref=e2530]:
+              - generic [ref=e2531]: Owner
+              - combobox "Owner" [ref=e2532]:
+                - option "All owner"
+                - option "Missing / unavailable (1)"
+                - option "finance systems (1)"
+                - option "henry (17)" [selected]
+                - option "risk (self) (2)"
+            - generic [ref=e2533]:
+              - generic [ref=e2534]: Kind
+              - combobox "Kind" [ref=e2535]:
+                - option "All kind" [selected]
+                - option "accepted-asset (1)"
+                - option "candidate-tool (6)"
+                - option "context (3)"
+                - option "control (2)"
+                - option "evaluation (1)"
+                - option "intent-context (1)"
+                - option "ontology-action (1)"
+                - option "prompt-template (1)"
+                - option "skill (2)"
+                - option "workflow (3)"
+            - generic [ref=e2536]:
+              - generic [ref=e2537]: Lifecycle
+              - combobox "Lifecycle" [disabled] [ref=e2538]:
+                - option "Unavailable" [selected]
+                - option "Missing / unavailable (21)"
+            - generic [ref=e2539]:
+              - generic [ref=e2540]: Portability
+              - combobox "Portability" [ref=e2541]:
+                - option "All portability" [selected]
+                - option "fail (4)"
+                - option "pass (8)"
+                - option "warn (9)"
+            - generic [ref=e2542]:
+              - generic [ref=e2543]: Provider
+              - combobox "Provider" [ref=e2544]:
+                - option "All provider" [selected]
+                - option "Missing / unavailable (6)"
+                - option "chatgpt (4)"
+                - option "claude (12)"
+                - option "codex (10)"
+                - option "local-llm (1)"
+                - option "markdown export in vault (1)"
+            - generic [ref=e2545]:
+              - generic [ref=e2546]: Evidence freshness
+              - combobox "Evidence freshness" [ref=e2547]:
+                - option "All evidence freshness" [selected]
+                - option "Missing / unavailable (4)"
+                - option "current (16)"
+                - option "stale (1)"
+        - generic [ref=e2548]:
+          - strong [ref=e2549]: 17 of 21 assets
+          - generic [ref=e2550]: "Owner: henry"
+        - list "Coverage legend" [ref=e2551]:
+          - listitem [ref=e2552]:
+            - strong [ref=e2553]: check
+            - text: verified
+          - listitem [ref=e2554]:
+            - strong [ref=e2555]: "!"
+            - text: stale
+          - listitem [ref=e2556]:
+            - strong [ref=e2557]: "?"
+            - text: unverified
+          - listitem [ref=e2558]:
+            - strong [ref=e2559]: x
+            - text: not shared
+          - listitem [ref=e2560]:
+            - strong [ref=e2561]: PRI
+            - text: primary provider
+          - listitem [ref=e2562]:
+            - strong [ref=e2563]: FBK
+            - text: fallback provider
+          - listitem [ref=e2564]:
+            - strong [ref=e2565]: dot
+            - text: not applicable
+        - table [ref=e2567]:
+          - rowgroup [ref=e2568]:
+            - row [ref=e2569]:
+              - columnheader "Asset" [ref=e2570]
+              - columnheader "State" [ref=e2571]
+              - columnheader "Kind" [ref=e2572]
+              - columnheader "claude" [ref=e2573]
+              - columnheader "codex" [ref=e2574]
+              - columnheader "chatgpt" [ref=e2575]
+              - columnheader "local-llm" [ref=e2576]
+          - rowgroup [ref=e2577]:
+            - row [ref=e2578]:
+              - cell [ref=e2579]:
+                - button "Accept governed asset action" [ref=e2580] [cursor=pointer]
+              - cell "—" [ref=e2581]
+              - cell "ontology-action" [ref=e2582]
+              - 'cell "Accept governed asset action, claude: Verified 5d ago" [ref=e2583]': ✓
+              - 'cell "Accept governed asset action, codex: Verified 5d ago" [ref=e2584]': ✓
+              - 'cell "Accept governed asset action, chatgpt: Not shared" [ref=e2585]': ✕
+              - 'cell "Accept governed asset action, local-llm: Not shared" [ref=e2586]': ✕
+            - row [ref=e2587]:
+              - cell [ref=e2588]:
+                - button "FindMnemo ontology contract" [ref=e2589] [cursor=pointer]
+              - cell "—" [ref=e2590]
+              - cell "accepted-asset" [ref=e2591]
+              - 'cell "FindMnemo ontology contract, claude: Verified 4d ago" [ref=e2592]': ✓
+              - 'cell "FindMnemo ontology contract, codex: Verified 4d ago" [ref=e2593]': ✓
+              - 'cell "FindMnemo ontology contract, chatgpt: Not shared" [ref=e2594]': ✕
+              - 'cell "FindMnemo ontology contract, local-llm: Not shared" [ref=e2595]': ✕
+            - row [ref=e2596]:
+              - cell [ref=e2597]:
+                - button "Agent Beacon" [ref=e2598] [cursor=pointer]
+              - cell "—" [ref=e2599]
+              - cell "candidate-tool" [ref=e2600]
+              - 'cell "Agent Beacon, claude: Not shared" [ref=e2601]': ✕
+              - 'cell "Agent Beacon, codex: Not shared" [ref=e2602]': ✕
+              - 'cell "Agent Beacon, chatgpt: Not shared" [ref=e2603]': ✕
+              - 'cell "Agent Beacon, local-llm: Not shared" [ref=e2604]': ✕
+            - row [ref=e2605]:
+              - cell [ref=e2606]:
+                - button "AIMap" [ref=e2607] [cursor=pointer]
+              - cell "—" [ref=e2608]
+              - cell "candidate-tool" [ref=e2609]
+              - 'cell "AIMap, claude: Not shared" [ref=e2610]': ✕
+              - 'cell "AIMap, codex: Not shared" [ref=e2611]': ✕
+              - 'cell "AIMap, chatgpt: Not shared" [ref=e2612]': ✕
+              - 'cell "AIMap, local-llm: Not shared" [ref=e2613]': ✕
+            - row [ref=e2614]:
+              - cell [ref=e2615]:
+                - button "Kiji Privacy Proxy" [ref=e2616] [cursor=pointer]
+              - cell "—" [ref=e2617]
+              - cell "candidate-tool" [ref=e2618]
+              - 'cell "Kiji Privacy Proxy, claude: Not shared" [ref=e2619]': ✕
+              - 'cell "Kiji Privacy Proxy, codex: Not shared" [ref=e2620]': ✕
+              - 'cell "Kiji Privacy Proxy, chatgpt: Not shared" [ref=e2621]': ✕
+              - 'cell "Kiji Privacy Proxy, local-llm: Not shared" [ref=e2622]': ✕
+            - row [ref=e2623]:
+              - cell [ref=e2624]:
+                - button "Pipelock" [ref=e2625] [cursor=pointer]
+              - cell "—" [ref=e2626]
+              - cell "candidate-tool" [ref=e2627]
+              - 'cell "Pipelock, claude: Not shared" [ref=e2628]': ✕
+              - 'cell "Pipelock, codex: Not shared" [ref=e2629]': ✕
+              - 'cell "Pipelock, chatgpt: Not shared" [ref=e2630]': ✕
+              - 'cell "Pipelock, local-llm: Not shared" [ref=e2631]': ✕
+            - row [ref=e2632]:
+              - cell [ref=e2633]:
+                - button "Praxen" [ref=e2634] [cursor=pointer]
+              - cell "—" [ref=e2635]
+              - cell "candidate-tool" [ref=e2636]
+              - 'cell "Praxen, claude: Not shared" [ref=e2637]': ✕
+              - 'cell "Praxen, codex: Not shared" [ref=e2638]': ✕
+              - 'cell "Praxen, chatgpt: Not shared" [ref=e2639]': ✕
+              - 'cell "Praxen, local-llm: Not shared" [ref=e2640]': ✕
+            - row [ref=e2641]:
+              - cell [ref=e2642]:
+                - button "RAMPART" [ref=e2643] [cursor=pointer]
+              - cell "—" [ref=e2644]
+              - cell "candidate-tool" [ref=e2645]
+              - 'cell "RAMPART, claude: Not shared" [ref=e2646]': ✕
+              - 'cell "RAMPART, codex: Not shared" [ref=e2647]': ✕
+              - 'cell "RAMPART, chatgpt: Not shared" [ref=e2648]': ✕
+              - 'cell "RAMPART, local-llm: Not shared" [ref=e2649]': ✕
+            - row [ref=e2650]:
+              - cell [ref=e2651]:
+                - button "Interview transcripts pack" [ref=e2652] [cursor=pointer]
+              - cell "—" [ref=e2653]
+              - cell "context" [ref=e2654]
+              - 'cell "Interview transcripts pack, claude: Not shared" [ref=e2655]': ✕
+              - 'cell "Interview transcripts pack, codex: Not shared" [ref=e2656]': ✕
+              - 'cell "Interview transcripts pack, chatgpt: Verified 25d ago" [ref=e2657]': ✓
+              - 'cell "Interview transcripts pack, local-llm: Not shared" [ref=e2658]': ✕
+            - row [ref=e2659]:
+              - cell [ref=e2660]:
+                - button "Shared memory export" [ref=e2661] [cursor=pointer]
+              - cell "—" [ref=e2662]
+              - cell "context" [ref=e2663]
+              - 'cell "Shared memory export, claude: Verified 12d ago" [ref=e2664]': ✓
+              - 'cell "Shared memory export, codex: Verified 12d ago" [ref=e2665]': ✓
+              - 'cell "Shared memory export, chatgpt: Not shared" [ref=e2666]': ✕
+              - 'cell "Shared memory export, local-llm: Not shared" [ref=e2667]': ✕
+            - row [ref=e2668]:
+              - cell [ref=e2669]:
+                - button "Voice & context pack" [ref=e2670] [cursor=pointer]
+              - cell [ref=e2671]:
+                - strong [ref=e2672]: Selected
+              - cell "context" [ref=e2673]
+              - 'cell "Voice & context pack, claude: Verified 3d ago" [ref=e2674]': ✓
+              - 'cell "Voice & context pack, codex: Verified 9d ago" [ref=e2675]': ✓
+              - 'cell "Voice & context pack, chatgpt: Shared, never verified" [ref=e2676]': "?"
+              - 'cell "Voice & context pack, local-llm: Not shared" [ref=e2677]': ✕
+            - row [ref=e2678]:
+              - cell [ref=e2679]:
+                - button "AGENTS.md — cross-agent operating rules" [ref=e2680] [cursor=pointer]
+              - cell "—" [ref=e2681]
+              - cell "intent-context" [ref=e2682]
+              - 'cell "AGENTS.md — cross-agent operating rules, claude: Verified 12d ago" [ref=e2683]': ✓
+              - 'cell "AGENTS.md — cross-agent operating rules, codex: Verified 12d ago" [ref=e2684]': ✓
+              - 'cell "AGENTS.md — cross-agent operating rules, chatgpt: Not shared" [ref=e2685]': ✕
+              - 'cell "AGENTS.md — cross-agent operating rules, local-llm: Not shared" [ref=e2686]': ✕
+            - row [ref=e2687]:
+              - cell [ref=e2688]:
+                - button "Client style guide (custom GPT)" [ref=e2689] [cursor=pointer]
+              - cell "—" [ref=e2690]
+              - cell "prompt-template" [ref=e2691]
+              - 'cell "Client style guide (custom GPT), claude: Not shared" [ref=e2692]': ✕
+              - 'cell "Client style guide (custom GPT), codex: Not shared" [ref=e2693]': ✕
+              - 'cell "Client style guide (custom GPT), chatgpt: Verified 80d ago (stale)" [ref=e2694]': "!"
+              - 'cell "Client style guide (custom GPT), local-llm: Not shared" [ref=e2695]': ✕
+            - row [ref=e2696]:
+              - cell [ref=e2697]:
+                - button "Post Pipeline runbook" [ref=e2698] [cursor=pointer]
+              - cell "—" [ref=e2699]
+              - cell "skill" [ref=e2700]
+              - 'cell "Post Pipeline runbook, claude: Verified 4d ago" [ref=e2701]': ✓
+              - 'cell "Post Pipeline runbook, codex: Verified 21d ago" [ref=e2702]': ✓
+              - 'cell "Post Pipeline runbook, chatgpt: Not shared" [ref=e2703]': ✕
+              - 'cell "Post Pipeline runbook, local-llm: Not shared" [ref=e2704]': ✕
+            - row [ref=e2705]:
+              - cell [ref=e2706]:
+                - button "Research ingest skill" [ref=e2707] [cursor=pointer]
+              - cell "—" [ref=e2708]
+              - cell "skill" [ref=e2709]
+              - 'cell "Research ingest skill, claude: Verified 14d ago" [ref=e2710]': ✓
+              - 'cell "Research ingest skill, codex: Not shared" [ref=e2711]': ✕
+              - 'cell "Research ingest skill, chatgpt: Not shared" [ref=e2712]': ✕
+              - 'cell "Research ingest skill, local-llm: Not shared" [ref=e2713]': ✕
+            - row [ref=e2732]:
+              - cell [ref=e2733]:
+                - button "Weekly post production" [ref=e2734] [cursor=pointer]
+              - cell "—" [ref=e2735]
+              - cell "workflow" [ref=e2736]
+              - 'cell "Weekly post production, claude: Primary provider" [ref=e2737]': PRI
+              - 'cell "Weekly post production, codex: Fallback provider" [ref=e2738]': FBK
+              - 'cell "Weekly post production, chatgpt: Not applicable" [ref=e2739]': ·
+              - 'cell "Weekly post production, local-llm: Not applicable" [ref=e2740]': ·
+            - row [ref=e2759]:
+              - cell [ref=e2760]:
+                - button "Post QA eval fixtures" [ref=e2761] [cursor=pointer]
+              - cell "—" [ref=e2762]
+              - cell "evaluation" [ref=e2763]
+              - 'cell "Post QA eval fixtures, claude: Verified 20d ago" [ref=e2764]': ✓
+              - 'cell "Post QA eval fixtures, codex: Verified 20d ago" [ref=e2765]': ✓
+              - 'cell "Post QA eval fixtures, chatgpt: Not shared" [ref=e2766]': ✕
+              - 'cell "Post QA eval fixtures, local-llm: Not shared" [ref=e2767]': ✕
+        - paragraph [ref=e2768]
+      - article [ref=e2770]:
+        - generic [ref=e2771]:
+          - generic [ref=e2772]:
+            - generic [ref=e2773]: Asset Passport / context
+            - heading "Voice & context pack" [level=2] [ref=e2774]
+            - paragraph [ref=e2775]: "Selected asset: ctx-voice"
+          - button "Clear selection" [ref=e2776] [cursor=pointer]
+        - generic [ref=e2777]:
+          - generic [ref=e2778]:
+            - heading "Summary" [level=3] [ref=e2779]
+            - generic [ref=e2780]: Recorded facts
+          - generic [ref=e2781]:
+            - generic [ref=e2782]:
+              - term [ref=e2783]: Name
+              - definition [ref=e2784]: Voice & context pack
+            - generic [ref=e2785]:
+              - term [ref=e2786]: Kind
+              - definition [ref=e2787]: context
+            - generic [ref=e2788]:
+              - term [ref=e2789]: Format
+              - definition [ref=e2790]: markdown
+            - generic [ref=e2791]:
+              - term [ref=e2792]: Location
+              - definition [ref=e2793]: vault/wiki/context-pack.md
+            - generic [ref=e2794]:
+              - term [ref=e2795]: Owner
+              - definition [ref=e2796]: henry
+            - generic [ref=e2797]:
+              - term [ref=e2798]: Sensitivity
+              - definition [ref=e2799]: internal
+            - generic [ref=e2800]:
+              - term [ref=e2801]: Lifecycle
+              - definition [ref=e2802]: Not recorded
+            - generic [ref=e2803]:
+              - term [ref=e2804]: Shared by design
+              - definition [ref=e2805]: "Yes"
+            - generic [ref=e2806]:
+              - term [ref=e2807]: Purpose
+              - definition [ref=e2808]: Not recorded
+            - generic [ref=e2809]:
+              - term [ref=e2810]: Stable ID
+              - definition [ref=e2811]: Not recorded
+            - generic [ref=e2812]:
+              - term [ref=e2813]: Supported version
+              - definition [ref=e2814]: Not recorded
+            - generic [ref=e2815]:
+              - term [ref=e2816]: Source product
+              - definition [ref=e2817]: Not recorded
+            - generic [ref=e2818]:
+              - term [ref=e2819]: Producer
+              - definition [ref=e2820]: Not recorded
+            - generic [ref=e2821]:
+              - term [ref=e2822]: Consumers
+              - definition [ref=e2823]: None recorded
+          - button "Record review today" [ref=e2825] [cursor=pointer]
+        - generic [ref=e2826]:
+          - generic [ref=e2827]:
+            - heading "Portability" [level=3] [ref=e2828]
+            - generic [ref=e2829]: Recorded facts + deterministic findings
+          - generic [ref=e2831]:
+            - term [ref=e2832]: Deterministic portability state
+            - definition [ref=e2833]: pass
+          - generic [ref=e2834]:
+            - heading "Recorded coverage and providers" [level=4] [ref=e2835]
+            - list [ref=e2836]:
+              - listitem [ref=e2837]:
+                - strong [ref=e2838]: claude
+                - generic [ref=e2839]: Verified 3d ago; last verified 2026-07-21
+                - button "Record verification" [ref=e2840] [cursor=pointer]
+              - listitem [ref=e2841]:
+                - strong [ref=e2842]: codex
+                - generic [ref=e2843]: Verified 9d ago; last verified 2026-07-15
+                - button "Record verification" [ref=e2844] [cursor=pointer]
+              - listitem [ref=e2845]:
+                - strong [ref=e2846]: chatgpt
+                - generic [ref=e2847]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e2848] [cursor=pointer]
+            - generic [ref=e2849]:
+              - generic [ref=e2850]:
+                - term [ref=e2851]: Primary provider
+                - definition [ref=e2852]: Not recorded
+              - generic [ref=e2853]:
+                - term [ref=e2854]: Fallback provider
+                - definition [ref=e2855]: Not recorded
+          - list [ref=e2856]:
+            - listitem [ref=e2857]:
+              - generic [ref=e2858]:
+                - generic [ref=e2859]: PASS
+                - strong [ref=e2860]: Canonical copy is stored in an open, exportable format
+                - generic [ref=e2861]: Deterministic finding
+              - paragraph [ref=e2862]: Stored as markdown at vault/wiki/context-pack.md
+              - generic [ref=e2863]: "Evidence: Registry format field / observed Never recorded / owner: henry"
+            - listitem [ref=e2864]:
+              - generic [ref=e2865]:
+                - generic [ref=e2866]: PASS
+                - strong [ref=e2867]: Reviewed by a human within 45 days
+                - generic [ref=e2868]: Deterministic finding
+              - paragraph [ref=e2869]: Reviewed 6 days ago
+              - generic [ref=e2870]: "Evidence: lastReviewed = 2026-07-18 / observed Never recorded / owner: henry"
+            - listitem [ref=e2871]:
+              - generic [ref=e2872]:
+                - generic [ref=e2873]: PASS
+                - strong [ref=e2874]: Shared and verified on 2+ approved platforms
+                - generic [ref=e2875]: Deterministic finding
+              - paragraph [ref=e2876]: Verified on claude, codex
+              - generic [ref=e2877]: "Evidence: Coverage entries with lastVerified dates / observed Never recorded / owner: henry"
+        - generic [ref=e2878]:
+          - generic [ref=e2879]:
+            - heading "Dependencies" [level=3] [ref=e2880]
+            - generic [ref=e2881]: Recorded facts
+          - paragraph [ref=e2882]:
+            - strong [ref=e2883]: "Missing / unavailable:"
+            - text: No provider dependencies recorded.
+          - generic [ref=e2884]:
+            - generic [ref=e2885]:
+              - term [ref=e2886]: Workflow dependencies
+              - definition [ref=e2887]: None recorded
+            - generic [ref=e2888]:
+              - term [ref=e2889]: Producing product
+              - definition [ref=e2890]: Not recorded
+            - generic [ref=e2891]:
+              - term [ref=e2892]: Consuming products
+              - definition [ref=e2893]: None recorded
+        - generic [ref=e2894]:
+          - generic [ref=e2895]:
+            - heading "Evidence" [level=3] [ref=e2896]
+            - generic [ref=e2897]: Evidence states + deterministic findings
+          - generic [ref=e2899]:
+            - term [ref=e2900]: Deterministic evidence freshness
+            - definition [ref=e2901]: current
+          - list [ref=e2902]:
+            - listitem [ref=e2903]:
+              - strong [ref=e2904]: retrieval spot-check, 5/5 answers grounded
+              - generic [ref=e2905]: Recorded 2026-07-15
+          - generic [ref=e2907]:
+            - term [ref=e2908]: Evidence bindings
+            - definition [ref=e2909]: None recorded
+          - list [ref=e2910]:
+            - listitem [ref=e2911]:
+              - generic [ref=e2912]:
+                - generic [ref=e2913]: PASS
+                - strong [ref=e2914]: Asset has a named owner
+                - generic [ref=e2915]: Deterministic finding
+              - paragraph [ref=e2916]: Owned by henry
+              - generic [ref=e2917]: "Evidence: Registry owner field / observed Never recorded / owner: henry"
+        - generic [ref=e2918]:
+          - generic [ref=e2919]:
+            - heading "Decisions" [level=3] [ref=e2920]
+            - generic [ref=e2921]: Human decisions
+          - paragraph [ref=e2922]:
+            - strong [ref=e2923]: "Missing / unavailable:"
+            - text: No human decisions recorded.
+        - generic [ref=e2924]:
+          - generic [ref=e2925]:
+            - heading "History" [level=3] [ref=e2926]
+            - generic [ref=e2927]: Recorded facts
+          - generic [ref=e2928]:
+            - generic [ref=e2929]:
+              - term [ref=e2930]: Registry source updated
+              - definition [ref=e2931]: 2026-07-24T00:51:30.015Z
+            - generic [ref=e2932]:
+              - term [ref=e2933]: Last review
+              - definition [ref=e2934]: 2026-07-18
+            - generic [ref=e2935]:
+              - term [ref=e2936]: Last substitution drill
+              - definition [ref=e2937]: Never recorded
+          - list [ref=e2938]:
+            - listitem [ref=e2939]:
+              - strong [ref=e2940]: claude verification
+              - generic [ref=e2941]: 2026-07-21
+            - listitem [ref=e2942]:
+              - strong [ref=e2943]: codex verification
+              - generic [ref=e2944]: 2026-07-15
+            - listitem [ref=e2945]:
+              - strong [ref=e2946]: chatgpt verification
+              - generic [ref=e2947]: Never recorded
+  - contentinfo [ref=e328]:
+    - link "https://sancussight.vercel.app" [ref=e329] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

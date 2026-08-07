@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "platforms": ["primary-cloud", "local-runner"],
+  "updatedAt": "2026-07-23T00:00:00.000Z",
+  "assets": [
+    {
+      "id": "asset-provider",
+      "name": "Synthetic provider workflow",
+      "kind": "workflow",
+      "format": "markdown",
+      "location": "synthetic/provider-workflow.md",
+      "owner": "Synthetic operator",
+      "sensitivity": "internal",
+      "lastReviewed": "2026-07-23",
+      "sharedByDesign": true,
+      "coverage": [],
+      "providerDependencies": [
+        {
+          "provider": "primary-cloud",
+          "capability": "chat"
+        }
+      ],
+      "evidence": [],
+      "primaryProvider": "primary-cloud",
+      "lastSubstitutionDrill": "2026-07-23"
+    },
+    {
+      "id": "asset-review",
+      "name": "Synthetic review target",
+      "kind": "skill",
+      "format": "markdown",
+      "location": "synthetic/review-target.md",
+      "owner": "Synthetic operator",
+      "sensitivity": "internal",
+      "lastReviewed": "2026-01-01",
+      "sharedByDesign": true,
+      "coverage": [
+        {
+          "platform": "primary-cloud",
+          "lastVerified": "2026-07-23"
+        },
+        {
+          "platform": "local-runner",
+          "lastVerified": "2026-07-23"
+        }
+      ],
+      "providerDependencies": [],
+      "evidence": []
+    },
+    {
+      "id": "asset-missing",
+      "name": "Synthetic missing evidence target",
+      "kind": "skill",
+      "format": "markdown",
+      "location": "synthetic/missing-evidence.md",
+      "owner": "Synthetic operator",
+      "sensitivity": "internal",
+      "lastReviewed": "2026-07-23",
+      "sharedByDesign": true,
+      "coverage": [
+        {
+          "platform": "primary-cloud",
+          "lastVerified": "2026-07-23"
+        },
+        {
+          "platform": "local-runner",
+          "lastVerified": "2026-07-23"
+        }
+      ],
+      "providerDependencies": [],
+      "evidence": [],
+      "evidenceBindings": [
+        {
+          "source": "agent-beacon",
+          "externalId": "synthetic-missing"
+        }
+      ]
+    },
+    {
+      "id": "asset-accepted",
+      "name": "Synthetic accepted risk target",
+      "kind": "context",
+      "format": "proprietary",
+      "location": "synthetic/accepted-risk.bin",
+      "owner": "Synthetic operator",
+      "sensitivity": "internal",
+      "lastReviewed": "2026-07-23",
+      "sharedByDesign": false,
+      "coverage": [],
+      "providerDependencies": [],
+      "evidence": [],
+      "acceptedRisk": {
+        "note": "Synthetic acceptance used only for local browser verification.",
+        "owner": "Synthetic operator",
+        "expires": "2027-01-01"
+      }
+    },
+    {
+      "id": "asset-lineage",
+      "name": "Synthetic lineage target",
+      "kind": "accepted-asset",
+      "format": "json",
+      "location": "synthetic/lineage-target.json",
+      "owner": "Synthetic operator",
+      "sensitivity": "internal",
+      "lastReviewed": "2026-07-23",
+      "sharedByDesign": true,
+      "coverage": [
+        {
+          "platform": "primary-cloud",
+          "lastVerified": "2026-07-23"
+        },
+        {
+          "platform": "local-runner",
+          "lastVerified": "2026-07-23"
+        }
+      ],
+      "providerDependencies": [],
+      "evidence": [
+        {
+          "label": "Synthetic lineage evidence reference",
+          "date": "2026-07-23"
+        }
+      ],
+      "stableId": "synthetic:lineage:v1",
+      "supportedVersion": "1",
+      "producingProduct": "Synthetic producer",
+      "consumingProducts": ["Synthetic consumer"],
+      "acceptedAsset": {
+        "version": "1",
+        "license": "Synthetic test fixture",
+        "decisionRationale": "Synthetic browser-acceptance fixture.",
+        "sourceProvenance": "Generated locally for Feature 009 T4.",
+        "scope": "Local browser verification only."
+      }
+    }
+  ],
+  "provenance": {
+    "mode": "local",
+    "sourceUpdatedAt": "2026-07-23T00:00:00.000Z"
+  }
+}

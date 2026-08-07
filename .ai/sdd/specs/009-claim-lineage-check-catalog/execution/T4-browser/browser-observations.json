@@ -1,0 +1,149 @@
+{
+  "feature": "009-claim-lineage-check-catalog",
+  "task": "T4",
+  "environment": {
+    "browser": "Google Chrome via Playwright CLI",
+    "browserMode": "headed",
+    "application": "local Vite preview",
+    "origin": "http://127.0.0.1:4174",
+    "productionUsed": false
+  },
+  "scenarios": {
+    "definitionOnly": {
+      "query": "candidate.bundle-readiness.v1",
+      "heading": "Candidate bundle readiness",
+      "noResultSelected": true,
+      "assetSpecificLineageNotConstructed": true
+    },
+    "nonPassingResult": {
+      "checkId": "portability.provider-fallback.v1",
+      "asset": "Synthetic provider workflow",
+      "status": "fail",
+      "exactRuleVisible": true,
+      "remediationVisible": true,
+      "invalidationVisible": true,
+      "verifiedRelationshipVisible": true
+    },
+    "passportRoundTrip": {
+      "asset": "Synthetic provider workflow",
+      "selectedCheckId": "portability.provider-fallback.v1",
+      "passportHeadingBefore": "Synthetic provider workflow",
+      "passportHeadingAfter": "Synthetic provider workflow",
+      "passportHeadingFocusedBefore": true,
+      "passportHeadingFocusedAfter": true
+    },
+    "history": {
+      "initialPreviousState": "No previous result recorded",
+      "changedCurrentStatus": "pass",
+      "previousStatus": "warn",
+      "previousEvaluationTime": "2026-07-24T00:00:00.000Z",
+      "identicalRepeatCountBefore": 2,
+      "identicalRepeatCountAfter": 2,
+      "identicalRepeatDeduped": true
+    },
+    "indexedDb": {
+      "database": "sancussight-check-history",
+      "version": 1,
+      "store": "snapshots",
+      "keyPath": null,
+      "autoIncrement": true,
+      "keyTypes": [
+        "number"
+      ],
+      "recordFieldNames": [
+        "assetId",
+        "checkId",
+        "evaluatedAt",
+        "registryScopeHash",
+        "safeEvidenceHash",
+        "status"
+      ],
+      "forbiddenFieldNamesPresent": false
+    },
+    "relationshipStates": {
+      "verified": true,
+      "missing": true,
+      "inferred": true,
+      "stale": true,
+      "conflicting": true
+    },
+    "uncatalogedObservation": {
+      "visible": true,
+      "inventedRuleAbsent": true,
+      "inventedLineageAbsent": true
+    },
+    "desktopGeometry": {
+      "viewportCssPixels": {
+        "width": 1280,
+        "height": 900
+      },
+      "list": {
+        "x": 20,
+        "width": 377.7375
+      },
+      "detail": {
+        "x": 413.7375,
+        "width": 511.0625
+      },
+      "adjacent": true
+    },
+    "narrowAccessibility": {
+      "viewportCssPixels": {
+        "width": 320,
+        "height": 800
+      },
+      "listOnlyBeforeSelection": true,
+      "detailOnlyAfterSelection": true,
+      "detailEntryFocus": "H2#check-detail-heading Candidate bundle readiness",
+      "backFocus": "selected Candidate bundle readiness button",
+      "backFocusRestored": true,
+      "documentClientWidth": 305,
+      "documentScrollWidth": 305,
+      "pageOverflow": false
+    },
+    "zoom200": {
+      "instrument": "Chrome DevTools Protocol Emulation.setPageScaleFactor",
+      "visualViewportScale": 2,
+      "effectiveCssViewportWidth": 320,
+      "visualViewportWidth": 152.39999389648438,
+      "layout": "narrow",
+      "documentClientWidth": 305,
+      "documentScrollWidth": 305,
+      "pageOverflow": false
+    },
+    "historyUnavailable": {
+      "indexedDbRemovedBeforeApplicationLoad": true,
+      "notice": "Local history unavailable. The current result remains usable.",
+      "currentResultRemainsUsable": true
+    },
+    "console": {
+      "primaryErrors": 0,
+      "primaryWarnings": 0,
+      "historyUnavailableErrors": 0,
+      "historyUnavailableWarnings": 0
+    },
+    "network": {
+      "requests": [
+        "GET http://127.0.0.1:4174/",
+        "GET http://127.0.0.1:4174/assets/index-YaA2ewaM.js",
+        "GET http://127.0.0.1:4174/assets/index-BdUeC_SW.css",
+        "GET http://127.0.0.1:4174/favicon.svg"
+      ],
+      "unexpectedExternalRequests": []
+    }
+  },
+  "screenshots": [
+    "01-definition-only.png",
+    "02-provider-result-desktop.png",
+    "03-no-previous-result.png",
+    "04-changed-result-previous.png",
+    "05-stale-lineage.png",
+    "06-conflicting-lineage.png",
+    "07-uncataloged-observation.png",
+    "08-narrow-320-zoom200.png",
+    "09-chromium-zoom-200.png",
+    "10-history-unavailable.png"
+  ],
+  "result": "pass",
+  "productCorrections": []
+}

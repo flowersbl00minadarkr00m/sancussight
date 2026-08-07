@@ -1,0 +1,1617 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Return to SancusSight entry" [ref=e5] [cursor=pointer]:
+      - generic [ref=e6]: SancusSight
+    - generic [ref=e12]:
+      - generic [ref=e13]: Snapshot
+      - generic [ref=e14]: Imported copy; no live source
+      - generic [ref=e15]: 1 assets / 1 platforms
+    - generic [ref=e16]:
+      - button "Export registry" [ref=e293] [cursor=pointer]
+      - group [ref=e18]:
+        - generic "Utilities" [active] [ref=e19] [cursor=pointer]
+        - generic [ref=e287]:
+          - button "Share card" [ref=e288] [cursor=pointer]
+          - button "Import snapshot" [ref=e290] [cursor=pointer]
+          - button "Replace source" [ref=e294] [cursor=pointer]
+          - button "Return to entry" [ref=e291] [cursor=pointer]
+          - button "Disconnect and clear cache" [ref=e295] [cursor=pointer]
+  - navigation "Workspace" [ref=e20]:
+    - generic "Primary workspace views" [ref=e21]:
+      - button "Home" [ref=e22] [cursor=pointer]
+      - button "Assets" [ref=e23] [cursor=pointer]
+      - button "Exit Drills" [ref=e24] [cursor=pointer]
+      - button "Attention 2" [ref=e296] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e26]: "2"
+    - button "Advanced" [ref=e28] [cursor=pointer]
+  - status [ref=e297]: Snapshot imported from changed-first.json. Later source changes require another import.
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: Asset catalog
+          - heading "Coverage matrix" [level=2] [ref=e36]
+        - generic "Asset catalog criteria" [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Search assets
+            - searchbox "Search assets" [ref=e40]
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - generic [ref=e43]: Owner
+              - combobox "Owner" [ref=e44]:
+                - option "All owner" [selected]
+                - option "c2-fixture (1)"
+            - generic [ref=e45]:
+              - generic [ref=e46]: Kind
+              - combobox "Kind" [ref=e47]:
+                - option "All kind" [selected]
+                - option "context (1)"
+            - generic [ref=e48]:
+              - generic [ref=e49]: Lifecycle
+              - combobox "Lifecycle" [disabled] [ref=e50]:
+                - option "Unavailable" [selected]
+                - option "Missing / unavailable (1)"
+            - generic [ref=e51]:
+              - generic [ref=e52]: Portability
+              - combobox "Portability" [ref=e53]:
+                - option "All portability" [selected]
+                - option "fail (1)"
+            - generic [ref=e54]:
+              - generic [ref=e55]: Provider
+              - combobox "Provider" [ref=e56]:
+                - option "All provider" [selected]
+                - option "platform-000 (1)"
+                - option "platform-001 (1)"
+                - option "platform-002 (1)"
+                - option "platform-003 (1)"
+                - option "platform-004 (1)"
+                - option "platform-005 (1)"
+                - option "platform-006 (1)"
+                - option "platform-007 (1)"
+                - option "platform-008 (1)"
+                - option "platform-009 (1)"
+                - option "platform-010 (1)"
+                - option "platform-011 (1)"
+                - option "platform-012 (1)"
+                - option "platform-013 (1)"
+                - option "platform-014 (1)"
+                - option "platform-015 (1)"
+                - option "platform-016 (1)"
+                - option "platform-017 (1)"
+                - option "platform-018 (1)"
+                - option "platform-019 (1)"
+                - option "platform-020 (1)"
+                - option "platform-021 (1)"
+                - option "platform-022 (1)"
+                - option "platform-023 (1)"
+                - option "platform-024 (1)"
+                - option "platform-025 (1)"
+                - option "platform-026 (1)"
+                - option "platform-027 (1)"
+                - option "platform-028 (1)"
+                - option "platform-029 (1)"
+                - option "platform-030 (1)"
+                - option "platform-031 (1)"
+                - option "platform-032 (1)"
+                - option "platform-033 (1)"
+                - option "platform-034 (1)"
+                - option "platform-035 (1)"
+                - option "platform-036 (1)"
+                - option "platform-037 (1)"
+                - option "platform-038 (1)"
+                - option "platform-039 (1)"
+                - option "platform-040 (1)"
+                - option "platform-041 (1)"
+                - option "platform-042 (1)"
+                - option "platform-043 (1)"
+                - option "platform-044 (1)"
+                - option "platform-045 (1)"
+                - option "platform-046 (1)"
+                - option "platform-047 (1)"
+                - option "platform-048 (1)"
+                - option "platform-049 (1)"
+                - option "platform-050 (1)"
+                - option "platform-051 (1)"
+                - option "platform-052 (1)"
+                - option "platform-053 (1)"
+                - option "platform-054 (1)"
+                - option "platform-055 (1)"
+                - option "platform-056 (1)"
+                - option "platform-057 (1)"
+                - option "platform-058 (1)"
+                - option "platform-059 (1)"
+                - option "platform-060 (1)"
+                - option "platform-061 (1)"
+                - option "platform-062 (1)"
+                - option "platform-063 (1)"
+                - option "platform-064 (1)"
+                - option "platform-065 (1)"
+                - option "platform-066 (1)"
+                - option "platform-067 (1)"
+                - option "platform-068 (1)"
+                - option "platform-069 (1)"
+                - option "platform-070 (1)"
+                - option "platform-071 (1)"
+                - option "platform-072 (1)"
+                - option "platform-073 (1)"
+                - option "platform-074 (1)"
+                - option "platform-075 (1)"
+                - option "platform-076 (1)"
+                - option "platform-077 (1)"
+                - option "platform-078 (1)"
+                - option "platform-079 (1)"
+                - option "platform-080 (1)"
+                - option "platform-081 (1)"
+                - option "platform-082 (1)"
+                - option "platform-083 (1)"
+                - option "platform-084 (1)"
+                - option "platform-085 (1)"
+                - option "platform-086 (1)"
+                - option "platform-087 (1)"
+                - option "platform-088 (1)"
+                - option "platform-089 (1)"
+                - option "platform-090 (1)"
+                - option "platform-091 (1)"
+                - option "platform-092 (1)"
+                - option "platform-093 (1)"
+                - option "platform-094 (1)"
+                - option "platform-095 (1)"
+                - option "platform-096 (1)"
+                - option "platform-097 (1)"
+                - option "platform-098 (1)"
+                - option "platform-099 (1)"
+            - generic [ref=e57]:
+              - generic [ref=e58]: Evidence freshness
+              - combobox "Evidence freshness" [disabled] [ref=e59]:
+                - option "Unavailable" [selected]
+                - option "Missing / unavailable (1)"
+        - generic [ref=e60]:
+          - strong [ref=e61]: 1 asset
+          - generic [ref=e62]: No active criteria
+        - list "Coverage legend" [ref=e63]:
+          - listitem [ref=e64]:
+            - strong [ref=e65]: check
+            - text: verified
+          - listitem [ref=e66]:
+            - strong [ref=e67]: "!"
+            - text: stale
+          - listitem [ref=e68]:
+            - strong [ref=e69]: "?"
+            - text: unverified
+          - listitem [ref=e70]:
+            - strong [ref=e71]: x
+            - text: not shared
+          - listitem [ref=e72]:
+            - strong [ref=e73]: PRI
+            - text: primary provider
+          - listitem [ref=e74]:
+            - strong [ref=e75]: FBK
+            - text: fallback provider
+          - listitem [ref=e76]:
+            - strong [ref=e77]: dot
+            - text: not applicable
+        - table [ref=e79]:
+          - rowgroup [ref=e80]:
+            - row [ref=e298]:
+              - columnheader "Asset" [ref=e82]
+              - columnheader "State" [ref=e83]
+              - columnheader "Kind" [ref=e84]
+              - columnheader "codex" [ref=e86]
+          - rowgroup [ref=e89]:
+            - row [ref=e305]:
+              - cell [ref=e300]:
+                - button "C2 changed-first truncation fixture" [ref=e301] [cursor=pointer]
+              - cell [ref=e306]:
+                - strong [ref=e307]: Selected
+              - cell "context" [ref=e303]
+              - 'cell "C2 changed-first truncation fixture, codex: Not shared" [ref=e304]': ✕
+        - paragraph [ref=e279]
+      - article [ref=e308]:
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e311]: Asset Passport / context
+            - heading "C2 changed-first truncation fixture" [level=2] [ref=e312]
+            - paragraph [ref=e313]: "Selected asset: c2-changed-first"
+          - button "Clear selection" [ref=e314] [cursor=pointer]
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - heading "Summary" [level=3] [ref=e317]
+            - generic [ref=e318]: Recorded facts
+          - generic [ref=e319]:
+            - generic [ref=e320]:
+              - term [ref=e321]: Name
+              - definition [ref=e322]: C2 changed-first truncation fixture
+            - generic [ref=e323]:
+              - term [ref=e324]: Kind
+              - definition [ref=e325]: context
+            - generic [ref=e326]:
+              - term [ref=e327]: Format
+              - definition [ref=e328]: markdown
+            - generic [ref=e329]:
+              - term [ref=e330]: Location
+              - definition [ref=e331]: fixture/c2-changed-first
+            - generic [ref=e332]:
+              - term [ref=e333]: Owner
+              - definition [ref=e334]: c2-fixture
+            - generic [ref=e335]:
+              - term [ref=e336]: Sensitivity
+              - definition [ref=e337]: internal
+            - generic [ref=e338]:
+              - term [ref=e339]: Lifecycle
+              - definition [ref=e340]: Not recorded
+            - generic [ref=e341]:
+              - term [ref=e342]: Shared by design
+              - definition [ref=e343]: "Yes"
+            - generic [ref=e344]:
+              - term [ref=e345]: Purpose
+              - definition [ref=e346]: Not recorded
+            - generic [ref=e347]:
+              - term [ref=e348]: Stable ID
+              - definition [ref=e349]: sancussight:asset:c2-changed-first:v1
+            - generic [ref=e350]:
+              - term [ref=e351]: Supported version
+              - definition [ref=e352]: "2"
+            - generic [ref=e353]:
+              - term [ref=e354]: Source product
+              - definition [ref=e355]: Not recorded
+            - generic [ref=e356]:
+              - term [ref=e357]: Producer
+              - definition [ref=e358]: Not recorded
+            - generic [ref=e359]:
+              - term [ref=e360]: Consumers
+              - definition [ref=e361]: None recorded
+          - button "Record review today" [ref=e363] [cursor=pointer]
+        - generic [ref=e364]:
+          - generic [ref=e365]:
+            - heading "Portability" [level=3] [ref=e366]
+            - generic [ref=e367]: Recorded facts + deterministic findings
+          - generic [ref=e369]:
+            - term [ref=e370]: Deterministic portability state
+            - definition [ref=e371]: fail
+          - generic [ref=e372]:
+            - heading "Recorded coverage and providers" [level=4] [ref=e373]
+            - list [ref=e374]:
+              - listitem [ref=e375]:
+                - strong [ref=e376]: platform-000
+                - generic [ref=e377]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e378] [cursor=pointer]
+              - listitem [ref=e379]:
+                - strong [ref=e380]: platform-001
+                - generic [ref=e381]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e382] [cursor=pointer]
+              - listitem [ref=e383]:
+                - strong [ref=e384]: platform-002
+                - generic [ref=e385]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e386] [cursor=pointer]
+              - listitem [ref=e387]:
+                - strong [ref=e388]: platform-003
+                - generic [ref=e389]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e390] [cursor=pointer]
+              - listitem [ref=e391]:
+                - strong [ref=e392]: platform-004
+                - generic [ref=e393]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e394] [cursor=pointer]
+              - listitem [ref=e395]:
+                - strong [ref=e396]: platform-005
+                - generic [ref=e397]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e398] [cursor=pointer]
+              - listitem [ref=e399]:
+                - strong [ref=e400]: platform-006
+                - generic [ref=e401]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e402] [cursor=pointer]
+              - listitem [ref=e403]:
+                - strong [ref=e404]: platform-007
+                - generic [ref=e405]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e406] [cursor=pointer]
+              - listitem [ref=e407]:
+                - strong [ref=e408]: platform-008
+                - generic [ref=e409]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e410] [cursor=pointer]
+              - listitem [ref=e411]:
+                - strong [ref=e412]: platform-009
+                - generic [ref=e413]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e414] [cursor=pointer]
+              - listitem [ref=e415]:
+                - strong [ref=e416]: platform-010
+                - generic [ref=e417]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e418] [cursor=pointer]
+              - listitem [ref=e419]:
+                - strong [ref=e420]: platform-011
+                - generic [ref=e421]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e422] [cursor=pointer]
+              - listitem [ref=e423]:
+                - strong [ref=e424]: platform-012
+                - generic [ref=e425]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e426] [cursor=pointer]
+              - listitem [ref=e427]:
+                - strong [ref=e428]: platform-013
+                - generic [ref=e429]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e430] [cursor=pointer]
+              - listitem [ref=e431]:
+                - strong [ref=e432]: platform-014
+                - generic [ref=e433]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e434] [cursor=pointer]
+              - listitem [ref=e435]:
+                - strong [ref=e436]: platform-015
+                - generic [ref=e437]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e438] [cursor=pointer]
+              - listitem [ref=e439]:
+                - strong [ref=e440]: platform-016
+                - generic [ref=e441]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e442] [cursor=pointer]
+              - listitem [ref=e443]:
+                - strong [ref=e444]: platform-017
+                - generic [ref=e445]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e446] [cursor=pointer]
+              - listitem [ref=e447]:
+                - strong [ref=e448]: platform-018
+                - generic [ref=e449]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e450] [cursor=pointer]
+              - listitem [ref=e451]:
+                - strong [ref=e452]: platform-019
+                - generic [ref=e453]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e454] [cursor=pointer]
+              - listitem [ref=e455]:
+                - strong [ref=e456]: platform-020
+                - generic [ref=e457]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e458] [cursor=pointer]
+              - listitem [ref=e459]:
+                - strong [ref=e460]: platform-021
+                - generic [ref=e461]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e462] [cursor=pointer]
+              - listitem [ref=e463]:
+                - strong [ref=e464]: platform-022
+                - generic [ref=e465]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e466] [cursor=pointer]
+              - listitem [ref=e467]:
+                - strong [ref=e468]: platform-023
+                - generic [ref=e469]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e470] [cursor=pointer]
+              - listitem [ref=e471]:
+                - strong [ref=e472]: platform-024
+                - generic [ref=e473]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e474] [cursor=pointer]
+              - listitem [ref=e475]:
+                - strong [ref=e476]: platform-025
+                - generic [ref=e477]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e478] [cursor=pointer]
+              - listitem [ref=e479]:
+                - strong [ref=e480]: platform-026
+                - generic [ref=e481]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e482] [cursor=pointer]
+              - listitem [ref=e483]:
+                - strong [ref=e484]: platform-027
+                - generic [ref=e485]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e486] [cursor=pointer]
+              - listitem [ref=e487]:
+                - strong [ref=e488]: platform-028
+                - generic [ref=e489]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e490] [cursor=pointer]
+              - listitem [ref=e491]:
+                - strong [ref=e492]: platform-029
+                - generic [ref=e493]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e494] [cursor=pointer]
+              - listitem [ref=e495]:
+                - strong [ref=e496]: platform-030
+                - generic [ref=e497]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e498] [cursor=pointer]
+              - listitem [ref=e499]:
+                - strong [ref=e500]: platform-031
+                - generic [ref=e501]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e502] [cursor=pointer]
+              - listitem [ref=e503]:
+                - strong [ref=e504]: platform-032
+                - generic [ref=e505]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e506] [cursor=pointer]
+              - listitem [ref=e507]:
+                - strong [ref=e508]: platform-033
+                - generic [ref=e509]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e510] [cursor=pointer]
+              - listitem [ref=e511]:
+                - strong [ref=e512]: platform-034
+                - generic [ref=e513]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e514] [cursor=pointer]
+              - listitem [ref=e515]:
+                - strong [ref=e516]: platform-035
+                - generic [ref=e517]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e518] [cursor=pointer]
+              - listitem [ref=e519]:
+                - strong [ref=e520]: platform-036
+                - generic [ref=e521]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e522] [cursor=pointer]
+              - listitem [ref=e523]:
+                - strong [ref=e524]: platform-037
+                - generic [ref=e525]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e526] [cursor=pointer]
+              - listitem [ref=e527]:
+                - strong [ref=e528]: platform-038
+                - generic [ref=e529]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e530] [cursor=pointer]
+              - listitem [ref=e531]:
+                - strong [ref=e532]: platform-039
+                - generic [ref=e533]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e534] [cursor=pointer]
+              - listitem [ref=e535]:
+                - strong [ref=e536]: platform-040
+                - generic [ref=e537]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e538] [cursor=pointer]
+              - listitem [ref=e539]:
+                - strong [ref=e540]: platform-041
+                - generic [ref=e541]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e542] [cursor=pointer]
+              - listitem [ref=e543]:
+                - strong [ref=e544]: platform-042
+                - generic [ref=e545]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e546] [cursor=pointer]
+              - listitem [ref=e547]:
+                - strong [ref=e548]: platform-043
+                - generic [ref=e549]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e550] [cursor=pointer]
+              - listitem [ref=e551]:
+                - strong [ref=e552]: platform-044
+                - generic [ref=e553]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e554] [cursor=pointer]
+              - listitem [ref=e555]:
+                - strong [ref=e556]: platform-045
+                - generic [ref=e557]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e558] [cursor=pointer]
+              - listitem [ref=e559]:
+                - strong [ref=e560]: platform-046
+                - generic [ref=e561]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e562] [cursor=pointer]
+              - listitem [ref=e563]:
+                - strong [ref=e564]: platform-047
+                - generic [ref=e565]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e566] [cursor=pointer]
+              - listitem [ref=e567]:
+                - strong [ref=e568]: platform-048
+                - generic [ref=e569]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e570] [cursor=pointer]
+              - listitem [ref=e571]:
+                - strong [ref=e572]: platform-049
+                - generic [ref=e573]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e574] [cursor=pointer]
+              - listitem [ref=e575]:
+                - strong [ref=e576]: platform-050
+                - generic [ref=e577]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e578] [cursor=pointer]
+              - listitem [ref=e579]:
+                - strong [ref=e580]: platform-051
+                - generic [ref=e581]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e582] [cursor=pointer]
+              - listitem [ref=e583]:
+                - strong [ref=e584]: platform-052
+                - generic [ref=e585]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e586] [cursor=pointer]
+              - listitem [ref=e587]:
+                - strong [ref=e588]: platform-053
+                - generic [ref=e589]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e590] [cursor=pointer]
+              - listitem [ref=e591]:
+                - strong [ref=e592]: platform-054
+                - generic [ref=e593]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e594] [cursor=pointer]
+              - listitem [ref=e595]:
+                - strong [ref=e596]: platform-055
+                - generic [ref=e597]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e598] [cursor=pointer]
+              - listitem [ref=e599]:
+                - strong [ref=e600]: platform-056
+                - generic [ref=e601]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e602] [cursor=pointer]
+              - listitem [ref=e603]:
+                - strong [ref=e604]: platform-057
+                - generic [ref=e605]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e606] [cursor=pointer]
+              - listitem [ref=e607]:
+                - strong [ref=e608]: platform-058
+                - generic [ref=e609]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e610] [cursor=pointer]
+              - listitem [ref=e611]:
+                - strong [ref=e612]: platform-059
+                - generic [ref=e613]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e614] [cursor=pointer]
+              - listitem [ref=e615]:
+                - strong [ref=e616]: platform-060
+                - generic [ref=e617]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e618] [cursor=pointer]
+              - listitem [ref=e619]:
+                - strong [ref=e620]: platform-061
+                - generic [ref=e621]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e622] [cursor=pointer]
+              - listitem [ref=e623]:
+                - strong [ref=e624]: platform-062
+                - generic [ref=e625]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e626] [cursor=pointer]
+              - listitem [ref=e627]:
+                - strong [ref=e628]: platform-063
+                - generic [ref=e629]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e630] [cursor=pointer]
+              - listitem [ref=e631]:
+                - strong [ref=e632]: platform-064
+                - generic [ref=e633]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e634] [cursor=pointer]
+              - listitem [ref=e635]:
+                - strong [ref=e636]: platform-065
+                - generic [ref=e637]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e638] [cursor=pointer]
+              - listitem [ref=e639]:
+                - strong [ref=e640]: platform-066
+                - generic [ref=e641]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e642] [cursor=pointer]
+              - listitem [ref=e643]:
+                - strong [ref=e644]: platform-067
+                - generic [ref=e645]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e646] [cursor=pointer]
+              - listitem [ref=e647]:
+                - strong [ref=e648]: platform-068
+                - generic [ref=e649]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e650] [cursor=pointer]
+              - listitem [ref=e651]:
+                - strong [ref=e652]: platform-069
+                - generic [ref=e653]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e654] [cursor=pointer]
+              - listitem [ref=e655]:
+                - strong [ref=e656]: platform-070
+                - generic [ref=e657]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e658] [cursor=pointer]
+              - listitem [ref=e659]:
+                - strong [ref=e660]: platform-071
+                - generic [ref=e661]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e662] [cursor=pointer]
+              - listitem [ref=e663]:
+                - strong [ref=e664]: platform-072
+                - generic [ref=e665]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e666] [cursor=pointer]
+              - listitem [ref=e667]:
+                - strong [ref=e668]: platform-073
+                - generic [ref=e669]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e670] [cursor=pointer]
+              - listitem [ref=e671]:
+                - strong [ref=e672]: platform-074
+                - generic [ref=e673]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e674] [cursor=pointer]
+              - listitem [ref=e675]:
+                - strong [ref=e676]: platform-075
+                - generic [ref=e677]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e678] [cursor=pointer]
+              - listitem [ref=e679]:
+                - strong [ref=e680]: platform-076
+                - generic [ref=e681]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e682] [cursor=pointer]
+              - listitem [ref=e683]:
+                - strong [ref=e684]: platform-077
+                - generic [ref=e685]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e686] [cursor=pointer]
+              - listitem [ref=e687]:
+                - strong [ref=e688]: platform-078
+                - generic [ref=e689]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e690] [cursor=pointer]
+              - listitem [ref=e691]:
+                - strong [ref=e692]: platform-079
+                - generic [ref=e693]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e694] [cursor=pointer]
+              - listitem [ref=e695]:
+                - strong [ref=e696]: platform-080
+                - generic [ref=e697]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e698] [cursor=pointer]
+              - listitem [ref=e699]:
+                - strong [ref=e700]: platform-081
+                - generic [ref=e701]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e702] [cursor=pointer]
+              - listitem [ref=e703]:
+                - strong [ref=e704]: platform-082
+                - generic [ref=e705]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e706] [cursor=pointer]
+              - listitem [ref=e707]:
+                - strong [ref=e708]: platform-083
+                - generic [ref=e709]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e710] [cursor=pointer]
+              - listitem [ref=e711]:
+                - strong [ref=e712]: platform-084
+                - generic [ref=e713]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e714] [cursor=pointer]
+              - listitem [ref=e715]:
+                - strong [ref=e716]: platform-085
+                - generic [ref=e717]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e718] [cursor=pointer]
+              - listitem [ref=e719]:
+                - strong [ref=e720]: platform-086
+                - generic [ref=e721]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e722] [cursor=pointer]
+              - listitem [ref=e723]:
+                - strong [ref=e724]: platform-087
+                - generic [ref=e725]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e726] [cursor=pointer]
+              - listitem [ref=e727]:
+                - strong [ref=e728]: platform-088
+                - generic [ref=e729]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e730] [cursor=pointer]
+              - listitem [ref=e731]:
+                - strong [ref=e732]: platform-089
+                - generic [ref=e733]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e734] [cursor=pointer]
+              - listitem [ref=e735]:
+                - strong [ref=e736]: platform-090
+                - generic [ref=e737]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e738] [cursor=pointer]
+              - listitem [ref=e739]:
+                - strong [ref=e740]: platform-091
+                - generic [ref=e741]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e742] [cursor=pointer]
+              - listitem [ref=e743]:
+                - strong [ref=e744]: platform-092
+                - generic [ref=e745]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e746] [cursor=pointer]
+              - listitem [ref=e747]:
+                - strong [ref=e748]: platform-093
+                - generic [ref=e749]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e750] [cursor=pointer]
+              - listitem [ref=e751]:
+                - strong [ref=e752]: platform-094
+                - generic [ref=e753]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e754] [cursor=pointer]
+              - listitem [ref=e755]:
+                - strong [ref=e756]: platform-095
+                - generic [ref=e757]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e758] [cursor=pointer]
+              - listitem [ref=e759]:
+                - strong [ref=e760]: platform-096
+                - generic [ref=e761]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e762] [cursor=pointer]
+              - listitem [ref=e763]:
+                - strong [ref=e764]: platform-097
+                - generic [ref=e765]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e766] [cursor=pointer]
+              - listitem [ref=e767]:
+                - strong [ref=e768]: platform-098
+                - generic [ref=e769]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e770] [cursor=pointer]
+              - listitem [ref=e771]:
+                - strong [ref=e772]: platform-099
+                - generic [ref=e773]: Shared, never verified; last verified Never recorded
+                - button "Record verification" [ref=e774] [cursor=pointer]
+            - generic [ref=e775]:
+              - generic [ref=e776]:
+                - term [ref=e777]: Primary provider
+                - definition [ref=e778]: Not recorded
+              - generic [ref=e779]:
+                - term [ref=e780]: Fallback provider
+                - definition [ref=e781]: Not recorded
+          - list [ref=e782]:
+            - listitem [ref=e783]:
+              - generic [ref=e784]:
+                - generic [ref=e785]: PASS
+                - strong [ref=e786]: Canonical copy is stored in an open, exportable format
+                - generic [ref=e787]: Deterministic finding
+              - paragraph [ref=e788]: Stored as markdown at fixture/c2-changed-first
+              - generic [ref=e789]: "Evidence: Registry format field / observed Never recorded / owner: c2-fixture"
+              - button "Open check explanation" [ref=e790] [cursor=pointer]
+            - listitem [ref=e791]:
+              - generic [ref=e792]:
+                - generic [ref=e793]: UNKNOWN
+                - strong [ref=e794]: Reviewed by a human within 45 days
+                - generic [ref=e795]: Deterministic finding
+              - paragraph [ref=e796]: Never reviewed (no review date recorded)
+              - generic [ref=e797]: "Evidence: Registry lastReviewed field is empty / observed Never recorded / owner: c2-fixture"
+              - generic [ref=e798]: "Action: Review the asset and record the date"
+              - button "Open check explanation" [ref=e799] [cursor=pointer]
+            - listitem [ref=e800]:
+              - generic [ref=e801]:
+                - generic [ref=e802]: FAIL
+                - strong [ref=e803]: Shared and verified on 2+ approved platforms
+                - generic [ref=e804]: Deterministic finding
+              - paragraph [ref=e805]: Not shared with any approved platform
+              - generic [ref=e806]: "Evidence: Coverage entries / observed Never recorded / owner: c2-fixture"
+              - generic [ref=e807]: "Action: Run an import/retrieval test on at least one approved platform"
+              - button "Open check explanation" [ref=e808] [cursor=pointer]
+        - generic [ref=e809]:
+          - generic [ref=e810]:
+            - heading "Dependencies" [level=3] [ref=e811]
+            - generic [ref=e812]: Recorded facts
+          - paragraph [ref=e813]:
+            - strong [ref=e814]: "Missing / unavailable:"
+            - text: No provider dependencies recorded.
+          - generic [ref=e815]:
+            - generic [ref=e816]:
+              - term [ref=e817]: Workflow dependencies
+              - definition [ref=e818]: None recorded
+            - generic [ref=e819]:
+              - term [ref=e820]: Producing product
+              - definition [ref=e821]: Not recorded
+            - generic [ref=e822]:
+              - term [ref=e823]: Consuming products
+              - definition [ref=e824]: None recorded
+        - generic [ref=e825]:
+          - generic [ref=e826]:
+            - heading "Evidence" [level=3] [ref=e827]
+            - generic [ref=e828]: Evidence states + deterministic findings
+          - generic [ref=e830]:
+            - term [ref=e831]: Deterministic evidence freshness
+            - definition [ref=e832]: Missing / unavailable
+          - paragraph [ref=e833]:
+            - strong [ref=e834]: "Missing / unavailable:"
+            - text: No evidence points recorded.
+          - generic [ref=e836]:
+            - term [ref=e837]: Evidence bindings
+            - definition [ref=e838]: None recorded
+          - list [ref=e839]:
+            - listitem [ref=e840]:
+              - generic [ref=e841]:
+                - generic [ref=e842]: PASS
+                - strong [ref=e843]: Asset has a named owner
+                - generic [ref=e844]: Deterministic finding
+              - paragraph [ref=e845]: Owned by c2-fixture
+              - generic [ref=e846]: "Evidence: Registry owner field / observed Never recorded / owner: c2-fixture"
+              - button "Open check explanation" [ref=e847] [cursor=pointer]
+        - generic [ref=e848]:
+          - generic [ref=e849]:
+            - heading "Decisions" [level=3] [ref=e850]
+            - generic [ref=e851]: Human decisions
+          - paragraph [ref=e852]:
+            - strong [ref=e853]: "Missing / unavailable:"
+            - text: No human decisions recorded.
+        - generic [ref=e854]:
+          - generic [ref=e855]:
+            - heading "History" [level=3] [ref=e856]
+            - generic [ref=e857]: Recorded facts
+          - generic [ref=e858]:
+            - generic [ref=e859]:
+              - button "Record current version" [ref=e860] [cursor=pointer]
+              - status
+            - list "Recorded asset versions, newest first" [ref=e861]:
+              - listitem [ref=e862]:
+                - generic [ref=e863]:
+                  - strong [ref=e864]: Current recorded version
+                  - time [ref=e865]: 7/24/2026, 3:00:00 AM
+                - code [ref=e866]: av1_ff15afa8664210722f3548fdef89bf45
+                - generic [ref=e867]:
+                  - generic [ref=e868]: "Aliases (labels only):"
+                  - generic [ref=e869]:
+                    - text: preferred
+                    - button "Remove alias preferred" [ref=e870] [cursor=pointer]: Remove
+              - listitem [ref=e871]:
+                - generic [ref=e872]:
+                  - strong [ref=e873]: Recorded version
+                  - time [ref=e874]: 7/24/2026, 2:00:00 AM
+                - code [ref=e875]: av1_9943bf31c28810b206c1760ae3d4b149
+                - generic [ref=e876]:
+                  - generic [ref=e877]: "Aliases (labels only):"
+                  - emphasis [ref=e878]: None
+            - generic [ref=e879]:
+              - paragraph [ref=e880]:
+                - strong [ref=e881]: Version aliases are labels only.
+                - text: They are not evidence, environments, lifecycle stages, or approval truth.
+              - generic [ref=e882]:
+                - text: Alias label
+                - combobox "Alias label" [ref=e883]
+              - generic [ref=e884]:
+                - text: Recorded version
+                - combobox "Recorded version" [ref=e885]:
+                  - option "av1_ff15afa8664210722f3548fdef89bf45 — current" [selected]
+                  - option "av1_9943bf31c28810b206c1760ae3d4b149"
+              - button "Add or move alias" [disabled] [ref=e886]
+              - status
+            - region [ref=e887]:
+              - heading "Current versus previous recorded version" [level=4] [ref=e888]
+              - paragraph [ref=e889]: All 1 meaningful changes are shown; 5 unchanged context items were omitted.
+              - list [ref=e890]:
+                - listitem [ref=e891]:
+                  - strong [ref=e892]: "regression: Check: check.late:result"
+                  - generic [ref=e893]: "Previous: pass"
+                  - generic [ref=e894]: "Current: fail"
+                  - generic [ref=e895]: "Basis: deterministic check"
+                - listitem [ref=e896]:
+                  - strong [ref=e897]: "unchanged: Format"
+                  - generic [ref=e898]: "Previous: markdown"
+                  - generic [ref=e899]: "Current: markdown"
+                  - generic [ref=e900]: "Basis: recorded fact"
+                - listitem [ref=e901]:
+                  - strong [ref=e902]: "unchanged: Shared by design"
+                  - generic [ref=e903]: "Previous: true"
+                  - generic [ref=e904]: "Current: true"
+                  - generic [ref=e905]: "Basis: recorded fact"
+                - listitem [ref=e906]:
+                  - strong [ref=e907]: "unchanged: Registry state"
+                  - generic [ref=e908]: "Previous: active"
+                  - generic [ref=e909]: "Current: active"
+                  - generic [ref=e910]: "Basis: recorded fact"
+                - listitem [ref=e911]:
+                  - strong [ref=e912]: "unchanged: Supported version"
+                  - generic [ref=e913]: "Previous: 2"
+                  - generic [ref=e914]: "Current: 2"
+                  - generic [ref=e915]: "Basis: recorded fact"
+                - listitem [ref=e916]:
+                  - strong [ref=e917]: "unchanged: Coverage: platform-000"
+                  - generic [ref=e918]: "Previous: recorded"
+                  - generic [ref=e919]: "Current: recorded"
+                  - generic [ref=e920]: "Basis: recorded fact"
+                - listitem [ref=e921]:
+                  - strong [ref=e922]: "unchanged: Coverage: platform-001"
+                  - generic [ref=e923]: "Previous: recorded"
+                  - generic [ref=e924]: "Current: recorded"
+                  - generic [ref=e925]: "Basis: recorded fact"
+                - listitem [ref=e926]:
+                  - strong [ref=e927]: "unchanged: Coverage: platform-002"
+                  - generic [ref=e928]: "Previous: recorded"
+                  - generic [ref=e929]: "Current: recorded"
+                  - generic [ref=e930]: "Basis: recorded fact"
+                - listitem [ref=e931]:
+                  - strong [ref=e932]: "unchanged: Coverage: platform-003"
+                  - generic [ref=e933]: "Previous: recorded"
+                  - generic [ref=e934]: "Current: recorded"
+                  - generic [ref=e935]: "Basis: recorded fact"
+                - listitem [ref=e936]:
+                  - strong [ref=e937]: "unchanged: Coverage: platform-004"
+                  - generic [ref=e938]: "Previous: recorded"
+                  - generic [ref=e939]: "Current: recorded"
+                  - generic [ref=e940]: "Basis: recorded fact"
+                - listitem [ref=e941]:
+                  - strong [ref=e942]: "unchanged: Coverage: platform-005"
+                  - generic [ref=e943]: "Previous: recorded"
+                  - generic [ref=e944]: "Current: recorded"
+                  - generic [ref=e945]: "Basis: recorded fact"
+                - listitem [ref=e946]:
+                  - strong [ref=e947]: "unchanged: Coverage: platform-006"
+                  - generic [ref=e948]: "Previous: recorded"
+                  - generic [ref=e949]: "Current: recorded"
+                  - generic [ref=e950]: "Basis: recorded fact"
+                - listitem [ref=e951]:
+                  - strong [ref=e952]: "unchanged: Coverage: platform-007"
+                  - generic [ref=e953]: "Previous: recorded"
+                  - generic [ref=e954]: "Current: recorded"
+                  - generic [ref=e955]: "Basis: recorded fact"
+                - listitem [ref=e956]:
+                  - strong [ref=e957]: "unchanged: Coverage: platform-008"
+                  - generic [ref=e958]: "Previous: recorded"
+                  - generic [ref=e959]: "Current: recorded"
+                  - generic [ref=e960]: "Basis: recorded fact"
+                - listitem [ref=e961]:
+                  - strong [ref=e962]: "unchanged: Coverage: platform-009"
+                  - generic [ref=e963]: "Previous: recorded"
+                  - generic [ref=e964]: "Current: recorded"
+                  - generic [ref=e965]: "Basis: recorded fact"
+                - listitem [ref=e966]:
+                  - strong [ref=e967]: "unchanged: Coverage: platform-010"
+                  - generic [ref=e968]: "Previous: recorded"
+                  - generic [ref=e969]: "Current: recorded"
+                  - generic [ref=e970]: "Basis: recorded fact"
+                - listitem [ref=e971]:
+                  - strong [ref=e972]: "unchanged: Coverage: platform-011"
+                  - generic [ref=e973]: "Previous: recorded"
+                  - generic [ref=e974]: "Current: recorded"
+                  - generic [ref=e975]: "Basis: recorded fact"
+                - listitem [ref=e976]:
+                  - strong [ref=e977]: "unchanged: Coverage: platform-012"
+                  - generic [ref=e978]: "Previous: recorded"
+                  - generic [ref=e979]: "Current: recorded"
+                  - generic [ref=e980]: "Basis: recorded fact"
+                - listitem [ref=e981]:
+                  - strong [ref=e982]: "unchanged: Coverage: platform-013"
+                  - generic [ref=e983]: "Previous: recorded"
+                  - generic [ref=e984]: "Current: recorded"
+                  - generic [ref=e985]: "Basis: recorded fact"
+                - listitem [ref=e986]:
+                  - strong [ref=e987]: "unchanged: Coverage: platform-014"
+                  - generic [ref=e988]: "Previous: recorded"
+                  - generic [ref=e989]: "Current: recorded"
+                  - generic [ref=e990]: "Basis: recorded fact"
+                - listitem [ref=e991]:
+                  - strong [ref=e992]: "unchanged: Coverage: platform-015"
+                  - generic [ref=e993]: "Previous: recorded"
+                  - generic [ref=e994]: "Current: recorded"
+                  - generic [ref=e995]: "Basis: recorded fact"
+                - listitem [ref=e996]:
+                  - strong [ref=e997]: "unchanged: Coverage: platform-016"
+                  - generic [ref=e998]: "Previous: recorded"
+                  - generic [ref=e999]: "Current: recorded"
+                  - generic [ref=e1000]: "Basis: recorded fact"
+                - listitem [ref=e1001]:
+                  - strong [ref=e1002]: "unchanged: Coverage: platform-017"
+                  - generic [ref=e1003]: "Previous: recorded"
+                  - generic [ref=e1004]: "Current: recorded"
+                  - generic [ref=e1005]: "Basis: recorded fact"
+                - listitem [ref=e1006]:
+                  - strong [ref=e1007]: "unchanged: Coverage: platform-018"
+                  - generic [ref=e1008]: "Previous: recorded"
+                  - generic [ref=e1009]: "Current: recorded"
+                  - generic [ref=e1010]: "Basis: recorded fact"
+                - listitem [ref=e1011]:
+                  - strong [ref=e1012]: "unchanged: Coverage: platform-019"
+                  - generic [ref=e1013]: "Previous: recorded"
+                  - generic [ref=e1014]: "Current: recorded"
+                  - generic [ref=e1015]: "Basis: recorded fact"
+                - listitem [ref=e1016]:
+                  - strong [ref=e1017]: "unchanged: Coverage: platform-020"
+                  - generic [ref=e1018]: "Previous: recorded"
+                  - generic [ref=e1019]: "Current: recorded"
+                  - generic [ref=e1020]: "Basis: recorded fact"
+                - listitem [ref=e1021]:
+                  - strong [ref=e1022]: "unchanged: Coverage: platform-021"
+                  - generic [ref=e1023]: "Previous: recorded"
+                  - generic [ref=e1024]: "Current: recorded"
+                  - generic [ref=e1025]: "Basis: recorded fact"
+                - listitem [ref=e1026]:
+                  - strong [ref=e1027]: "unchanged: Coverage: platform-022"
+                  - generic [ref=e1028]: "Previous: recorded"
+                  - generic [ref=e1029]: "Current: recorded"
+                  - generic [ref=e1030]: "Basis: recorded fact"
+                - listitem [ref=e1031]:
+                  - strong [ref=e1032]: "unchanged: Coverage: platform-023"
+                  - generic [ref=e1033]: "Previous: recorded"
+                  - generic [ref=e1034]: "Current: recorded"
+                  - generic [ref=e1035]: "Basis: recorded fact"
+                - listitem [ref=e1036]:
+                  - strong [ref=e1037]: "unchanged: Coverage: platform-024"
+                  - generic [ref=e1038]: "Previous: recorded"
+                  - generic [ref=e1039]: "Current: recorded"
+                  - generic [ref=e1040]: "Basis: recorded fact"
+                - listitem [ref=e1041]:
+                  - strong [ref=e1042]: "unchanged: Coverage: platform-025"
+                  - generic [ref=e1043]: "Previous: recorded"
+                  - generic [ref=e1044]: "Current: recorded"
+                  - generic [ref=e1045]: "Basis: recorded fact"
+                - listitem [ref=e1046]:
+                  - strong [ref=e1047]: "unchanged: Coverage: platform-026"
+                  - generic [ref=e1048]: "Previous: recorded"
+                  - generic [ref=e1049]: "Current: recorded"
+                  - generic [ref=e1050]: "Basis: recorded fact"
+                - listitem [ref=e1051]:
+                  - strong [ref=e1052]: "unchanged: Coverage: platform-027"
+                  - generic [ref=e1053]: "Previous: recorded"
+                  - generic [ref=e1054]: "Current: recorded"
+                  - generic [ref=e1055]: "Basis: recorded fact"
+                - listitem [ref=e1056]:
+                  - strong [ref=e1057]: "unchanged: Coverage: platform-028"
+                  - generic [ref=e1058]: "Previous: recorded"
+                  - generic [ref=e1059]: "Current: recorded"
+                  - generic [ref=e1060]: "Basis: recorded fact"
+                - listitem [ref=e1061]:
+                  - strong [ref=e1062]: "unchanged: Coverage: platform-029"
+                  - generic [ref=e1063]: "Previous: recorded"
+                  - generic [ref=e1064]: "Current: recorded"
+                  - generic [ref=e1065]: "Basis: recorded fact"
+                - listitem [ref=e1066]:
+                  - strong [ref=e1067]: "unchanged: Coverage: platform-030"
+                  - generic [ref=e1068]: "Previous: recorded"
+                  - generic [ref=e1069]: "Current: recorded"
+                  - generic [ref=e1070]: "Basis: recorded fact"
+                - listitem [ref=e1071]:
+                  - strong [ref=e1072]: "unchanged: Coverage: platform-031"
+                  - generic [ref=e1073]: "Previous: recorded"
+                  - generic [ref=e1074]: "Current: recorded"
+                  - generic [ref=e1075]: "Basis: recorded fact"
+                - listitem [ref=e1076]:
+                  - strong [ref=e1077]: "unchanged: Coverage: platform-032"
+                  - generic [ref=e1078]: "Previous: recorded"
+                  - generic [ref=e1079]: "Current: recorded"
+                  - generic [ref=e1080]: "Basis: recorded fact"
+                - listitem [ref=e1081]:
+                  - strong [ref=e1082]: "unchanged: Coverage: platform-033"
+                  - generic [ref=e1083]: "Previous: recorded"
+                  - generic [ref=e1084]: "Current: recorded"
+                  - generic [ref=e1085]: "Basis: recorded fact"
+                - listitem [ref=e1086]:
+                  - strong [ref=e1087]: "unchanged: Coverage: platform-034"
+                  - generic [ref=e1088]: "Previous: recorded"
+                  - generic [ref=e1089]: "Current: recorded"
+                  - generic [ref=e1090]: "Basis: recorded fact"
+                - listitem [ref=e1091]:
+                  - strong [ref=e1092]: "unchanged: Coverage: platform-035"
+                  - generic [ref=e1093]: "Previous: recorded"
+                  - generic [ref=e1094]: "Current: recorded"
+                  - generic [ref=e1095]: "Basis: recorded fact"
+                - listitem [ref=e1096]:
+                  - strong [ref=e1097]: "unchanged: Coverage: platform-036"
+                  - generic [ref=e1098]: "Previous: recorded"
+                  - generic [ref=e1099]: "Current: recorded"
+                  - generic [ref=e1100]: "Basis: recorded fact"
+                - listitem [ref=e1101]:
+                  - strong [ref=e1102]: "unchanged: Coverage: platform-037"
+                  - generic [ref=e1103]: "Previous: recorded"
+                  - generic [ref=e1104]: "Current: recorded"
+                  - generic [ref=e1105]: "Basis: recorded fact"
+                - listitem [ref=e1106]:
+                  - strong [ref=e1107]: "unchanged: Coverage: platform-038"
+                  - generic [ref=e1108]: "Previous: recorded"
+                  - generic [ref=e1109]: "Current: recorded"
+                  - generic [ref=e1110]: "Basis: recorded fact"
+                - listitem [ref=e1111]:
+                  - strong [ref=e1112]: "unchanged: Coverage: platform-039"
+                  - generic [ref=e1113]: "Previous: recorded"
+                  - generic [ref=e1114]: "Current: recorded"
+                  - generic [ref=e1115]: "Basis: recorded fact"
+                - listitem [ref=e1116]:
+                  - strong [ref=e1117]: "unchanged: Coverage: platform-040"
+                  - generic [ref=e1118]: "Previous: recorded"
+                  - generic [ref=e1119]: "Current: recorded"
+                  - generic [ref=e1120]: "Basis: recorded fact"
+                - listitem [ref=e1121]:
+                  - strong [ref=e1122]: "unchanged: Coverage: platform-041"
+                  - generic [ref=e1123]: "Previous: recorded"
+                  - generic [ref=e1124]: "Current: recorded"
+                  - generic [ref=e1125]: "Basis: recorded fact"
+                - listitem [ref=e1126]:
+                  - strong [ref=e1127]: "unchanged: Coverage: platform-042"
+                  - generic [ref=e1128]: "Previous: recorded"
+                  - generic [ref=e1129]: "Current: recorded"
+                  - generic [ref=e1130]: "Basis: recorded fact"
+                - listitem [ref=e1131]:
+                  - strong [ref=e1132]: "unchanged: Coverage: platform-043"
+                  - generic [ref=e1133]: "Previous: recorded"
+                  - generic [ref=e1134]: "Current: recorded"
+                  - generic [ref=e1135]: "Basis: recorded fact"
+                - listitem [ref=e1136]:
+                  - strong [ref=e1137]: "unchanged: Coverage: platform-044"
+                  - generic [ref=e1138]: "Previous: recorded"
+                  - generic [ref=e1139]: "Current: recorded"
+                  - generic [ref=e1140]: "Basis: recorded fact"
+                - listitem [ref=e1141]:
+                  - strong [ref=e1142]: "unchanged: Coverage: platform-045"
+                  - generic [ref=e1143]: "Previous: recorded"
+                  - generic [ref=e1144]: "Current: recorded"
+                  - generic [ref=e1145]: "Basis: recorded fact"
+                - listitem [ref=e1146]:
+                  - strong [ref=e1147]: "unchanged: Coverage: platform-046"
+                  - generic [ref=e1148]: "Previous: recorded"
+                  - generic [ref=e1149]: "Current: recorded"
+                  - generic [ref=e1150]: "Basis: recorded fact"
+                - listitem [ref=e1151]:
+                  - strong [ref=e1152]: "unchanged: Coverage: platform-047"
+                  - generic [ref=e1153]: "Previous: recorded"
+                  - generic [ref=e1154]: "Current: recorded"
+                  - generic [ref=e1155]: "Basis: recorded fact"
+                - listitem [ref=e1156]:
+                  - strong [ref=e1157]: "unchanged: Coverage: platform-048"
+                  - generic [ref=e1158]: "Previous: recorded"
+                  - generic [ref=e1159]: "Current: recorded"
+                  - generic [ref=e1160]: "Basis: recorded fact"
+                - listitem [ref=e1161]:
+                  - strong [ref=e1162]: "unchanged: Coverage: platform-049"
+                  - generic [ref=e1163]: "Previous: recorded"
+                  - generic [ref=e1164]: "Current: recorded"
+                  - generic [ref=e1165]: "Basis: recorded fact"
+                - listitem [ref=e1166]:
+                  - strong [ref=e1167]: "unchanged: Coverage: platform-050"
+                  - generic [ref=e1168]: "Previous: recorded"
+                  - generic [ref=e1169]: "Current: recorded"
+                  - generic [ref=e1170]: "Basis: recorded fact"
+                - listitem [ref=e1171]:
+                  - strong [ref=e1172]: "unchanged: Coverage: platform-051"
+                  - generic [ref=e1173]: "Previous: recorded"
+                  - generic [ref=e1174]: "Current: recorded"
+                  - generic [ref=e1175]: "Basis: recorded fact"
+                - listitem [ref=e1176]:
+                  - strong [ref=e1177]: "unchanged: Coverage: platform-052"
+                  - generic [ref=e1178]: "Previous: recorded"
+                  - generic [ref=e1179]: "Current: recorded"
+                  - generic [ref=e1180]: "Basis: recorded fact"
+                - listitem [ref=e1181]:
+                  - strong [ref=e1182]: "unchanged: Coverage: platform-053"
+                  - generic [ref=e1183]: "Previous: recorded"
+                  - generic [ref=e1184]: "Current: recorded"
+                  - generic [ref=e1185]: "Basis: recorded fact"
+                - listitem [ref=e1186]:
+                  - strong [ref=e1187]: "unchanged: Coverage: platform-054"
+                  - generic [ref=e1188]: "Previous: recorded"
+                  - generic [ref=e1189]: "Current: recorded"
+                  - generic [ref=e1190]: "Basis: recorded fact"
+                - listitem [ref=e1191]:
+                  - strong [ref=e1192]: "unchanged: Coverage: platform-055"
+                  - generic [ref=e1193]: "Previous: recorded"
+                  - generic [ref=e1194]: "Current: recorded"
+                  - generic [ref=e1195]: "Basis: recorded fact"
+                - listitem [ref=e1196]:
+                  - strong [ref=e1197]: "unchanged: Coverage: platform-056"
+                  - generic [ref=e1198]: "Previous: recorded"
+                  - generic [ref=e1199]: "Current: recorded"
+                  - generic [ref=e1200]: "Basis: recorded fact"
+                - listitem [ref=e1201]:
+                  - strong [ref=e1202]: "unchanged: Coverage: platform-057"
+                  - generic [ref=e1203]: "Previous: recorded"
+                  - generic [ref=e1204]: "Current: recorded"
+                  - generic [ref=e1205]: "Basis: recorded fact"
+                - listitem [ref=e1206]:
+                  - strong [ref=e1207]: "unchanged: Coverage: platform-058"
+                  - generic [ref=e1208]: "Previous: recorded"
+                  - generic [ref=e1209]: "Current: recorded"
+                  - generic [ref=e1210]: "Basis: recorded fact"
+                - listitem [ref=e1211]:
+                  - strong [ref=e1212]: "unchanged: Coverage: platform-059"
+                  - generic [ref=e1213]: "Previous: recorded"
+                  - generic [ref=e1214]: "Current: recorded"
+                  - generic [ref=e1215]: "Basis: recorded fact"
+                - listitem [ref=e1216]:
+                  - strong [ref=e1217]: "unchanged: Coverage: platform-060"
+                  - generic [ref=e1218]: "Previous: recorded"
+                  - generic [ref=e1219]: "Current: recorded"
+                  - generic [ref=e1220]: "Basis: recorded fact"
+                - listitem [ref=e1221]:
+                  - strong [ref=e1222]: "unchanged: Coverage: platform-061"
+                  - generic [ref=e1223]: "Previous: recorded"
+                  - generic [ref=e1224]: "Current: recorded"
+                  - generic [ref=e1225]: "Basis: recorded fact"
+                - listitem [ref=e1226]:
+                  - strong [ref=e1227]: "unchanged: Coverage: platform-062"
+                  - generic [ref=e1228]: "Previous: recorded"
+                  - generic [ref=e1229]: "Current: recorded"
+                  - generic [ref=e1230]: "Basis: recorded fact"
+                - listitem [ref=e1231]:
+                  - strong [ref=e1232]: "unchanged: Coverage: platform-063"
+                  - generic [ref=e1233]: "Previous: recorded"
+                  - generic [ref=e1234]: "Current: recorded"
+                  - generic [ref=e1235]: "Basis: recorded fact"
+                - listitem [ref=e1236]:
+                  - strong [ref=e1237]: "unchanged: Coverage: platform-064"
+                  - generic [ref=e1238]: "Previous: recorded"
+                  - generic [ref=e1239]: "Current: recorded"
+                  - generic [ref=e1240]: "Basis: recorded fact"
+                - listitem [ref=e1241]:
+                  - strong [ref=e1242]: "unchanged: Coverage: platform-065"
+                  - generic [ref=e1243]: "Previous: recorded"
+                  - generic [ref=e1244]: "Current: recorded"
+                  - generic [ref=e1245]: "Basis: recorded fact"
+                - listitem [ref=e1246]:
+                  - strong [ref=e1247]: "unchanged: Coverage: platform-066"
+                  - generic [ref=e1248]: "Previous: recorded"
+                  - generic [ref=e1249]: "Current: recorded"
+                  - generic [ref=e1250]: "Basis: recorded fact"
+                - listitem [ref=e1251]:
+                  - strong [ref=e1252]: "unchanged: Coverage: platform-067"
+                  - generic [ref=e1253]: "Previous: recorded"
+                  - generic [ref=e1254]: "Current: recorded"
+                  - generic [ref=e1255]: "Basis: recorded fact"
+                - listitem [ref=e1256]:
+                  - strong [ref=e1257]: "unchanged: Coverage: platform-068"
+                  - generic [ref=e1258]: "Previous: recorded"
+                  - generic [ref=e1259]: "Current: recorded"
+                  - generic [ref=e1260]: "Basis: recorded fact"
+                - listitem [ref=e1261]:
+                  - strong [ref=e1262]: "unchanged: Coverage: platform-069"
+                  - generic [ref=e1263]: "Previous: recorded"
+                  - generic [ref=e1264]: "Current: recorded"
+                  - generic [ref=e1265]: "Basis: recorded fact"
+                - listitem [ref=e1266]:
+                  - strong [ref=e1267]: "unchanged: Coverage: platform-070"
+                  - generic [ref=e1268]: "Previous: recorded"
+                  - generic [ref=e1269]: "Current: recorded"
+                  - generic [ref=e1270]: "Basis: recorded fact"
+                - listitem [ref=e1271]:
+                  - strong [ref=e1272]: "unchanged: Coverage: platform-071"
+                  - generic [ref=e1273]: "Previous: recorded"
+                  - generic [ref=e1274]: "Current: recorded"
+                  - generic [ref=e1275]: "Basis: recorded fact"
+                - listitem [ref=e1276]:
+                  - strong [ref=e1277]: "unchanged: Coverage: platform-072"
+                  - generic [ref=e1278]: "Previous: recorded"
+                  - generic [ref=e1279]: "Current: recorded"
+                  - generic [ref=e1280]: "Basis: recorded fact"
+                - listitem [ref=e1281]:
+                  - strong [ref=e1282]: "unchanged: Coverage: platform-073"
+                  - generic [ref=e1283]: "Previous: recorded"
+                  - generic [ref=e1284]: "Current: recorded"
+                  - generic [ref=e1285]: "Basis: recorded fact"
+                - listitem [ref=e1286]:
+                  - strong [ref=e1287]: "unchanged: Coverage: platform-074"
+                  - generic [ref=e1288]: "Previous: recorded"
+                  - generic [ref=e1289]: "Current: recorded"
+                  - generic [ref=e1290]: "Basis: recorded fact"
+                - listitem [ref=e1291]:
+                  - strong [ref=e1292]: "unchanged: Coverage: platform-075"
+                  - generic [ref=e1293]: "Previous: recorded"
+                  - generic [ref=e1294]: "Current: recorded"
+                  - generic [ref=e1295]: "Basis: recorded fact"
+                - listitem [ref=e1296]:
+                  - strong [ref=e1297]: "unchanged: Coverage: platform-076"
+                  - generic [ref=e1298]: "Previous: recorded"
+                  - generic [ref=e1299]: "Current: recorded"
+                  - generic [ref=e1300]: "Basis: recorded fact"
+                - listitem [ref=e1301]:
+                  - strong [ref=e1302]: "unchanged: Coverage: platform-077"
+                  - generic [ref=e1303]: "Previous: recorded"
+                  - generic [ref=e1304]: "Current: recorded"
+                  - generic [ref=e1305]: "Basis: recorded fact"
+                - listitem [ref=e1306]:
+                  - strong [ref=e1307]: "unchanged: Coverage: platform-078"
+                  - generic [ref=e1308]: "Previous: recorded"
+                  - generic [ref=e1309]: "Current: recorded"
+                  - generic [ref=e1310]: "Basis: recorded fact"
+                - listitem [ref=e1311]:
+                  - strong [ref=e1312]: "unchanged: Coverage: platform-079"
+                  - generic [ref=e1313]: "Previous: recorded"
+                  - generic [ref=e1314]: "Current: recorded"
+                  - generic [ref=e1315]: "Basis: recorded fact"
+                - listitem [ref=e1316]:
+                  - strong [ref=e1317]: "unchanged: Coverage: platform-080"
+                  - generic [ref=e1318]: "Previous: recorded"
+                  - generic [ref=e1319]: "Current: recorded"
+                  - generic [ref=e1320]: "Basis: recorded fact"
+                - listitem [ref=e1321]:
+                  - strong [ref=e1322]: "unchanged: Coverage: platform-081"
+                  - generic [ref=e1323]: "Previous: recorded"
+                  - generic [ref=e1324]: "Current: recorded"
+                  - generic [ref=e1325]: "Basis: recorded fact"
+                - listitem [ref=e1326]:
+                  - strong [ref=e1327]: "unchanged: Coverage: platform-082"
+                  - generic [ref=e1328]: "Previous: recorded"
+                  - generic [ref=e1329]: "Current: recorded"
+                  - generic [ref=e1330]: "Basis: recorded fact"
+                - listitem [ref=e1331]:
+                  - strong [ref=e1332]: "unchanged: Coverage: platform-083"
+                  - generic [ref=e1333]: "Previous: recorded"
+                  - generic [ref=e1334]: "Current: recorded"
+                  - generic [ref=e1335]: "Basis: recorded fact"
+                - listitem [ref=e1336]:
+                  - strong [ref=e1337]: "unchanged: Coverage: platform-084"
+                  - generic [ref=e1338]: "Previous: recorded"
+                  - generic [ref=e1339]: "Current: recorded"
+                  - generic [ref=e1340]: "Basis: recorded fact"
+                - listitem [ref=e1341]:
+                  - strong [ref=e1342]: "unchanged: Coverage: platform-085"
+                  - generic [ref=e1343]: "Previous: recorded"
+                  - generic [ref=e1344]: "Current: recorded"
+                  - generic [ref=e1345]: "Basis: recorded fact"
+                - listitem [ref=e1346]:
+                  - strong [ref=e1347]: "unchanged: Coverage: platform-086"
+                  - generic [ref=e1348]: "Previous: recorded"
+                  - generic [ref=e1349]: "Current: recorded"
+                  - generic [ref=e1350]: "Basis: recorded fact"
+                - listitem [ref=e1351]:
+                  - strong [ref=e1352]: "unchanged: Coverage: platform-087"
+                  - generic [ref=e1353]: "Previous: recorded"
+                  - generic [ref=e1354]: "Current: recorded"
+                  - generic [ref=e1355]: "Basis: recorded fact"
+                - listitem [ref=e1356]:
+                  - strong [ref=e1357]: "unchanged: Coverage: platform-088"
+                  - generic [ref=e1358]: "Previous: recorded"
+                  - generic [ref=e1359]: "Current: recorded"
+                  - generic [ref=e1360]: "Basis: recorded fact"
+                - listitem [ref=e1361]:
+                  - strong [ref=e1362]: "unchanged: Coverage: platform-089"
+                  - generic [ref=e1363]: "Previous: recorded"
+                  - generic [ref=e1364]: "Current: recorded"
+                  - generic [ref=e1365]: "Basis: recorded fact"
+                - listitem [ref=e1366]:
+                  - strong [ref=e1367]: "unchanged: Coverage: platform-090"
+                  - generic [ref=e1368]: "Previous: recorded"
+                  - generic [ref=e1369]: "Current: recorded"
+                  - generic [ref=e1370]: "Basis: recorded fact"
+                - listitem [ref=e1371]:
+                  - strong [ref=e1372]: "unchanged: Coverage: platform-091"
+                  - generic [ref=e1373]: "Previous: recorded"
+                  - generic [ref=e1374]: "Current: recorded"
+                  - generic [ref=e1375]: "Basis: recorded fact"
+                - listitem [ref=e1376]:
+                  - strong [ref=e1377]: "unchanged: Coverage: platform-092"
+                  - generic [ref=e1378]: "Previous: recorded"
+                  - generic [ref=e1379]: "Current: recorded"
+                  - generic [ref=e1380]: "Basis: recorded fact"
+                - listitem [ref=e1381]:
+                  - strong [ref=e1382]: "unchanged: Coverage: platform-093"
+                  - generic [ref=e1383]: "Previous: recorded"
+                  - generic [ref=e1384]: "Current: recorded"
+                  - generic [ref=e1385]: "Basis: recorded fact"
+                - listitem [ref=e1386]:
+                  - strong [ref=e1387]: "unchanged: Coverage: platform-094"
+                  - generic [ref=e1388]: "Previous: recorded"
+                  - generic [ref=e1389]: "Current: recorded"
+                  - generic [ref=e1390]: "Basis: recorded fact"
+            - generic [ref=e1391]:
+              - button "Export Evidence Packet" [ref=e1392] [cursor=pointer]
+              - paragraph [ref=e1393]: Downloads a validated local packet for the current recorded version. It does not export the registry or raw evidence.
+              - status [ref=e1705]: Evidence Packet downloaded as sancussight-evidence-packet-asset-version-214635d2fbeb.json.
+          - generic [ref=e1394]:
+            - generic [ref=e1395]:
+              - term [ref=e1396]: Registry source updated
+              - definition [ref=e1397]: 2026-07-24T12:26:05.634Z
+            - generic [ref=e1398]:
+              - term [ref=e1399]: Last review
+              - definition [ref=e1400]: Never recorded
+            - generic [ref=e1401]:
+              - term [ref=e1402]: Last substitution drill
+              - definition [ref=e1403]: Never recorded
+          - list [ref=e1404]:
+            - listitem [ref=e1405]:
+              - strong [ref=e1406]: platform-000 verification
+              - generic [ref=e1407]: Never recorded
+            - listitem [ref=e1408]:
+              - strong [ref=e1409]: platform-001 verification
+              - generic [ref=e1410]: Never recorded
+            - listitem [ref=e1411]:
+              - strong [ref=e1412]: platform-002 verification
+              - generic [ref=e1413]: Never recorded
+            - listitem [ref=e1414]:
+              - strong [ref=e1415]: platform-003 verification
+              - generic [ref=e1416]: Never recorded
+            - listitem [ref=e1417]:
+              - strong [ref=e1418]: platform-004 verification
+              - generic [ref=e1419]: Never recorded
+            - listitem [ref=e1420]:
+              - strong [ref=e1421]: platform-005 verification
+              - generic [ref=e1422]: Never recorded
+            - listitem [ref=e1423]:
+              - strong [ref=e1424]: platform-006 verification
+              - generic [ref=e1425]: Never recorded
+            - listitem [ref=e1426]:
+              - strong [ref=e1427]: platform-007 verification
+              - generic [ref=e1428]: Never recorded
+            - listitem [ref=e1429]:
+              - strong [ref=e1430]: platform-008 verification
+              - generic [ref=e1431]: Never recorded
+            - listitem [ref=e1432]:
+              - strong [ref=e1433]: platform-009 verification
+              - generic [ref=e1434]: Never recorded
+            - listitem [ref=e1435]:
+              - strong [ref=e1436]: platform-010 verification
+              - generic [ref=e1437]: Never recorded
+            - listitem [ref=e1438]:
+              - strong [ref=e1439]: platform-011 verification
+              - generic [ref=e1440]: Never recorded
+            - listitem [ref=e1441]:
+              - strong [ref=e1442]: platform-012 verification
+              - generic [ref=e1443]: Never recorded
+            - listitem [ref=e1444]:
+              - strong [ref=e1445]: platform-013 verification
+              - generic [ref=e1446]: Never recorded
+            - listitem [ref=e1447]:
+              - strong [ref=e1448]: platform-014 verification
+              - generic [ref=e1449]: Never recorded
+            - listitem [ref=e1450]:
+              - strong [ref=e1451]: platform-015 verification
+              - generic [ref=e1452]: Never recorded
+            - listitem [ref=e1453]:
+              - strong [ref=e1454]: platform-016 verification
+              - generic [ref=e1455]: Never recorded
+            - listitem [ref=e1456]:
+              - strong [ref=e1457]: platform-017 verification
+              - generic [ref=e1458]: Never recorded
+            - listitem [ref=e1459]:
+              - strong [ref=e1460]: platform-018 verification
+              - generic [ref=e1461]: Never recorded
+            - listitem [ref=e1462]:
+              - strong [ref=e1463]: platform-019 verification
+              - generic [ref=e1464]: Never recorded
+            - listitem [ref=e1465]:
+              - strong [ref=e1466]: platform-020 verification
+              - generic [ref=e1467]: Never recorded
+            - listitem [ref=e1468]:
+              - strong [ref=e1469]: platform-021 verification
+              - generic [ref=e1470]: Never recorded
+            - listitem [ref=e1471]:
+              - strong [ref=e1472]: platform-022 verification
+              - generic [ref=e1473]: Never recorded
+            - listitem [ref=e1474]:
+              - strong [ref=e1475]: platform-023 verification
+              - generic [ref=e1476]: Never recorded
+            - listitem [ref=e1477]:
+              - strong [ref=e1478]: platform-024 verification
+              - generic [ref=e1479]: Never recorded
+            - listitem [ref=e1480]:
+              - strong [ref=e1481]: platform-025 verification
+              - generic [ref=e1482]: Never recorded
+            - listitem [ref=e1483]:
+              - strong [ref=e1484]: platform-026 verification
+              - generic [ref=e1485]: Never recorded
+            - listitem [ref=e1486]:
+              - strong [ref=e1487]: platform-027 verification
+              - generic [ref=e1488]: Never recorded
+            - listitem [ref=e1489]:
+              - strong [ref=e1490]: platform-028 verification
+              - generic [ref=e1491]: Never recorded
+            - listitem [ref=e1492]:
+              - strong [ref=e1493]: platform-029 verification
+              - generic [ref=e1494]: Never recorded
+            - listitem [ref=e1495]:
+              - strong [ref=e1496]: platform-030 verification
+              - generic [ref=e1497]: Never recorded
+            - listitem [ref=e1498]:
+              - strong [ref=e1499]: platform-031 verification
+              - generic [ref=e1500]: Never recorded
+            - listitem [ref=e1501]:
+              - strong [ref=e1502]: platform-032 verification
+              - generic [ref=e1503]: Never recorded
+            - listitem [ref=e1504]:
+              - strong [ref=e1505]: platform-033 verification
+              - generic [ref=e1506]: Never recorded
+            - listitem [ref=e1507]:
+              - strong [ref=e1508]: platform-034 verification
+              - generic [ref=e1509]: Never recorded
+            - listitem [ref=e1510]:
+              - strong [ref=e1511]: platform-035 verification
+              - generic [ref=e1512]: Never recorded
+            - listitem [ref=e1513]:
+              - strong [ref=e1514]: platform-036 verification
+              - generic [ref=e1515]: Never recorded
+            - listitem [ref=e1516]:
+              - strong [ref=e1517]: platform-037 verification
+              - generic [ref=e1518]: Never recorded
+            - listitem [ref=e1519]:
+              - strong [ref=e1520]: platform-038 verification
+              - generic [ref=e1521]: Never recorded
+            - listitem [ref=e1522]:
+              - strong [ref=e1523]: platform-039 verification
+              - generic [ref=e1524]: Never recorded
+            - listitem [ref=e1525]:
+              - strong [ref=e1526]: platform-040 verification
+              - generic [ref=e1527]: Never recorded
+            - listitem [ref=e1528]:
+              - strong [ref=e1529]: platform-041 verification
+              - generic [ref=e1530]: Never recorded
+            - listitem [ref=e1531]:
+              - strong [ref=e1532]: platform-042 verification
+              - generic [ref=e1533]: Never recorded
+            - listitem [ref=e1534]:
+              - strong [ref=e1535]: platform-043 verification
+              - generic [ref=e1536]: Never recorded
+            - listitem [ref=e1537]:
+              - strong [ref=e1538]: platform-044 verification
+              - generic [ref=e1539]: Never recorded
+            - listitem [ref=e1540]:
+              - strong [ref=e1541]: platform-045 verification
+              - generic [ref=e1542]: Never recorded
+            - listitem [ref=e1543]:
+              - strong [ref=e1544]: platform-046 verification
+              - generic [ref=e1545]: Never recorded
+            - listitem [ref=e1546]:
+              - strong [ref=e1547]: platform-047 verification
+              - generic [ref=e1548]: Never recorded
+            - listitem [ref=e1549]:
+              - strong [ref=e1550]: platform-048 verification
+              - generic [ref=e1551]: Never recorded
+            - listitem [ref=e1552]:
+              - strong [ref=e1553]: platform-049 verification
+              - generic [ref=e1554]: Never recorded
+            - listitem [ref=e1555]:
+              - strong [ref=e1556]: platform-050 verification
+              - generic [ref=e1557]: Never recorded
+            - listitem [ref=e1558]:
+              - strong [ref=e1559]: platform-051 verification
+              - generic [ref=e1560]: Never recorded
+            - listitem [ref=e1561]:
+              - strong [ref=e1562]: platform-052 verification
+              - generic [ref=e1563]: Never recorded
+            - listitem [ref=e1564]:
+              - strong [ref=e1565]: platform-053 verification
+              - generic [ref=e1566]: Never recorded
+            - listitem [ref=e1567]:
+              - strong [ref=e1568]: platform-054 verification
+              - generic [ref=e1569]: Never recorded
+            - listitem [ref=e1570]:
+              - strong [ref=e1571]: platform-055 verification
+              - generic [ref=e1572]: Never recorded
+            - listitem [ref=e1573]:
+              - strong [ref=e1574]: platform-056 verification
+              - generic [ref=e1575]: Never recorded
+            - listitem [ref=e1576]:
+              - strong [ref=e1577]: platform-057 verification
+              - generic [ref=e1578]: Never recorded
+            - listitem [ref=e1579]:
+              - strong [ref=e1580]: platform-058 verification
+              - generic [ref=e1581]: Never recorded
+            - listitem [ref=e1582]:
+              - strong [ref=e1583]: platform-059 verification
+              - generic [ref=e1584]: Never recorded
+            - listitem [ref=e1585]:
+              - strong [ref=e1586]: platform-060 verification
+              - generic [ref=e1587]: Never recorded
+            - listitem [ref=e1588]:
+              - strong [ref=e1589]: platform-061 verification
+              - generic [ref=e1590]: Never recorded
+            - listitem [ref=e1591]:
+              - strong [ref=e1592]: platform-062 verification
+              - generic [ref=e1593]: Never recorded
+            - listitem [ref=e1594]:
+              - strong [ref=e1595]: platform-063 verification
+              - generic [ref=e1596]: Never recorded
+            - listitem [ref=e1597]:
+              - strong [ref=e1598]: platform-064 verification
+              - generic [ref=e1599]: Never recorded
+            - listitem [ref=e1600]:
+              - strong [ref=e1601]: platform-065 verification
+              - generic [ref=e1602]: Never recorded
+            - listitem [ref=e1603]:
+              - strong [ref=e1604]: platform-066 verification
+              - generic [ref=e1605]: Never recorded
+            - listitem [ref=e1606]:
+              - strong [ref=e1607]: platform-067 verification
+              - generic [ref=e1608]: Never recorded
+            - listitem [ref=e1609]:
+              - strong [ref=e1610]: platform-068 verification
+              - generic [ref=e1611]: Never recorded
+            - listitem [ref=e1612]:
+              - strong [ref=e1613]: platform-069 verification
+              - generic [ref=e1614]: Never recorded
+            - listitem [ref=e1615]:
+              - strong [ref=e1616]: platform-070 verification
+              - generic [ref=e1617]: Never recorded
+            - listitem [ref=e1618]:
+              - strong [ref=e1619]: platform-071 verification
+              - generic [ref=e1620]: Never recorded
+            - listitem [ref=e1621]:
+              - strong [ref=e1622]: platform-072 verification
+              - generic [ref=e1623]: Never recorded
+            - listitem [ref=e1624]:
+              - strong [ref=e1625]: platform-073 verification
+              - generic [ref=e1626]: Never recorded
+            - listitem [ref=e1627]:
+              - strong [ref=e1628]: platform-074 verification
+              - generic [ref=e1629]: Never recorded
+            - listitem [ref=e1630]:
+              - strong [ref=e1631]: platform-075 verification
+              - generic [ref=e1632]: Never recorded
+            - listitem [ref=e1633]:
+              - strong [ref=e1634]: platform-076 verification
+              - generic [ref=e1635]: Never recorded
+            - listitem [ref=e1636]:
+              - strong [ref=e1637]: platform-077 verification
+              - generic [ref=e1638]: Never recorded
+            - listitem [ref=e1639]:
+              - strong [ref=e1640]: platform-078 verification
+              - generic [ref=e1641]: Never recorded
+            - listitem [ref=e1642]:
+              - strong [ref=e1643]: platform-079 verification
+              - generic [ref=e1644]: Never recorded
+            - listitem [ref=e1645]:
+              - strong [ref=e1646]: platform-080 verification
+              - generic [ref=e1647]: Never recorded
+            - listitem [ref=e1648]:
+              - strong [ref=e1649]: platform-081 verification
+              - generic [ref=e1650]: Never recorded
+            - listitem [ref=e1651]:
+              - strong [ref=e1652]: platform-082 verification
+              - generic [ref=e1653]: Never recorded
+            - listitem [ref=e1654]:
+              - strong [ref=e1655]: platform-083 verification
+              - generic [ref=e1656]: Never recorded
+            - listitem [ref=e1657]:
+              - strong [ref=e1658]: platform-084 verification
+              - generic [ref=e1659]: Never recorded
+            - listitem [ref=e1660]:
+              - strong [ref=e1661]: platform-085 verification
+              - generic [ref=e1662]: Never recorded
+            - listitem [ref=e1663]:
+              - strong [ref=e1664]: platform-086 verification
+              - generic [ref=e1665]: Never recorded
+            - listitem [ref=e1666]:
+              - strong [ref=e1667]: platform-087 verification
+              - generic [ref=e1668]: Never recorded
+            - listitem [ref=e1669]:
+              - strong [ref=e1670]: platform-088 verification
+              - generic [ref=e1671]: Never recorded
+            - listitem [ref=e1672]:
+              - strong [ref=e1673]: platform-089 verification
+              - generic [ref=e1674]: Never recorded
+            - listitem [ref=e1675]:
+              - strong [ref=e1676]: platform-090 verification
+              - generic [ref=e1677]: Never recorded
+            - listitem [ref=e1678]:
+              - strong [ref=e1679]: platform-091 verification
+              - generic [ref=e1680]: Never recorded
+            - listitem [ref=e1681]:
+              - strong [ref=e1682]: platform-092 verification
+              - generic [ref=e1683]: Never recorded
+            - listitem [ref=e1684]:
+              - strong [ref=e1685]: platform-093 verification
+              - generic [ref=e1686]: Never recorded
+            - listitem [ref=e1687]:
+              - strong [ref=e1688]: platform-094 verification
+              - generic [ref=e1689]: Never recorded
+            - listitem [ref=e1690]:
+              - strong [ref=e1691]: platform-095 verification
+              - generic [ref=e1692]: Never recorded
+            - listitem [ref=e1693]:
+              - strong [ref=e1694]: platform-096 verification
+              - generic [ref=e1695]: Never recorded
+            - listitem [ref=e1696]:
+              - strong [ref=e1697]: platform-097 verification
+              - generic [ref=e1698]: Never recorded
+            - listitem [ref=e1699]:
+              - strong [ref=e1700]: platform-098 verification
+              - generic [ref=e1701]: Never recorded
+            - listitem [ref=e1702]:
+              - strong [ref=e1703]: platform-099 verification
+              - generic [ref=e1704]: Never recorded
+  - contentinfo [ref=e285]:
+    - link "https://sancussight.vercel.app" [ref=e286] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

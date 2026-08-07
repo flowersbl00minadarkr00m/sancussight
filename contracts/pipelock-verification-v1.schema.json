@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/pipelock-verification-v1.schema.json",
+  "title": "PipelockVerificationV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "packetContentHash", "verdict", "chainValid", "signatureValid", "trustedSignerFingerprint", "verifierId", "verifierVersion", "observedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "packetContentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "verdict": { "enum": ["valid", "invalid"] },
+    "chainValid": { "type": "boolean" },
+    "signatureValid": { "type": "boolean" },
+    "trustedSignerFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "verifierId": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "verifierVersion": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "observedAt": { "type": "string", "format": "date-time" },
+    "runId": { "type": "string", "maxLength": 160 }
+  }
+}

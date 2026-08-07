@@ -1,0 +1,257 @@
+- generic [ref=e46]:
+  - banner [ref=e47]:
+    - button "Return to SancusSight entry" [ref=e48] [cursor=pointer]:
+      - generic [ref=e49]: SancusSight
+    - generic [ref=e55]:
+      - generic [ref=e56]: Demo data
+      - generic [ref=e57]: Synthetic workspace
+      - generic [ref=e58]: 21 assets / 4 platforms
+    - generic [ref=e59]:
+      - button "Connect file" [ref=e60] [cursor=pointer]
+      - group [ref=e61]:
+        - generic "Utilities" [ref=e62] [cursor=pointer]
+  - navigation "Workspace" [ref=e63]:
+    - generic "Primary workspace views" [ref=e64]:
+      - button "Home" [ref=e65] [cursor=pointer]
+      - button "Assets" [ref=e66] [cursor=pointer]
+      - button "Exit Drills" [ref=e67] [cursor=pointer]
+      - button "Attention 24" [active] [ref=e868] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e69]: "24"
+    - button "Advanced" [ref=e71] [cursor=pointer]
+  - generic [ref=e72]:
+    - main [ref=e73]:
+      - generic [ref=e1818]:
+        - generic [ref=e1819]: Remediation Queue - 24 signals, worst first
+        - paragraph [ref=e1820]: Every condition remains separate here for ownership, evidence review, and action.
+        - table [ref=e1822]:
+          - rowgroup [ref=e1823]:
+            - row [ref=e1824]:
+              - columnheader "Status" [ref=e1825]
+              - columnheader "Asset" [ref=e1826]
+              - columnheader "Finding" [ref=e1827]
+              - columnheader "Required action" [ref=e1828]
+              - columnheader "Owner" [ref=e1829]
+          - rowgroup [ref=e1830]:
+            - row [ref=e1831]:
+              - cell "FAIL" [ref=e1832]
+              - cell [ref=e1834]:
+                - button "Client style guide (custom GPT)" [ref=e1835] [cursor=pointer]
+              - cell "Canonical form is provider-proprietary (chatgpt/custom-gpt-config)" [ref=e1836]
+              - cell "Export to an open format and make that copy canonical" [ref=e1837]
+              - cell "henry" [ref=e1838]
+            - row [ref=e1839]:
+              - cell "FAIL" [ref=e1840]
+              - cell [ref=e1842]:
+                - button "Client style guide (custom GPT)" [ref=e1843] [cursor=pointer]
+              - 'cell "Locked to chatgpt: custom GPT instruction store has no fallback" [ref=e1844]'
+              - cell "Name and test an alternative to chatgpt's custom GPT instruction store" [ref=e1845]
+              - cell "henry" [ref=e1846]
+            - row [ref=e1847]:
+              - cell "FAIL" [ref=e1848]
+              - cell [ref=e1850]:
+                - button "Finance analysis brief" [ref=e1851] [cursor=pointer]
+              - 'cell "Locked to claude: private retrieval connector has no fallback" [ref=e1852]'
+              - cell "Name and test an alternative to claude's private retrieval connector" [ref=e1853]
+              - cell "finance systems" [ref=e1854]
+            - row [ref=e1855]:
+              - cell "FAIL" [ref=e1856]
+              - cell [ref=e1858]:
+                - button "Kill-switch procedure" [ref=e1859] [cursor=pointer]
+              - cell "Shared but never verified anywhere — sharing without a retrieval test is a hope, not a control" [ref=e1860]
+              - cell "Run an import/retrieval test on at least one approved platform" [ref=e1861]
+              - cell "risk (self)" [ref=e1862]
+            - row [ref=e1863]:
+              - cell "FAIL" [ref=e1864]
+              - cell [ref=e1866]:
+                - button "Network analysis refresh" [ref=e1867] [cursor=pointer]
+              - cell "No owner recorded — exceptions on this asset have nowhere to go" [ref=e1868]
+              - cell "Assign an owner" [ref=e1869]
+              - cell "unowned" [ref=e1870]
+            - row [ref=e1871]:
+              - cell "FAIL" [ref=e1872]
+              - cell [ref=e1874]:
+                - button "Network analysis refresh" [ref=e1875] [cursor=pointer]
+              - cell "Concentrated on chatgpt with no fallback" [ref=e1876]
+              - cell "Approve and record a fallback provider" [ref=e1877]
+              - cell "unowned" [ref=e1878]
+            - row [ref=e1879]:
+              - cell "WARN" [ref=e1880]
+              - cell [ref=e1882]:
+                - button "Agent Beacon" [ref=e1883] [cursor=pointer]
+              - 'cell "Recorded data egress: unknown; trust boundary: Telemetry producer and collector boundary" [ref=e1884]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1885]
+              - cell "henry" [ref=e1886]
+            - row [ref=e1887]:
+              - cell "WARN" [ref=e1888]
+              - cell [ref=e1890]:
+                - button "AIMap" [ref=e1891] [cursor=pointer]
+              - 'cell "Recorded data egress: network-required; trust boundary: Tester and explicitly authorized target systems" [ref=e1892]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1893]
+              - cell "henry" [ref=e1894]
+            - row [ref=e1895]:
+              - cell "WARN" [ref=e1896]
+              - cell [ref=e1898]:
+                - button "Client style guide (custom GPT)" [ref=e1899] [cursor=pointer]
+              - cell "Stale — last reviewed 80 days ago" [ref=e1900]
+              - cell "Re-review; stale context silently degrades every agent that loads it" [ref=e1901]
+              - cell "henry" [ref=e1902]
+            - row [ref=e1903]:
+              - cell "WARN" [ref=e1904]
+              - cell [ref=e1906]:
+                - button "Client style guide (custom GPT)" [ref=e1907] [cursor=pointer]
+              - cell "Only verified on chatgpt — single-platform asset" [ref=e1908]
+              - cell "Import and verify on a second approved platform" [ref=e1909]
+              - cell "henry" [ref=e1910]
+            - row [ref=e1911]:
+              - cell "WARN" [ref=e1912]
+              - cell [ref=e1914]:
+                - button "Finance analysis brief" [ref=e1915] [cursor=pointer]
+              - cell "Never drilled — the fallback is untested paper" [ref=e1916]
+              - cell "Run the workflow once on the fallback provider and record the result" [ref=e1917]
+              - cell "finance systems" [ref=e1918]
+            - row [ref=e1919]:
+              - cell "WARN" [ref=e1920]
+              - cell [ref=e1922]:
+                - button "Finance analysis brief" [ref=e1923] [cursor=pointer]
+              - cell "No evaluation asset linked and no evidence recorded — outcomes exist only in chat history" [ref=e1924]
+              - cell "Export evaluation cases into a durable, versioned fixture" [ref=e1925]
+              - cell "finance systems" [ref=e1926]
+            - row [ref=e1927]:
+              - cell "WARN" [ref=e1928]
+              - cell [ref=e1930]:
+                - button "Interview transcripts pack" [ref=e1931] [cursor=pointer]
+              - cell "Only verified on chatgpt — single-platform asset" [ref=e1932]
+              - cell "Import and verify on a second approved platform" [ref=e1933]
+              - cell "henry" [ref=e1934]
+            - row [ref=e1935]:
+              - cell "WARN" [ref=e1936]
+              - cell [ref=e1938]:
+                - button "Kiji Privacy Proxy" [ref=e1939] [cursor=pointer]
+              - 'cell "Recorded data egress: network-required; trust boundary: Traffic crosses a local masking proxy before the external AI service" [ref=e1940]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1941]
+              - cell "henry" [ref=e1942]
+            - row [ref=e1943]:
+              - cell "WARN" [ref=e1944]
+              - cell [ref=e1946]:
+                - button "Network analysis refresh" [ref=e1947] [cursor=pointer]
+              - cell "Stale — last reviewed 70 days ago" [ref=e1948]
+              - cell "Re-review; stale context silently degrades every agent that loads it" [ref=e1949]
+              - cell "unowned" [ref=e1950]
+            - row [ref=e1951]:
+              - cell "WARN" [ref=e1952]
+              - cell [ref=e1954]:
+                - button "Network analysis refresh" [ref=e1955] [cursor=pointer]
+              - cell "Never drilled — the fallback is untested paper" [ref=e1956]
+              - cell "Run the workflow once on the fallback provider and record the result" [ref=e1957]
+              - cell "unowned" [ref=e1958]
+            - row [ref=e1959]:
+              - cell "WARN" [ref=e1960]
+              - cell [ref=e1962]:
+                - button "Network analysis refresh" [ref=e1963] [cursor=pointer]
+              - cell "No evaluation asset linked and no evidence recorded — outcomes exist only in chat history" [ref=e1964]
+              - cell "Export evaluation cases into a durable, versioned fixture" [ref=e1965]
+              - cell "unowned" [ref=e1966]
+            - row [ref=e1967]:
+              - cell "WARN" [ref=e1968]
+              - cell [ref=e1970]:
+                - button "Pipelock" [ref=e1971] [cursor=pointer]
+              - 'cell "Recorded data egress: network-required; trust boundary: Agent network egress passes through the firewall boundary" [ref=e1972]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1973]
+              - cell "henry" [ref=e1974]
+            - row [ref=e1975]:
+              - cell "WARN" [ref=e1976]
+              - cell [ref=e1978]:
+                - button "Praxen" [ref=e1979] [cursor=pointer]
+              - 'cell "Recorded data egress: unknown; trust boundary: Policy declarations, source/deployment evidence, and verifier runtime" [ref=e1980]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1981]
+              - cell "henry" [ref=e1982]
+            - row [ref=e1983]:
+              - cell "WARN" [ref=e1984]
+              - cell [ref=e1986]:
+                - button "RAMPART" [ref=e1987] [cursor=pointer]
+              - 'cell "Recorded data egress: unknown; trust boundary: Test runner, agent under test, and configured model/tool services" [ref=e1988]'
+              - cell "Review data flow and sensitive fields before adoption or import automation" [ref=e1989]
+              - cell "henry" [ref=e1990]
+            - row [ref=e1991]:
+              - cell "WARN" [ref=e1992]
+              - cell [ref=e1994]:
+                - button "Research ingest skill" [ref=e1995] [cursor=pointer]
+              - cell "Only verified on claude — single-platform asset" [ref=e1996]
+              - cell "Import and verify on a second approved platform" [ref=e1997]
+              - cell "henry" [ref=e1998]
+            - row [ref=e1999]:
+              - cell "WARN" [ref=e2000]
+              - cell [ref=e2002]:
+                - button "Shared memory export" [ref=e2003] [cursor=pointer]
+              - cell "Stale — last reviewed 58 days ago" [ref=e2004]
+              - cell "Re-review; stale context silently degrades every agent that loads it" [ref=e2005]
+              - cell "henry" [ref=e2006]
+            - row [ref=e2007]:
+              - cell "UNKNOWN" [ref=e2008]
+              - cell [ref=e2010]:
+                - button "Kill-switch procedure" [ref=e2011] [cursor=pointer]
+              - cell "Never reviewed (no review date recorded)" [ref=e2012]
+              - cell "Review the asset and record the date" [ref=e2013]
+              - cell "risk (self)" [ref=e2014]
+            - row [ref=e2015]:
+              - cell "ACCEPTED" [ref=e2016]
+              - cell [ref=e2018]:
+                - button "Interview transcripts pack" [ref=e2019] [cursor=pointer]
+              - 'cell "Canonical form is provider-proprietary (vendor/notebook-product) — accepted by henry until 2026-09-22: Vendor notebook UX worth the lock-in for this quarter; markdown export tested monthly" [ref=e2020]'
+              - cell "Re-decide or remediate before 2026-09-22" [ref=e2021]
+              - cell "henry" [ref=e2022]
+    - complementary "Evidence sources" [ref=e974]:
+      - generic [ref=e976]:
+        - text: Evidence sources
+        - strong [ref=e977]: Hosted / manual viewer
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - button "Import snapshot" [ref=e980] [cursor=pointer]
+          - button "Export" [disabled] [ref=e984]
+          - button "Clear" [disabled] [ref=e988]
+        - list [ref=e992]:
+          - listitem [ref=e993] [cursor=pointer]:
+            - generic [ref=e995]:
+              - strong [ref=e996]: Agent Beacon
+              - generic [ref=e997]: Runtime and inventory JSONL
+            - emphasis [ref=e998]: Not configured
+          - listitem [ref=e999] [cursor=pointer]:
+            - generic [ref=e1001]:
+              - strong [ref=e1002]: Runtime telemetry
+              - generic [ref=e1003]: Sanitized Codex, Claude, and Pi metadata JSONL
+            - emphasis [ref=e1004]: Not configured
+          - listitem [ref=e1005] [cursor=pointer]:
+            - generic [ref=e1007]:
+              - strong [ref=e1008]: Praxen
+              - generic [ref=e1009]: Canonical findings JSON 2.0
+            - emphasis [ref=e1010]: Not configured
+          - listitem [ref=e1011] [cursor=pointer]:
+            - generic [ref=e1013]:
+              - strong [ref=e1014]: Pipelock
+              - generic [ref=e1015]: Audit Packet v0
+            - emphasis [ref=e1016]: Not configured
+          - listitem [ref=e1017] [cursor=pointer]:
+            - generic [ref=e1019]:
+              - strong [ref=e1020]: RAMPART
+              - generic [ref=e1021]: Sanitized safety test results
+            - emphasis [ref=e1022]: Not configured
+          - listitem [ref=e1023] [cursor=pointer]:
+            - generic [ref=e1025]:
+              - strong [ref=e1026]: AIMap
+              - generic [ref=e1027]: Authorized completed scan findings
+            - emphasis [ref=e1028]: Not configured
+        - region "Agent Beacon source details" [ref=e1029]:
+          - generic [ref=e1030]:
+            - generic [ref=e1031]:
+              - term [ref=e1032]: Last accepted
+              - definition [ref=e1033]: None
+            - generic [ref=e1034]:
+              - term [ref=e1035]: Rejected
+              - definition [ref=e1036]: "0"
+          - paragraph [ref=e1037]: "Viewer only: import a snapshot here. Source files and credentials stay wherever the collector runs."
+        - group [ref=e1038]:
+          - generic "Later adapters" [ref=e1039] [cursor=pointer]
+  - contentinfo [ref=e328]:
+    - link "https://sancussight.vercel.app" [ref=e329] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

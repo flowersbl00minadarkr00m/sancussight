@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/operational-lifecycle-run-v1.schema.json",
+  "title": "SancusSight fixed operational lifecycle run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "runId", "action", "operatorAction", "recordedAt", "result", "message", "limits"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "runId": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "action": {"enum": ["preflight", "install-user", "inspect", "export-source", "run-release-gate", "exercise-failures", "rollback", "uninstall-user"]},
+    "sourceId": {"type": ["string", "null"], "enum": ["agent-beacon", "runtime-telemetry", "praxen", "pipelock", "rampart", "aimap", null]},
+    "operatorAction": {"type": "string", "pattern": "^sancussight\\.operations\\.[a-z-]+$"},
+    "recordedAt": {"type": "string", "format": "date-time"},
+    "result": {"enum": ["passed", "blocked", "planned", "failed"]},
+    "message": {"type": "string", "maxLength": 480},
+    "evidenceLocation": {"type": ["string", "null"], "maxLength": 240},
+    "limits": {"type": "array", "maxItems": 12, "items": {"type": "string", "maxLength": 240}}
+  }
+}

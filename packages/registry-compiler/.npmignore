@@ -1,0 +1,5 @@
+src/
+test/
+dist/__tests__
+dist/**/__tests__/*
+*.tgz

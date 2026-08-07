@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.vercel.app/spec/evidence-packet-interoperability/v1",
+  "title": "SancusSight Evidence Packet Interoperability Predicate v1",
+  "description": "Exact custom predicate used by SancusSight unsigned in-toto Statement v1 projections. This schema does not imply signing, external verification, certification, or endorsement by in-toto maintainers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "packetType",
+    "packetDigest",
+    "subjectKind",
+    "qualification",
+    "verificationCount",
+    "missingEvidenceCount",
+    "unsigned",
+    "externallyVerified"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "packetType": {
+      "const": "sancussight-evidence-packet"
+    },
+    "packetDigest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "subjectKind": {
+      "type": "string",
+      "enum": [
+        "context",
+        "skill",
+        "prompt-template",
+        "intent-context",
+        "workflow",
+        "control",
+        "evaluation",
+        "ontology-object",
+        "ontology-link",
+        "ontology-action",
+        "schema",
+        "evidence-contract",
+        "consumer-adapter",
+        "candidate-tool",
+        "accepted-asset"
+      ]
+    },
+    "qualification": {
+      "type": "string",
+      "enum": [
+        "recorded",
+        "portable-projection",
+        "deterministic",
+        "manual",
+        "missing"
+      ]
+    },
+    "verificationCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missingEvidenceCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unsigned": {
+      "const": true
+    },
+    "externallyVerified": {
+      "const": false
+    }
+  }
+}

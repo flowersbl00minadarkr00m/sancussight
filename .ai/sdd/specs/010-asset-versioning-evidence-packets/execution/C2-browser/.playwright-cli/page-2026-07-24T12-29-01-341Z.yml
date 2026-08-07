@@ -1,0 +1,113 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Return to SancusSight entry" [ref=e5] [cursor=pointer]:
+      - generic [ref=e6]: SancusSight
+    - generic [ref=e12]:
+      - generic [ref=e13]: Snapshot
+      - generic [ref=e14]: Imported copy; no live source
+      - generic [ref=e15]: 1 assets / 2 platforms
+    - generic [ref=e16]:
+      - button "Export registry" [ref=e293] [cursor=pointer]
+      - group [ref=e18]:
+        - generic "Utilities" [ref=e19] [cursor=pointer]
+        - generic [ref=e287]:
+          - button "Share card" [ref=e288] [cursor=pointer]
+          - button "Import snapshot" [ref=e290] [cursor=pointer]
+          - button "Replace source" [ref=e294] [cursor=pointer]
+          - button "Return to entry" [ref=e291] [cursor=pointer]
+          - button "Disconnect and clear cache" [ref=e295] [cursor=pointer]
+  - navigation "Workspace" [ref=e20]:
+    - generic "Primary workspace views" [ref=e21]:
+      - button "Home" [ref=e22] [cursor=pointer]
+      - button "Assets" [ref=e23] [cursor=pointer]
+      - button "Exit Drills" [ref=e24] [cursor=pointer]
+      - button "Attention" [ref=e2149] [cursor=pointer]
+    - button "Advanced" [ref=e28] [cursor=pointer]
+  - status [ref=e1922]: Snapshot imported from portable-derivative.json. Later source changes require another import.
+  - main [ref=e30]:
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: Asset catalog
+        - heading "Coverage matrix" [level=2] [ref=e36]
+      - generic "Asset catalog criteria" [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: Search assets
+          - searchbox "Search assets" [ref=e40]
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: Owner
+            - combobox "Owner" [disabled] [ref=e44]:
+              - option "Unavailable" [selected]
+              - option "Missing / unavailable (1)"
+          - generic [ref=e45]:
+            - generic [ref=e46]: Kind
+            - combobox "Kind" [ref=e47]:
+              - option "All kind" [selected]
+              - option "skill (1)"
+          - generic [ref=e48]:
+            - generic [ref=e49]: Lifecycle
+            - combobox "Lifecycle" [ref=e50]:
+              - option "All lifecycle" [selected]
+              - option "active (1)"
+          - generic [ref=e51]:
+            - generic [ref=e52]: Portability
+            - combobox "Portability" [ref=e53]:
+              - option "All portability" [selected]
+              - option "fail (1)"
+          - generic [ref=e54]:
+            - generic [ref=e55]: Provider
+            - combobox "Provider" [ref=e56]:
+              - option "All provider" [selected]
+              - option "linux (1)"
+              - option "windows (1)"
+          - generic [ref=e57]:
+            - generic [ref=e58]: Evidence freshness
+            - combobox "Evidence freshness" [ref=e59]:
+              - option "All evidence freshness" [selected]
+              - option "current (1)"
+      - generic [ref=e60]:
+        - strong [ref=e61]: 1 asset
+        - generic [ref=e62]: No active criteria
+      - list "Coverage legend" [ref=e63]:
+        - listitem [ref=e64]:
+          - strong [ref=e65]: check
+          - text: verified
+        - listitem [ref=e66]:
+          - strong [ref=e67]: "!"
+          - text: stale
+        - listitem [ref=e68]:
+          - strong [ref=e69]: "?"
+          - text: unverified
+        - listitem [ref=e70]:
+          - strong [ref=e71]: x
+          - text: not shared
+        - listitem [ref=e72]:
+          - strong [ref=e73]: PRI
+          - text: primary provider
+        - listitem [ref=e74]:
+          - strong [ref=e75]: FBK
+          - text: fallback provider
+        - listitem [ref=e76]:
+          - strong [ref=e77]: dot
+          - text: not applicable
+      - table [ref=e79]:
+        - rowgroup [ref=e80]:
+          - row [ref=e1923]:
+            - columnheader "Asset" [ref=e82]
+            - columnheader "State" [ref=e83]
+            - columnheader "Kind" [ref=e84]
+            - columnheader "linux" [ref=e1924]
+            - columnheader "windows" [ref=e1925]
+        - rowgroup [ref=e89]:
+          - row [ref=e1937]:
+            - cell [ref=e1927]:
+              - button "portable skill" [active] [ref=e1928] [cursor=pointer]
+            - cell [ref=e1938]:
+              - strong [ref=e1939]: Selected
+            - cell "skill" [ref=e1930]
+            - 'cell "portable skill, linux: Shared, never verified" [ref=e1931]': "?"
+            - 'cell "portable skill, windows: Shared, never verified" [ref=e1932]': "?"
+      - paragraph [ref=e279]: Returned to portable skill.
+  - contentinfo [ref=e285]:
+    - link "https://sancussight.vercel.app" [ref=e286] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

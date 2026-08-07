@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/operational-producer-inventory-v1.schema.json",
+  "title": "SancusSight operational producer inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contract", "scope", "sources"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "contract": {"const": "OperationalProducerInventoryV1"},
+    "scope": {"type": "string", "minLength": 1, "maxLength": 240},
+    "sources": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "displayName", "evidenceContract", "boundary", "officialUrl", "supportedVersions", "lifecycle"],
+        "properties": {
+          "id": {"enum": ["agent-beacon", "runtime-telemetry", "praxen", "pipelock", "rampart", "aimap"]},
+          "displayName": {"type": "string", "minLength": 1, "maxLength": 80},
+          "evidenceContract": {"type": "string", "minLength": 1, "maxLength": 120},
+          "boundary": {"type": "string", "minLength": 1, "maxLength": 240},
+          "officialUrl": {"type": "string", "pattern": "^https://"},
+          "supportedVersions": {"type": "array", "maxItems": 8, "items": {"type": "string", "pattern": "^[0-9A-Za-z][0-9A-Za-z._+-]{0,79}$"}},
+          "lifecycle": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["install", "configure", "start", "inspect", "update", "rollback", "stop", "remove"],
+            "properties": {
+              "install": {"type": "string", "maxLength": 120},
+              "configure": {"type": "string", "maxLength": 120},
+              "start": {"type": "string", "maxLength": 120},
+              "inspect": {"type": "string", "maxLength": 120},
+              "update": {"type": "string", "maxLength": 120},
+              "rollback": {"type": "string", "maxLength": 120},
+              "stop": {"type": "string", "maxLength": 120},
+              "remove": {"type": "string", "maxLength": 120}
+            }
+          }
+        }
+      }
+    }
+  }
+}

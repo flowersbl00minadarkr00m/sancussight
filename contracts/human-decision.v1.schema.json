@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/human-decision.v1.schema.json",
+  "title": "HumanDecisionPayloadV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "actionId", "policyId", "policyVersion", "scopeHash", "rationale", "decidedBy", "effectiveAt", "evidenceRefs"],
+  "properties": {
+    "decision": { "enum": ["approve", "reject", "override", "exception", "revoke"] },
+    "actionId": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "policyId": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "policyVersion": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "scopeHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 320 },
+    "decidedBy": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "effectiveAt": { "type": "string", "format": "date-time" },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "supersedesDecisionId": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "evidenceRefs": { "type": "array", "maxItems": 32, "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" } }
+  }
+}

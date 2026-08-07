@@ -1,0 +1,55 @@
+{
+  "eventTime": "2026-07-24T16:15:00.000Z",
+  "eventType": "COMPLETE",
+  "run": {
+    "runId": "0176a8c2-fe01-7439-87e6-56a1a1b4029f",
+    "facets": {
+      "c3Run": {
+        "value": "C3_RUN_FACET_94d4_SENTINEL"
+      }
+    }
+  },
+  "job": {
+    "namespace": "c3-private-job-namespace",
+    "name": "c3-private-job-name",
+    "facets": {
+      "c3Job": {
+        "value": "C3_JOB_FACET_94d4_SENTINEL"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "namespace": "c3-private-input-namespace",
+      "name": "c3-private-input-name",
+      "facets": {
+        "c3Base": {
+          "value": "C3_INPUT_BASE_FACET_94d4_SENTINEL"
+        }
+      },
+      "inputFacets": {
+        "c3Input": {
+          "value": "C3_INPUT_DIRECTION_FACET_94d4_SENTINEL"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "namespace": "c3-private-output-namespace",
+      "name": "c3-private-output-name",
+      "facets": {
+        "c3Base": {
+          "value": "C3_OUTPUT_BASE_FACET_94d4_SENTINEL"
+        }
+      },
+      "outputFacets": {
+        "c3Output": {
+          "value": "C3_OUTPUT_DIRECTION_FACET_94d4_SENTINEL"
+        }
+      }
+    }
+  ],
+  "producer": "https://producer.example/c3-private-client",
+  "schemaURL": "https://openlineage.io/spec/1-0-5/OpenLineage.json#/definitions/RunEvent"
+}

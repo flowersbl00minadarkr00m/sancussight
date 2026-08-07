@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/aimap-operational-export-v1.schema.json",
+  "title": "AIMapOperationalExportV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "sourceVersion", "scanId", "authorizationId", "runId", "status", "target", "completedAt", "findings"],
+  "properties": {
+    "schemaVersion": { "const": 1 }, "sourceVersion": { "type": "string", "maxLength": 80 }, "scanId": { "type": "string", "maxLength": 160 }, "authorizationId": { "type": "string", "maxLength": 160 }, "runId": { "type": "string", "maxLength": 160 }, "status": { "const": "completed" }, "completedAt": { "type": "string", "format": "date-time" }, "target": { "$ref": "aimap-authorization-v1.schema.json#/$defs/target" }, "findings": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/finding" } }, "operational": { "type": "object" }
+  },
+  "$defs": { "finding": { "type": "object", "additionalProperties": false, "required": ["findingId", "endpointId", "hostname", "port", "protocol", "authStatus", "template", "severity", "title"], "properties": { "findingId": { "type": "string", "maxLength": 160 }, "endpointId": { "type": "string", "maxLength": 160 }, "hostname": { "type": "string", "maxLength": 160 }, "port": { "type": "integer", "minimum": 1, "maximum": 65535 }, "protocol": { "enum": ["http", "https"] }, "authStatus": { "enum": ["authenticated", "unauthenticated", "unknown"] }, "riskScore": { "type": "number" }, "riskFactors": { "type": "array", "maxItems": 16, "items": { "type": "string", "maxLength": 120 } }, "template": { "type": "string", "maxLength": 160 }, "severity": { "enum": ["critical", "high", "medium", "low", "informational"] }, "title": { "type": "string", "maxLength": 320 } } } }
+}

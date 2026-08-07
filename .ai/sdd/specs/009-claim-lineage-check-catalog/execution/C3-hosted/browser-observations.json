@@ -1,0 +1,58 @@
+{
+  "browser": {
+    "engines": [
+      "Google Chrome extension browser",
+      "Codex in-app Chromium browser"
+    ],
+    "origin": "https://sancussight.vercel.app",
+    "inputs": "built-in synthetic demo only",
+    "rawEvidenceUploaded": false
+  },
+  "canonicalDetail": {
+    "asset": "Finance analysis brief",
+    "checkId": "portability.provider-fallback.v1",
+    "exactRuleVisible": true,
+    "remediationVisible": true,
+    "invalidationVisible": true,
+    "noPreviousExplicit": true,
+    "resultIdentityVisible": true,
+    "boundedLineageVisible": true,
+    "desktopAdjacent": true
+  },
+  "passportRoundTrip": {
+    "focusSequence": [
+      "H2#asset-passport-heading",
+      "H2#check-detail-heading",
+      "H2#asset-passport-heading"
+    ],
+    "selectedAssetPreserved": true,
+    "selectedCheckPreserved": true
+  },
+  "footer": {
+    "text": "https://sancussight.vercel.app",
+    "linkCount": 1,
+    "href": "https://sancussight.vercel.app"
+  },
+  "targetedR1Continuity": {
+    "method": "tracking-owner-directed C2 semantic matrix plus byte-identical corrected hosted artifact",
+    "c2Matrix": ".ai/sdd/specs/009-claim-lineage-check-catalog/execution/C2-browser/browser-observations.json",
+    "hostedStaticManifest": "05506A631F3019D5B72F5BE88E5F66221D98A193FE889D7A4CBB5011AA5E02BC",
+    "hostedFilesMatched": 5,
+    "hostedBytesMatched": 592631
+  },
+  "console": {
+    "errors": [],
+    "warnings": []
+  },
+  "network": {
+    "canonicalStaticFilesHttp200": 5,
+    "canonicalStaticFilesByteMatched": 5,
+    "unexpectedExternalFreshTrace": "not enumerated by the managed browser resource API",
+    "continuityEvidence": "C2 recorded no unexpected external requests and the hosted artifact is byte-identical to the guarded corrected bundle"
+  },
+  "limitations": [
+    "Managed Chrome and in-app Chromium loaded and exercised the desktop flows, but their synthetic file chooser and viewport override bridges did not support the planned fixture/narrow rerun.",
+    "Per tracking-owner directive, browser-control mechanics were stopped; C2's locked passing semantic and narrow/200% matrix is used only as continuity evidence through exact source and hosted-static identity.",
+    "No product correction was attempted or retained."
+  ]
+}

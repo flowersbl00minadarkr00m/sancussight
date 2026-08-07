@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-07-24T12:02:00.000Z",
+  "evidence": [
+    {
+      "schemaVersion": 1,
+      "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "runtime-telemetry",
+      "evidenceKind": "tool.completed",
+      "observedAt": "2026-07-24T12:00:00.000Z",
+      "importedAt": "2026-07-24T12:01:00.000Z",
+      "subject": {
+        "externalId": "synthetic-accepted-session-reference",
+        "type": "agent"
+      },
+      "outcome": "pass",
+      "summary": "Synthetic accepted runtime metadata.",
+      "provenance": {
+        "artifactName": "synthetic-runtime-telemetry.jsonl",
+        "artifactContentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "sourceRecordId": "synthetic-accepted-event-reference",
+        "parserId": "runtime-telemetry-jsonl",
+        "parserVersion": "1.0.0",
+        "verification": "not-applicable"
+      },
+      "attributes": {
+        "runtime": "codex-cli",
+        "provider": "codex-otel",
+        "transport": "otlp-http",
+        "providerVersion": "1.2.3",
+        "eventType": "tool.completed",
+        "durationMs": 42,
+        "toolName": "shell",
+        "approvalState": "approved",
+        "outcome": "succeeded"
+      }
+    }
+  ]
+}

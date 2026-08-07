@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "demo-skill",
+      "stable_id": "skill:demo",
+      "name": "Demo skill",
+      "provider": "operator",
+      "platform": "windows",
+      "capabilities": ["review"],
+      "lifecycle": "active",
+      "version": "1.0.0"
+    },
+    {
+      "id": "skipped-sensitive",
+      "name": "Sensitive fixture",
+      "command_arguments": ["never retained"]
+    }
+  ]
+}

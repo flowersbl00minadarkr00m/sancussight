@@ -1,0 +1,136 @@
+{
+  "browser": "Google Chrome",
+  "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "origin": "http://127.0.0.1:4173",
+  "fixtureQualification": "Explicitly synthetic; not production evidence.",
+  "results": [
+    {
+      "name": "desktop workspace and existing Evidence Sources rail",
+      "verdict": "PASS",
+      "workspace": {
+        "left": 20,
+        "right": 940,
+        "width": 920
+      },
+      "rail": {
+        "left": 956,
+        "right": 1260,
+        "width": 304
+      },
+      "pageOverflow": 0
+    },
+    {
+      "name": "empty/no-runtime telemetry alignment",
+      "verdict": "PASS",
+      "accepted": 0,
+      "states": [
+        "missing",
+        "omitted-private"
+      ]
+    },
+    {
+      "name": "safe OpenLineage JSON and per-profile equivalence dedupe",
+      "verdict": "PASS",
+      "recordsBeforeRepeat": 3,
+      "recordsAfterRepeat": 3
+    },
+    {
+      "name": "safe OpenLineage JSONL",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mixed safe/malformed/unknown/facet isolation",
+      "verdict": "PASS",
+      "status": "Sanitized import complete: 2 accepted, 3 rejected, 4 omitted. The bounded preview is stored locally."
+    },
+    {
+      "name": "exact IndexedDB allowlist and raw-value/file-byte/hash-preimage privacy negatives",
+      "verdict": "PASS",
+      "database": "sancussight-standards-interoperability-v1",
+      "store": "previews",
+      "inspectedRecords": 5
+    },
+    {
+      "name": "populated accepted-runtime telemetry alignment",
+      "verdict": "PASS",
+      "status": "1 accepted runtime record aligned under pinned profiles. Sanitized alignment summaries are stored locally."
+    },
+    {
+      "name": "valid Statement canonical download, digest, and exact unsigned truth",
+      "verdict": "PASS",
+      "filename": "sancussight-unsigned-statement-0419d4b5b061.json",
+      "confirmationDigest": "sha256:0419d4b5b0610a02cf3217aa54293ddd1aea112ec6f111185c5d16f2ec1171e7"
+    },
+    {
+      "name": "tampered Evidence Packet rejection",
+      "verdict": "PASS",
+      "status": "Evidence Packet is invalid or unsupported (invalid-packet). No Statement was created."
+    },
+    {
+      "name": "download failure makes no false success claim",
+      "verdict": "PASS",
+      "status": "Local download failed (download-failed). No successful download is claimed."
+    },
+    {
+      "name": "20/profile and 100/global browser retention",
+      "verdict": "PASS",
+      "total": 80,
+      "retainedByProfile": {
+        "openinference-metadata-preview-1": 20,
+        "otel-genai-metadata-preview-1": 20,
+        "openlineage-run-event-core-1.0.5": 20,
+        "sancussight-in-toto-statement-1": 20
+      },
+      "note": "Four pinned profiles make the 20/profile cap bind at 80, below the global cap of 100."
+    },
+    {
+      "name": "Feature 011-only clear, useful focus, and Feature 009/010 isolation",
+      "verdict": "PASS",
+      "untouchedDatabases": [
+        "sancussight-check-history",
+        "sancussight-evidence",
+        "sancussight-governance"
+      ]
+    },
+    {
+      "name": "320 CSS pixels, long hashes, internal table overflow, and zero page overflow",
+      "verdict": "PASS",
+      "viewport": 320,
+      "pageScrollWidth": 320,
+      "pageClientWidth": 320,
+      "tableScrollWidth": 736,
+      "tableClientWidth": 258,
+      "hashScrollWidth": 236,
+      "hashClientWidth": 236,
+      "workspaceCount": 1,
+      "railCount": 1
+    },
+    {
+      "name": "effective 200% Chromium metrics with zero page overflow",
+      "verdict": "PASS",
+      "viewport": 320,
+      "devicePixelRatio": 2,
+      "pageScrollWidth": 320,
+      "pageClientWidth": 320
+    },
+    {
+      "name": "existing routes and canonical one-link footer",
+      "verdict": "PASS"
+    },
+    {
+      "name": "zero Feature 011 console warnings/errors and loopback/same-origin-only traffic",
+      "verdict": "PASS",
+      "consoleProblems": 0,
+      "pageErrors": 0,
+      "requests": 11,
+      "origins": [
+        "http://127.0.0.1:4173"
+      ]
+    },
+    {
+      "name": "honest IndexedDB unavailable state with usable in-memory preview",
+      "verdict": "PASS",
+      "status": "Sanitized import complete: 1 accepted, 0 rejected, 0 omitted. Browser persistence is unavailable; the current in-memory preview remains usable."
+    }
+  ]
+}

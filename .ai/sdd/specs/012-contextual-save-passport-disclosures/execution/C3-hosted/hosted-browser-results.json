@@ -1,0 +1,208 @@
+{
+  "verdict": "PASS",
+  "browser": {
+    "name": "Google Chrome",
+    "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "version": "150.0.7871.129"
+  },
+  "origin": "https://sancussight.vercel.app",
+  "limitations": [
+    "No public-host file write was automated or claimed.",
+    "No operating-system file chooser or native file handle was fabricated.",
+    "Local connected-file write, permission, preflight, verification, failure, and recovery evidence remains owned by C2/T3."
+  ],
+  "results": [
+    {
+      "name": "hosted compact header truth, contextual non-write strip state, six disclosures, keyboard/focus, content ownership, row association, rerender stability, asset reset, and footer",
+      "verdict": "PASS",
+      "headerText": "SancusSight\nDemo data\nSynthetic workspace\n21 assets / 4 platforms\nConnect file\nUtilities",
+      "firstName": "Accept governed asset action",
+      "secondName": "FindMnemo ontology contract",
+      "marker": {
+        "display": "list-item",
+        "listStyleType": "disclosure-open",
+        "markerContent": "normal",
+        "focusVisible": true
+      },
+      "footer": {
+        "children": 1,
+        "anchors": 1,
+        "text": "https://sancussight.vercel.app",
+        "href": "https://sancussight.vercel.app/"
+      }
+    },
+    {
+      "name": "hosted snapshot exposes no canonical-write action, write strip, or native-file authority",
+      "verdict": "PASS"
+    },
+    {
+      "name": "hosted narrow selected-row association, entry/Back focus, 320 CSS px, effective 200%, bounded content, zero page overflow, and single responsive DOM",
+      "verdict": "PASS",
+      "selectedAsset": "Accept governed asset action",
+      "metrics": {
+        "innerWidth": 320,
+        "devicePixelRatio": 2,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "pageOverflow": 0,
+        "passports": 1,
+        "catalogs": 1,
+        "strips": 0,
+        "disclosures": 6,
+        "contents": [
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          },
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          },
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          },
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          },
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          },
+          {
+            "clientWidth": 260,
+            "scrollWidth": 260
+          }
+        ],
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "hosted landing, demo, and unknown hash-route fallback",
+      "verdict": "PASS"
+    },
+    {
+      "name": "hosted clean console/page errors and canonical-origin-only traffic",
+      "verdict": "PASS",
+      "consoleIssues": 0,
+      "pageErrors": 0,
+      "requestCount": 22,
+      "foreignRequests": 0
+    }
+  ],
+  "consoleIssues": [],
+  "pageErrors": [],
+  "requests": [
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/assets/index-CyqhuywV.js",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/assets/index-B4g-NqFS.css",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/assets/index-CyqhuywV.js",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/assets/index-B4g-NqFS.css",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/assets/index-CyqhuywV.js",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/assets/index-B4g-NqFS.css",
+      "method": "GET"
+    },
+    {
+      "label": "narrow-effective-200",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/assets/index-CyqhuywV.js",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/assets/index-B4g-NqFS.css",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    }
+  ]
+}

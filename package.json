@@ -1,30 +1,41 @@
 {
   "name": "sancussight",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
+    "build": "tsc -p tsconfig.collector.json && tsc -b && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "verify:core": "node scripts/verify-core.ts",
+    "test:collector": "node --test collector/__tests__/*.test.ts",
+    "test:feature008": "node --test src/lib/__tests__/asset-catalog.test.mjs",
+    "test:feature009": "node --test src/lib/__tests__/feature009-*.test.mjs src/lib/__tests__/check-catalog-lineage.test.mjs",
+    "test:feature010": "node --test src/lib/__tests__/feature010-*.test.mjs",
+    "test:feature011": "node --test src/lib/__tests__/feature011-*.test.mjs",
+    "test:feature012": "node --test src/lib/__tests__/feature012-*.test.mjs",
+    "verify:feature012-build-inputs": "node scripts/verify-feature012-build-inputs.ts",
+    "build:registry-compiler": "tsc -p packages/registry-compiler/tsconfig.json",
+    "test:registry-compiler": "node --test packages/registry-compiler/test/*.test.ts packages/registry-compiler/src/__tests__/*.test.ts",
+    "verify:t10-matrix": "node scripts/run-spec005-t10-failure-matrix.ts",
+    "collector:start": "node collector/main.ts"
   },
   "dependencies": {
+    "lucide-react": "^1.24.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.2",
-    "@types/node": "^24.13.2",
+    "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
-    "jsdom": "^29.1.1",
-    "oxlint": "^1.71.0",
     "tailwindcss": "^4.3.2",
     "typescript": "~6.0.2",
-    "vite": "^8.1.1",
-    "vitest": "^4.1.9"
+    "vite": "^8.1.1"
   }
 }

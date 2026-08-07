@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "releaseRunId": "example-not-a-release-run",
+  "startedAt": "2026-07-16T00:00:00.000Z",
+  "runtimes": ["codex-cli", "claude-code", "pi"],
+  "sources": {
+    "runtime-telemetry": {"version": "1.0.0", "targetId": "operator-owned-target-required", "contractVersion": "runtime-telemetry-v1", "evidenceIds": [], "verification": "not-applicable", "operational": false},
+    "praxen": {
+      "version": "pinned-version-required",
+      "targetId": "sancussight",
+      "targetIds": ["sancussight", "sdd-exec"],
+      "contractVersion": "2.0.0",
+      "evidenceIds": ["sancussight-evidence-id-required", "sdd-exec-evidence-id-required"],
+      "latestObservedAt": "2026-07-16T00:00:00.000Z",
+      "verification": "not-applicable",
+      "operational": false,
+      "workerRemitHash": "1f28de633bf3249a07370128c9afeeab25bcba50dc2635a0f55e61f2d5944033",
+      "workerRemitHashes": [
+        "1f28de633bf3249a07370128c9afeeab25bcba50dc2635a0f55e61f2d5944033",
+        "abf7f7f9d31db0c92ea4ada61f1d70d89a49c05a7c2af5145e8e58d4211e5da1"
+      ],
+      "requiredTargets": [
+        {"targetId": "sancussight", "evidenceIds": ["sancussight-evidence-id-required"], "latestObservedAt": "2026-07-16T00:00:00.000Z", "workerRemitHash": "1f28de633bf3249a07370128c9afeeab25bcba50dc2635a0f55e61f2d5944033"},
+        {"targetId": "sdd-exec", "evidenceIds": ["sdd-exec-evidence-id-required"], "latestObservedAt": "2026-07-16T00:00:00.000Z", "workerRemitHash": "abf7f7f9d31db0c92ea4ada61f1d70d89a49c05a7c2af5145e8e58d4211e5da1"}
+      ]
+    },
+    "pipelock": {"version": "pinned-version-required", "targetId": "approved-workflow-required", "contractVersion": "0.0", "evidenceIds": [], "verification": "not-applicable", "operational": false},
+    "rampart": {"version": "pinned-version-required", "targetId": "operator-owned-target-required", "contractVersion": "1.0.0", "evidenceIds": [], "verification": "not-applicable", "operational": false},
+    "aimap": {"version": "pinned-version-required", "targetId": "exact-authorized-target-required", "contractVersion": "1.0.0", "evidenceIds": [], "verification": "not-applicable", "operational": false}
+  },
+  "failureCases": {
+    "source-stopped": "not-run",
+    "telemetry-bridge-stopped": "not-run",
+    "pi-extension-disabled": "not-run",
+    "malformed-runtime-event": "not-run",
+    "privacy-setting-mismatch": "not-run",
+    "artifact-inaccessible": "not-run",
+    "unsupported-format": "not-run",
+    "invalid-pipelock-signature": "not-run",
+    "rampart-execution-error": "not-run",
+    "aimap-out-of-scope": "not-run",
+    "collector-restart": "not-run",
+    "duplicate-replay": "not-run",
+    "artifact-rotation": "not-run",
+    "source-upgrade-mismatch": "not-run",
+    "successful-recovery": "not-run"
+  },
+  "status": "not-run",
+  "untestedBoundaries": ["This is an example only; it is not release evidence."]
+}

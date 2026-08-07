@@ -1,0 +1,497 @@
+- generic [ref=e46]:
+  - banner [ref=e47]:
+    - button "Return to SancusSight entry" [ref=e48] [cursor=pointer]:
+      - generic [ref=e49]: SancusSight
+    - generic [ref=e55]:
+      - generic [ref=e56]: Demo data
+      - generic [ref=e57]: Synthetic workspace
+      - generic [ref=e58]: 21 assets / 4 platforms
+    - generic [ref=e59]:
+      - button "Connect file" [ref=e60] [cursor=pointer]
+      - group [ref=e61]:
+        - generic "Utilities" [ref=e62] [cursor=pointer]
+  - navigation "Workspace" [ref=e63]:
+    - generic "Primary workspace views" [ref=e64]:
+      - button "Home" [ref=e65] [cursor=pointer]
+      - button "Assets" [ref=e66] [cursor=pointer]
+      - button "Exit Drills" [ref=e67] [cursor=pointer]
+      - button "Attention 24" [ref=e868] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e69]: "24"
+    - button "Advanced" [ref=e71] [cursor=pointer]
+  - main [ref=e73]:
+    - generic [ref=e2023]:
+      - generic [ref=e2024]:
+        - generic [ref=e2026]:
+          - generic [ref=e2027]: Asset catalog
+          - heading "Coverage matrix" [level=2] [ref=e2028]
+        - generic "Asset catalog criteria" [ref=e2029]:
+          - generic [ref=e2030]:
+            - generic [ref=e2031]: Search assets
+            - searchbox "Search assets" [ref=e2032]
+          - generic [ref=e2033]:
+            - generic [ref=e2034]:
+              - generic [ref=e2035]: Owner
+              - combobox "Owner" [ref=e2036]:
+                - option "All owner" [selected]
+                - option "Missing / unavailable (1)"
+                - option "finance systems (1)"
+                - option "henry (17)"
+                - option "risk (self) (2)"
+            - generic [ref=e2037]:
+              - generic [ref=e2038]: Kind
+              - combobox "Kind" [ref=e2039]:
+                - option "All kind" [selected]
+                - option "accepted-asset (1)"
+                - option "candidate-tool (6)"
+                - option "context (3)"
+                - option "control (2)"
+                - option "evaluation (1)"
+                - option "intent-context (1)"
+                - option "ontology-action (1)"
+                - option "prompt-template (1)"
+                - option "skill (2)"
+                - option "workflow (3)"
+            - generic [ref=e2040]:
+              - generic [ref=e2041]: Lifecycle
+              - combobox "Lifecycle" [disabled] [ref=e2042]:
+                - option "Unavailable" [selected]
+                - option "Missing / unavailable (21)"
+            - generic [ref=e2043]:
+              - generic [ref=e2044]: Portability
+              - combobox "Portability" [ref=e2045]:
+                - option "All portability" [selected]
+                - option "fail (4)"
+                - option "pass (8)"
+                - option "warn (9)"
+            - generic [ref=e2046]:
+              - generic [ref=e2047]: Provider
+              - combobox "Provider" [ref=e2048]:
+                - option "All provider" [selected]
+                - option "Missing / unavailable (6)"
+                - option "chatgpt (4)"
+                - option "claude (12)"
+                - option "codex (10)"
+                - option "local-llm (1)"
+                - option "markdown export in vault (1)"
+            - generic [ref=e2049]:
+              - generic [ref=e2050]: Evidence freshness
+              - combobox "Evidence freshness" [ref=e2051]:
+                - option "All evidence freshness" [selected]
+                - option "Missing / unavailable (4)"
+                - option "current (16)"
+                - option "stale (1)"
+        - generic [ref=e2052]:
+          - strong [ref=e2053]: 21 assets
+          - generic [ref=e2054]: No active criteria
+        - list "Coverage legend" [ref=e2055]:
+          - listitem [ref=e2056]:
+            - strong [ref=e2057]: check
+            - text: verified
+          - listitem [ref=e2058]:
+            - strong [ref=e2059]: "!"
+            - text: stale
+          - listitem [ref=e2060]:
+            - strong [ref=e2061]: "?"
+            - text: unverified
+          - listitem [ref=e2062]:
+            - strong [ref=e2063]: x
+            - text: not shared
+          - listitem [ref=e2064]:
+            - strong [ref=e2065]: PRI
+            - text: primary provider
+          - listitem [ref=e2066]:
+            - strong [ref=e2067]: FBK
+            - text: fallback provider
+          - listitem [ref=e2068]:
+            - strong [ref=e2069]: dot
+            - text: not applicable
+        - table [ref=e2071]:
+          - rowgroup [ref=e2072]:
+            - row [ref=e2073]:
+              - columnheader "Asset" [ref=e2074]
+              - columnheader "State" [ref=e2075]
+              - columnheader "Kind" [ref=e2076]
+              - columnheader "claude" [ref=e2077]
+              - columnheader "codex" [ref=e2078]
+              - columnheader "chatgpt" [ref=e2079]
+              - columnheader "local-llm" [ref=e2080]
+          - rowgroup [ref=e2081]:
+            - row [ref=e2082]:
+              - cell [ref=e2083]:
+                - button "Accept governed asset action" [ref=e2084] [cursor=pointer]
+              - cell "—" [ref=e2085]
+              - cell "ontology-action" [ref=e2086]
+              - 'cell "Accept governed asset action, claude: Verified 5d ago" [ref=e2087]': ✓
+              - 'cell "Accept governed asset action, codex: Verified 5d ago" [ref=e2088]': ✓
+              - 'cell "Accept governed asset action, chatgpt: Not shared" [ref=e2089]': ✕
+              - 'cell "Accept governed asset action, local-llm: Not shared" [ref=e2090]': ✕
+            - row [ref=e2091]:
+              - cell [ref=e2092]:
+                - button "FindMnemo ontology contract" [ref=e2093] [cursor=pointer]
+              - cell "—" [ref=e2094]
+              - cell "accepted-asset" [ref=e2095]
+              - 'cell "FindMnemo ontology contract, claude: Verified 4d ago" [ref=e2096]': ✓
+              - 'cell "FindMnemo ontology contract, codex: Verified 4d ago" [ref=e2097]': ✓
+              - 'cell "FindMnemo ontology contract, chatgpt: Not shared" [ref=e2098]': ✕
+              - 'cell "FindMnemo ontology contract, local-llm: Not shared" [ref=e2099]': ✕
+            - row [ref=e2100]:
+              - cell [ref=e2101]:
+                - button "Agent Beacon" [ref=e2102] [cursor=pointer]
+              - cell "—" [ref=e2103]
+              - cell "candidate-tool" [ref=e2104]
+              - 'cell "Agent Beacon, claude: Not shared" [ref=e2105]': ✕
+              - 'cell "Agent Beacon, codex: Not shared" [ref=e2106]': ✕
+              - 'cell "Agent Beacon, chatgpt: Not shared" [ref=e2107]': ✕
+              - 'cell "Agent Beacon, local-llm: Not shared" [ref=e2108]': ✕
+            - row [ref=e2109]:
+              - cell [ref=e2110]:
+                - button "AIMap" [ref=e2111] [cursor=pointer]
+              - cell "—" [ref=e2112]
+              - cell "candidate-tool" [ref=e2113]
+              - 'cell "AIMap, claude: Not shared" [ref=e2114]': ✕
+              - 'cell "AIMap, codex: Not shared" [ref=e2115]': ✕
+              - 'cell "AIMap, chatgpt: Not shared" [ref=e2116]': ✕
+              - 'cell "AIMap, local-llm: Not shared" [ref=e2117]': ✕
+            - row [ref=e2118]:
+              - cell [ref=e2119]:
+                - button "Kiji Privacy Proxy" [ref=e2120] [cursor=pointer]
+              - cell "—" [ref=e2121]
+              - cell "candidate-tool" [ref=e2122]
+              - 'cell "Kiji Privacy Proxy, claude: Not shared" [ref=e2123]': ✕
+              - 'cell "Kiji Privacy Proxy, codex: Not shared" [ref=e2124]': ✕
+              - 'cell "Kiji Privacy Proxy, chatgpt: Not shared" [ref=e2125]': ✕
+              - 'cell "Kiji Privacy Proxy, local-llm: Not shared" [ref=e2126]': ✕
+            - row [ref=e2127]:
+              - cell [ref=e2128]:
+                - button "Pipelock" [ref=e2129] [cursor=pointer]
+              - cell "—" [ref=e2130]
+              - cell "candidate-tool" [ref=e2131]
+              - 'cell "Pipelock, claude: Not shared" [ref=e2132]': ✕
+              - 'cell "Pipelock, codex: Not shared" [ref=e2133]': ✕
+              - 'cell "Pipelock, chatgpt: Not shared" [ref=e2134]': ✕
+              - 'cell "Pipelock, local-llm: Not shared" [ref=e2135]': ✕
+            - row [ref=e2136]:
+              - cell [ref=e2137]:
+                - button "Praxen" [ref=e2138] [cursor=pointer]
+              - cell "—" [ref=e2139]
+              - cell "candidate-tool" [ref=e2140]
+              - 'cell "Praxen, claude: Not shared" [ref=e2141]': ✕
+              - 'cell "Praxen, codex: Not shared" [ref=e2142]': ✕
+              - 'cell "Praxen, chatgpt: Not shared" [ref=e2143]': ✕
+              - 'cell "Praxen, local-llm: Not shared" [ref=e2144]': ✕
+            - row [ref=e2145]:
+              - cell [ref=e2146]:
+                - button "RAMPART" [ref=e2147] [cursor=pointer]
+              - cell "—" [ref=e2148]
+              - cell "candidate-tool" [ref=e2149]
+              - 'cell "RAMPART, claude: Not shared" [ref=e2150]': ✕
+              - 'cell "RAMPART, codex: Not shared" [ref=e2151]': ✕
+              - 'cell "RAMPART, chatgpt: Not shared" [ref=e2152]': ✕
+              - 'cell "RAMPART, local-llm: Not shared" [ref=e2153]': ✕
+            - row [ref=e2154]:
+              - cell [ref=e2155]:
+                - button "Interview transcripts pack" [ref=e2156] [cursor=pointer]
+              - cell "—" [ref=e2157]
+              - cell "context" [ref=e2158]
+              - 'cell "Interview transcripts pack, claude: Not shared" [ref=e2159]': ✕
+              - 'cell "Interview transcripts pack, codex: Not shared" [ref=e2160]': ✕
+              - 'cell "Interview transcripts pack, chatgpt: Verified 25d ago" [ref=e2161]': ✓
+              - 'cell "Interview transcripts pack, local-llm: Not shared" [ref=e2162]': ✕
+            - row [ref=e2163]:
+              - cell [ref=e2164]:
+                - button "Shared memory export" [ref=e2165] [cursor=pointer]
+              - cell "—" [ref=e2166]
+              - cell "context" [ref=e2167]
+              - 'cell "Shared memory export, claude: Verified 12d ago" [ref=e2168]': ✓
+              - 'cell "Shared memory export, codex: Verified 12d ago" [ref=e2169]': ✓
+              - 'cell "Shared memory export, chatgpt: Not shared" [ref=e2170]': ✕
+              - 'cell "Shared memory export, local-llm: Not shared" [ref=e2171]': ✕
+            - row [ref=e2172]:
+              - cell [ref=e2173]:
+                - button "Voice & context pack" [ref=e2174] [cursor=pointer]
+              - cell "—" [ref=e2175]
+              - cell "context" [ref=e2176]
+              - 'cell "Voice & context pack, claude: Verified 3d ago" [ref=e2177]': ✓
+              - 'cell "Voice & context pack, codex: Verified 9d ago" [ref=e2178]': ✓
+              - 'cell "Voice & context pack, chatgpt: Shared, never verified" [ref=e2179]': "?"
+              - 'cell "Voice & context pack, local-llm: Not shared" [ref=e2180]': ✕
+            - row [ref=e2181]:
+              - cell [ref=e2182]:
+                - button "AGENTS.md — cross-agent operating rules" [ref=e2183] [cursor=pointer]
+              - cell "—" [ref=e2184]
+              - cell "intent-context" [ref=e2185]
+              - 'cell "AGENTS.md — cross-agent operating rules, claude: Verified 12d ago" [ref=e2186]': ✓
+              - 'cell "AGENTS.md — cross-agent operating rules, codex: Verified 12d ago" [ref=e2187]': ✓
+              - 'cell "AGENTS.md — cross-agent operating rules, chatgpt: Not shared" [ref=e2188]': ✕
+              - 'cell "AGENTS.md — cross-agent operating rules, local-llm: Not shared" [ref=e2189]': ✕
+            - row [ref=e2190]:
+              - cell [ref=e2191]:
+                - button "Client style guide (custom GPT)" [ref=e2192] [cursor=pointer]
+              - cell "—" [ref=e2193]
+              - cell "prompt-template" [ref=e2194]
+              - 'cell "Client style guide (custom GPT), claude: Not shared" [ref=e2195]': ✕
+              - 'cell "Client style guide (custom GPT), codex: Not shared" [ref=e2196]': ✕
+              - 'cell "Client style guide (custom GPT), chatgpt: Verified 80d ago (stale)" [ref=e2197]': "!"
+              - 'cell "Client style guide (custom GPT), local-llm: Not shared" [ref=e2198]': ✕
+            - row [ref=e2199]:
+              - cell [ref=e2200]:
+                - button "Post Pipeline runbook" [ref=e2201] [cursor=pointer]
+              - cell "—" [ref=e2202]
+              - cell "skill" [ref=e2203]
+              - 'cell "Post Pipeline runbook, claude: Verified 4d ago" [ref=e2204]': ✓
+              - 'cell "Post Pipeline runbook, codex: Verified 21d ago" [ref=e2205]': ✓
+              - 'cell "Post Pipeline runbook, chatgpt: Not shared" [ref=e2206]': ✕
+              - 'cell "Post Pipeline runbook, local-llm: Not shared" [ref=e2207]': ✕
+            - row [ref=e2208]:
+              - cell [ref=e2209]:
+                - button "Research ingest skill" [ref=e2210] [cursor=pointer]
+              - cell "—" [ref=e2211]
+              - cell "skill" [ref=e2212]
+              - 'cell "Research ingest skill, claude: Verified 14d ago" [ref=e2213]': ✓
+              - 'cell "Research ingest skill, codex: Not shared" [ref=e2214]': ✕
+              - 'cell "Research ingest skill, chatgpt: Not shared" [ref=e2215]': ✕
+              - 'cell "Research ingest skill, local-llm: Not shared" [ref=e2216]': ✕
+            - row [ref=e2217]:
+              - cell [ref=e2218]:
+                - button "Finance analysis brief" [ref=e2219] [cursor=pointer]
+              - cell [ref=e2220]:
+                - strong [ref=e2221]: Selected
+              - cell "workflow" [ref=e2222]
+              - 'cell "Finance analysis brief, claude: Primary provider" [ref=e2223]': PRI
+              - 'cell "Finance analysis brief, codex: Not applicable" [ref=e2224]': ·
+              - 'cell "Finance analysis brief, chatgpt: Not applicable" [ref=e2225]': ·
+              - 'cell "Finance analysis brief, local-llm: Fallback provider" [ref=e2226]': FBK
+            - row [ref=e2227]:
+              - cell [ref=e2228]:
+                - button "Network analysis refresh" [ref=e2229] [cursor=pointer]
+              - cell "—" [ref=e2230]
+              - cell "workflow" [ref=e2231]
+              - 'cell "Network analysis refresh, claude: Not applicable" [ref=e2232]': ·
+              - 'cell "Network analysis refresh, codex: Not applicable" [ref=e2233]': ·
+              - 'cell "Network analysis refresh, chatgpt: Primary provider" [ref=e2234]': PRI
+              - 'cell "Network analysis refresh, local-llm: Not applicable" [ref=e2235]': ·
+            - row [ref=e2236]:
+              - cell [ref=e2237]:
+                - button "Weekly post production" [ref=e2238] [cursor=pointer]
+              - cell "—" [ref=e2239]
+              - cell "workflow" [ref=e2240]
+              - 'cell "Weekly post production, claude: Primary provider" [ref=e2241]': PRI
+              - 'cell "Weekly post production, codex: Fallback provider" [ref=e2242]': FBK
+              - 'cell "Weekly post production, chatgpt: Not applicable" [ref=e2243]': ·
+              - 'cell "Weekly post production, local-llm: Not applicable" [ref=e2244]': ·
+            - row [ref=e2245]:
+              - cell [ref=e2246]:
+                - button "Kill-switch procedure" [ref=e2247] [cursor=pointer]
+              - cell "—" [ref=e2248]
+              - cell "control" [ref=e2249]
+              - 'cell "Kill-switch procedure, claude: Shared, never verified" [ref=e2250]': "?"
+              - 'cell "Kill-switch procedure, codex: Shared, never verified" [ref=e2251]': "?"
+              - 'cell "Kill-switch procedure, chatgpt: Not shared" [ref=e2252]': ✕
+              - 'cell "Kill-switch procedure, local-llm: Not shared" [ref=e2253]': ✕
+            - row [ref=e2254]:
+              - cell [ref=e2255]:
+                - button "Loop contract policy" [ref=e2256] [cursor=pointer]
+              - cell "—" [ref=e2257]
+              - cell "control" [ref=e2258]
+              - 'cell "Loop contract policy, claude: Verified 15d ago" [ref=e2259]': ✓
+              - 'cell "Loop contract policy, codex: Verified 15d ago" [ref=e2260]': ✓
+              - 'cell "Loop contract policy, chatgpt: Not shared" [ref=e2261]': ✕
+              - 'cell "Loop contract policy, local-llm: Not shared" [ref=e2262]': ✕
+            - row [ref=e2263]:
+              - cell [ref=e2264]:
+                - button "Post QA eval fixtures" [ref=e2265] [cursor=pointer]
+              - cell "—" [ref=e2266]
+              - cell "evaluation" [ref=e2267]
+              - 'cell "Post QA eval fixtures, claude: Verified 20d ago" [ref=e2268]': ✓
+              - 'cell "Post QA eval fixtures, codex: Verified 20d ago" [ref=e2269]': ✓
+              - 'cell "Post QA eval fixtures, chatgpt: Not shared" [ref=e2270]': ✕
+              - 'cell "Post QA eval fixtures, local-llm: Not shared" [ref=e2271]': ✕
+        - paragraph [ref=e2272]
+      - article [ref=e2274]:
+        - generic [ref=e2275]:
+          - generic [ref=e2276]:
+            - generic [ref=e2277]: Asset Passport / workflow
+            - heading "Finance analysis brief" [level=2] [ref=e2278]
+            - paragraph [ref=e2279]: "Selected asset: wf-finance"
+          - button "Clear selection" [ref=e2280] [cursor=pointer]
+        - generic [ref=e2281]:
+          - generic [ref=e2282]:
+            - heading "Summary" [level=3] [ref=e2283]
+            - generic [ref=e2284]: Recorded facts
+          - generic [ref=e2285]:
+            - generic [ref=e2286]:
+              - term [ref=e2287]: Name
+              - definition [ref=e2288]: Finance analysis brief
+            - generic [ref=e2289]:
+              - term [ref=e2290]: Kind
+              - definition [ref=e2291]: workflow
+            - generic [ref=e2292]:
+              - term [ref=e2293]: Format
+              - definition [ref=e2294]: markdown
+            - generic [ref=e2295]:
+              - term [ref=e2296]: Location
+              - definition [ref=e2297]: vault/system/workflows/finance-analysis.md
+            - generic [ref=e2298]:
+              - term [ref=e2299]: Owner
+              - definition [ref=e2300]: finance systems
+            - generic [ref=e2301]:
+              - term [ref=e2302]: Sensitivity
+              - definition [ref=e2303]: sensitive
+            - generic [ref=e2304]:
+              - term [ref=e2305]: Lifecycle
+              - definition [ref=e2306]: Not recorded
+            - generic [ref=e2307]:
+              - term [ref=e2308]: Shared by design
+              - definition [ref=e2309]: "Yes"
+            - generic [ref=e2310]:
+              - term [ref=e2311]: Purpose
+              - definition [ref=e2312]: Not recorded
+            - generic [ref=e2313]:
+              - term [ref=e2314]: Stable ID
+              - definition [ref=e2315]: Not recorded
+            - generic [ref=e2316]:
+              - term [ref=e2317]: Supported version
+              - definition [ref=e2318]: Not recorded
+            - generic [ref=e2319]:
+              - term [ref=e2320]: Source product
+              - definition [ref=e2321]: Not recorded
+            - generic [ref=e2322]:
+              - term [ref=e2323]: Producer
+              - definition [ref=e2324]: Not recorded
+            - generic [ref=e2325]:
+              - term [ref=e2326]: Consumers
+              - definition [ref=e2327]: None recorded
+          - button "Record review today" [ref=e2329] [cursor=pointer]
+        - generic [ref=e2330]:
+          - generic [ref=e2331]:
+            - heading "Portability" [level=3] [ref=e2332]
+            - generic [ref=e2333]: Recorded facts + deterministic findings
+          - generic [ref=e2335]:
+            - term [ref=e2336]: Deterministic portability state
+            - definition [ref=e2337]: fail
+          - generic [ref=e2338]:
+            - heading "Recorded coverage and providers" [level=4] [ref=e2339]
+            - paragraph [ref=e2340]:
+              - strong [ref=e2341]: "Missing / unavailable:"
+              - text: No coverage recorded.
+            - generic [ref=e2342]:
+              - generic [ref=e2343]:
+                - term [ref=e2344]: Primary provider
+                - definition [ref=e2345]: claude
+              - generic [ref=e2346]:
+                - term [ref=e2347]: Fallback provider
+                - definition [ref=e2348]: local-llm
+          - list [ref=e2349]:
+            - listitem [ref=e2350]:
+              - generic [ref=e2351]:
+                - generic [ref=e2352]: PASS
+                - strong [ref=e2353]: Canonical copy is stored in an open, exportable format
+                - generic [ref=e2354]: Deterministic finding
+              - paragraph [ref=e2355]: Stored as markdown at vault/system/workflows/finance-analysis.md
+              - generic [ref=e2356]: "Evidence: Registry format field / observed Never recorded / owner: finance systems"
+            - listitem [ref=e2357]:
+              - generic [ref=e2358]:
+                - generic [ref=e2359]: PASS
+                - strong [ref=e2360]: Reviewed by a human within 45 days
+                - generic [ref=e2361]: Deterministic finding
+              - paragraph [ref=e2362]: Reviewed 35 days ago
+              - generic [ref=e2363]: "Evidence: lastReviewed = 2026-06-19 / observed Never recorded / owner: finance systems"
+            - listitem [ref=e2364]:
+              - generic [ref=e2365]:
+                - generic [ref=e2366]: FAIL
+                - strong [ref=e2367]: Every provider-specific dependency names an approved fallback
+                - generic [ref=e2368]: Deterministic finding
+              - paragraph [ref=e2369]: "Locked to claude: private retrieval connector has no fallback"
+              - generic [ref=e2370]: "Evidence: Registry providerDependencies / observed Never recorded / owner: finance systems"
+              - generic [ref=e2371]: "Action: Name and test an alternative to claude's private retrieval connector"
+            - listitem [ref=e2372]:
+              - generic [ref=e2373]:
+                - generic [ref=e2374]: PASS
+                - strong [ref=e2375]: Workflow has an approved fallback provider
+                - generic [ref=e2376]: Deterministic finding
+              - paragraph [ref=e2377]: Primary claude, fallback local-llm
+              - generic [ref=e2378]: "Evidence: Registry primaryProvider/fallbackProvider / observed Never recorded / owner: finance systems"
+            - listitem [ref=e2379]:
+              - generic [ref=e2380]:
+                - generic [ref=e2381]: WARN
+                - strong [ref=e2382]: Substitution drill run within 90 days
+                - generic [ref=e2383]: Deterministic finding
+              - paragraph [ref=e2384]: Never drilled — the fallback is untested paper
+              - generic [ref=e2385]: "Evidence: Registry lastSubstitutionDrill is empty / observed Never recorded / owner: finance systems"
+              - generic [ref=e2386]: "Action: Run the workflow once on the fallback provider and record the result"
+        - generic [ref=e2387]:
+          - generic [ref=e2388]:
+            - heading "Dependencies" [level=3] [ref=e2389]
+            - generic [ref=e2390]: Recorded facts
+          - list [ref=e2391]:
+            - listitem [ref=e2392]:
+              - strong [ref=e2393]: claude
+              - generic [ref=e2394]: private retrieval connector; fallback None recorded
+          - generic [ref=e2395]:
+            - generic [ref=e2396]:
+              - term [ref=e2397]: Workflow dependencies
+              - definition [ref=e2398]: Shared memory export, Research ingest skill
+            - generic [ref=e2399]:
+              - term [ref=e2400]: Producing product
+              - definition [ref=e2401]: Not recorded
+            - generic [ref=e2402]:
+              - term [ref=e2403]: Consuming products
+              - definition [ref=e2404]: None recorded
+          - button "Record substitution drill" [ref=e2406] [cursor=pointer]
+        - generic [ref=e2407]:
+          - generic [ref=e2408]:
+            - heading "Evidence" [level=3] [ref=e2409]
+            - generic [ref=e2410]: Evidence states + deterministic findings
+          - generic [ref=e2412]:
+            - term [ref=e2413]: Deterministic evidence freshness
+            - definition [ref=e2414]: Missing / unavailable
+          - paragraph [ref=e2415]:
+            - strong [ref=e2416]: "Missing / unavailable:"
+            - text: No evidence points recorded.
+          - generic [ref=e2418]:
+            - term [ref=e2419]: Evidence bindings
+            - definition [ref=e2420]: None recorded
+          - list [ref=e2421]:
+            - listitem [ref=e2422]:
+              - generic [ref=e2423]:
+                - generic [ref=e2424]: PASS
+                - strong [ref=e2425]: Asset has a named owner
+                - generic [ref=e2426]: Deterministic finding
+              - paragraph [ref=e2427]: Owned by finance systems
+              - generic [ref=e2428]: "Evidence: Registry owner field / observed Never recorded / owner: finance systems"
+            - listitem [ref=e2429]:
+              - generic [ref=e2430]:
+                - generic [ref=e2431]: WARN
+                - strong [ref=e2432]: Workflow has durable evaluation evidence
+                - generic [ref=e2433]: Deterministic finding
+              - paragraph [ref=e2434]: No evaluation asset linked and no evidence recorded — outcomes exist only in chat history
+              - generic [ref=e2435]: "Evidence: Registry dependsOn/evidence / observed Never recorded / owner: finance systems"
+              - generic [ref=e2436]: "Action: Export evaluation cases into a durable, versioned fixture"
+        - generic [ref=e2437]:
+          - generic [ref=e2438]:
+            - heading "Decisions" [level=3] [ref=e2439]
+            - generic [ref=e2440]: Human decisions
+          - paragraph [ref=e2441]:
+            - strong [ref=e2442]: "Missing / unavailable:"
+            - text: No human decisions recorded.
+        - generic [ref=e2443]:
+          - generic [ref=e2444]:
+            - heading "History" [level=3] [ref=e2445]
+            - generic [ref=e2446]: Recorded facts
+          - generic [ref=e2447]:
+            - generic [ref=e2448]:
+              - term [ref=e2449]: Registry source updated
+              - definition [ref=e2450]: 2026-07-24T00:51:30.015Z
+            - generic [ref=e2451]:
+              - term [ref=e2452]: Last review
+              - definition [ref=e2453]: 2026-06-19
+            - generic [ref=e2454]:
+              - term [ref=e2455]: Last substitution drill
+              - definition [ref=e2456]: Never recorded
+          - paragraph [ref=e2457]:
+            - strong [ref=e2458]: "Missing / unavailable:"
+            - text: No coverage verification history recorded.
+  - contentinfo [ref=e328]:
+    - link "https://sancussight.vercel.app" [ref=e329] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

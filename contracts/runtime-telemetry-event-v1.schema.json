@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/runtime-telemetry-event-v1.schema.json",
+  "title": "RuntimeTelemetryEventV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "eventId", "sessionId", "runtime", "provider", "transport", "providerVersion", "eventType", "observedAt", "outcome", "releaseRunId", "contentCapture"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "eventId": {"type": "string", "minLength": 1, "maxLength": 160},
+    "sessionId": {"type": "string", "minLength": 1, "maxLength": 160},
+    "runtime": {"enum": ["codex-cli", "claude-code", "pi"]},
+    "provider": {"enum": ["agent-beacon", "codex-otel", "claude-otel", "pi-extension"]},
+    "transport": {"enum": ["jsonl", "otlp-http", "otlp-grpc"]},
+    "providerVersion": {"type": "string", "minLength": 1, "maxLength": 80},
+    "eventType": {"type": "string", "minLength": 1, "maxLength": 80},
+    "observedAt": {"type": "string", "format": "date-time"},
+    "outcome": {"enum": ["succeeded", "failed", "blocked", "observed"]},
+    "durationMs": {"type": "number", "minimum": 0},
+    "toolName": {"type": "string", "minLength": 1, "maxLength": 80},
+    "approvalState": {"enum": ["approved", "denied", "not-required", "unknown"]},
+    "releaseRunId": {"type": "string", "minLength": 1, "maxLength": 160},
+    "contentCapture": {"const": false},
+    "operational": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["qualification", "sourceVersion", "runId", "targetId", "contractVersion", "runtime", "telemetryProvider", "telemetryTransport", "telemetryProviderVersion"],
+      "properties": {
+        "qualification": {"enum": ["operational", "isolated-qa", "demo", "fixture", "replay", "manual"]},
+        "sourceVersion": {"type": "string", "minLength": 1, "maxLength": 80},
+        "runId": {"type": "string", "minLength": 1, "maxLength": 160},
+        "targetId": {"type": "string", "minLength": 1, "maxLength": 160},
+        "contractVersion": {"type": "string", "minLength": 1, "maxLength": 80},
+        "configurationHash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "runtime": {"enum": ["codex-cli", "claude-code", "pi"]},
+        "telemetryProvider": {"enum": ["agent-beacon", "codex-otel", "claude-otel", "pi-extension"]},
+        "telemetryTransport": {"enum": ["jsonl", "otlp-http", "otlp-grpc"]},
+        "telemetryProviderVersion": {"type": "string", "minLength": 1, "maxLength": 80}
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "profileId": "personal-agentic",
+  "version": "1.0.0",
+  "attribution": {
+    "dimensions": "Singapore Model AI Governance Framework for Agentic AI (curated local interpretation)",
+    "aicm": "Cloud Security Alliance AICM v1.1 (control IDs attributed below; catalogue not reproduced)"
+  },
+  "dimensions": [
+    {"id": "risk-boundary", "label": "Assess and bound risk"},
+    {"id": "human-accountability", "label": "Meaningful human accountability"},
+    {"id": "technical-lifecycle", "label": "Technical controls and lifecycle"},
+    {"id": "responsible-use", "label": "Responsible end-user use"}
+  ],
+  "controls": [
+    {
+      "id": "sight.destination-boundary",
+      "dimension": "risk-boundary",
+      "outcome": "External destinations are explicit and reviewed before consequential transfer.",
+      "consequence": "Data or an agent action may cross the named local boundary.",
+      "defaultTier": "confirm",
+      "predicates": {"externalDestination": true, "effectTypes": ["network", "publish", "write"]},
+      "expectedEvidence": ["action.observed", "control.decided", "human.decided"],
+      "references": {"aicm": ["AICM-DSP-02"]}
+    },
+    {
+      "id": "sight.sensitive-egress",
+      "dimension": "risk-boundary",
+      "outcome": "Sensitive or secret data is not sent to an unapproved external destination.",
+      "consequence": "A sensitive-data egress could be irreversible or difficult to contain.",
+      "defaultTier": "block",
+      "predicates": {"externalDestination": true, "sensitivities": ["sensitive", "secret"]},
+      "expectedEvidence": ["action.observed", "control.decided", "verified outcome"],
+      "references": {"aicm": ["AICM-DSP-04"]}
+    },
+    {
+      "id": "sight.consequential-approval",
+      "dimension": "human-accountability",
+      "outcome": "Write, delete, publish, and execute effects have action-bound expiring approval.",
+      "consequence": "The action can change or publish state on behalf of the operator.",
+      "defaultTier": "confirm",
+      "predicates": {"effectTypes": ["write", "delete", "publish", "execute"]},
+      "expectedEvidence": ["action.observed", "human.decided", "effect.observed"],
+      "references": {"aicm": ["AICM-GOV-03"]}
+    },
+    {
+      "id": "sight.privilege-boundary",
+      "dimension": "human-accountability",
+      "outcome": "Elevated or administrator privileges are visible and explicitly approved.",
+      "consequence": "A broad permission set can amplify an otherwise bounded action.",
+      "defaultTier": "confirm",
+      "predicates": {"privileges": ["elevated", "admin"]},
+      "expectedEvidence": ["inventory.observed", "action.observed", "human.decided"],
+      "references": {"aicm": ["AICM-IAM-02"]}
+    },
+    {
+      "id": "sight.permission-breadth",
+      "dimension": "human-accountability",
+      "outcome": "Broad permission sets are visible before a consequential action uses them.",
+      "consequence": "A broad tool or MCP permission can expand the action's effect beyond its named purpose.",
+      "defaultTier": "confirm",
+      "predicates": {"permissionBreadths": ["broad", "machine-wide"]},
+      "expectedEvidence": ["inventory.observed", "action.observed", "human.decided"],
+      "references": {"aicm": ["AICM-IAM-03"]}
+    },
+    {
+      "id": "sight.reversibility",
+      "dimension": "risk-boundary",
+      "outcome": "Low-reversibility actions receive explicit review before proceeding.",
+      "consequence": "A mistake may be difficult to undo or contain.",
+      "defaultTier": "confirm",
+      "predicates": {"reversibilities": ["low"]},
+      "expectedEvidence": ["action.observed", "human.decided", "effect.observed"],
+      "references": {"aicm": ["AICM-GOV-04"]}
+    },
+    {
+      "id": "sight.inventory-novelty",
+      "dimension": "technical-lifecycle",
+      "outcome": "New or changed runtimes, tools, MCP servers, and permission sets receive review.",
+      "consequence": "A material change can invalidate an earlier conclusion.",
+      "defaultTier": "advise",
+      "predicates": {"novelty": true},
+      "expectedEvidence": ["inventory.observed", "material-change gap"],
+      "references": {"aicm": ["AICM-TPM-01"]}
+    },
+    {
+      "id": "sight.lineage-completeness",
+      "dimension": "technical-lifecycle",
+      "outcome": "Intent, action, decision, effect, outcome, and verification gaps remain visible.",
+      "consequence": "An action may look approved or effective without a complete trace.",
+      "defaultTier": "advise",
+      "predicates": {"lineageGap": true},
+      "expectedEvidence": ["work.intent-recorded", "action.observed", "effect.observed", "outcome.observed", "outcome.verified"],
+      "references": {"aicm": ["AICM-MON-02"]}
+    },
+    {
+      "id": "sight.source-freshness",
+      "dimension": "technical-lifecycle",
+      "outcome": "Stale, failed, and unverified source claims request refreshed evidence.",
+      "consequence": "Current decisions may rely on historical or incomplete source state.",
+      "defaultTier": "advise",
+      "predicates": {"sourceDegraded": true},
+      "expectedEvidence": ["source state", "fresh qualifying envelope"],
+      "references": {"aicm": ["AICM-MON-01"]}
+    },
+    {
+      "id": "sight.local-read-observe",
+      "dimension": "responsible-use",
+      "outcome": "Known local reads are recorded without repeated interruption.",
+      "consequence": "Routine work remains usable while its evidence is retained.",
+      "defaultTier": "observe",
+      "predicates": {"effectTypes": ["read"], "externalDestination": false, "sensitivityNot": ["secret"]},
+      "expectedEvidence": ["action.observed"],
+      "references": {"aicm": ["AICM-GOV-01"]}
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-07-23T00:00:00.000Z",
+  "evidence": [
+    {
+      "schemaVersion": 1,
+      "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "agent-beacon",
+      "evidenceKind": "synthetic-lineage-observation",
+      "observedAt": "2026-07-23T00:00:00.000Z",
+      "importedAt": "2026-07-23T00:00:00.000Z",
+      "subject": {
+        "stableId": "synthetic:lineage:v1",
+        "externalId": "synthetic-lineage",
+        "type": "workflow"
+      },
+      "outcome": "pass",
+      "summary": "Synthetic accepted observation for local browser acceptance.",
+      "provenance": {
+        "artifactName": "synthetic-evidence.json",
+        "artifactContentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "parserId": "synthetic-t4-fixture",
+        "parserVersion": "1",
+        "verification": "verified"
+      },
+      "operational": {
+        "qualification": "fixture",
+        "sourceVersion": "1",
+        "runId": "synthetic-run-1",
+        "targetId": "synthetic-lineage",
+        "contractVersion": "synthetic-contract-1"
+      },
+      "attributes": {
+        "fixture": true
+      }
+    }
+  ]
+}

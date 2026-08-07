@@ -1,0 +1,32 @@
+{
+  "proposalId": "project:sancussight",
+  "identityKey": "project:sancussight",
+  "identityConfidence": "high",
+  "kind": "project",
+  "displayName": "SancusSight",
+  "stableId": "project:sancussight",
+  "format": "json",
+  "lifecycle": "active",
+  "sensitivity": "internal",
+  "platforms": ["windows"],
+  "locations": [
+    {
+      "rootId": "project-registry",
+      "relativePath": "projects/sancussight.json",
+      "portableAlias": "root:project-registry"
+    }
+  ],
+  "provenance": [
+    {
+      "sourceType": "project-registry",
+      "sourceId": "sancussight",
+      "adapterId": "project-registry",
+      "adapterVersion": "1.0.0",
+      "rootId": "project-registry",
+      "relativePath": "projects/sancussight.json",
+      "observedAt": "2026-07-20T00:00:00.000Z"
+    }
+  ],
+  "selectedByDefault": true,
+  "warnings": []
+}

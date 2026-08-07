@@ -1,0 +1,4 @@
+[CmdletBinding()]
+param([Parameter(Mandatory)][ValidateSet('source-stopped', 'telemetry-bridge-stopped', 'pi-extension-disabled', 'malformed-runtime-event', 'privacy-setting-mismatch', 'artifact-inaccessible', 'unsupported-format', 'invalid-pipelock-signature', 'rampart-execution-error', 'aimap-out-of-scope', 'collector-restart', 'duplicate-replay', 'artifact-rotation', 'source-upgrade-mismatch', 'successful-recovery')][string]$FailureCase, [ValidateSet('agent-beacon', 'runtime-telemetry', 'praxen', 'pipelock', 'rampart', 'aimap')][string]$SourceId)
+. (Join-Path $PSScriptRoot 'lib\Invoke-SancusSightOperation.ps1')
+if ($SourceId) { Invoke-SancusSightOperation -Action 'exercise-failures' -SourceId $SourceId -FailureCase $FailureCase } else { Invoke-SancusSightOperation -Action 'exercise-failures' -FailureCase $FailureCase }

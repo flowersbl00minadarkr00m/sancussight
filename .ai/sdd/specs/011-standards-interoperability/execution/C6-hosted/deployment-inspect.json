@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "deployment": {
+    "id": "dpl_C1RpuwEBX3Tc8g2n7uMkuFjSk5CE",
+    "name": "sancussight",
+    "url": "sancussight-1qvn8hxfw-hflowers45-9370s-projects.vercel.app",
+    "projectId": "prj_1xc7VvasBFMzWSvURoWxJkOcuwrJ",
+    "teamId": "team_Y7ueoZZnBOfX63cjuG9R9SYG",
+    "target": "production",
+    "state": "READY",
+    "readyState": "READY",
+    "source": "cli",
+    "aliases": [
+      "sancussight.vercel.app",
+      "sancussight-hflowers45-9370s-projects.vercel.app",
+      "sancussight-hflowers45-9370-hflowers45-9370s-projects.vercel.app"
+    ],
+    "aliasError": null
+  }
+}

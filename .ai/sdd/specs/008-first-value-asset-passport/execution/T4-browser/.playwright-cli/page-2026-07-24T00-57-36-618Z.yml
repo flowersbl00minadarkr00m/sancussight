@@ -1,0 +1,172 @@
+- generic [ref=e46]:
+  - banner [ref=e47]:
+    - button "Return to SancusSight entry" [ref=e48] [cursor=pointer]:
+      - generic [ref=e49]: SancusSight
+    - generic [ref=e55]:
+      - generic [ref=e56]: Demo data
+      - generic [ref=e57]: Synthetic workspace
+      - generic [ref=e58]: 21 assets / 4 platforms
+    - generic [ref=e59]:
+      - button "Connect file" [ref=e60] [cursor=pointer]
+      - group [ref=e61]:
+        - generic "Utilities" [ref=e62] [cursor=pointer]
+  - navigation "Workspace" [ref=e63]:
+    - generic "Primary workspace views" [ref=e64]:
+      - button "Home" [ref=e65] [cursor=pointer]
+      - button "Assets" [ref=e66] [cursor=pointer]
+      - button "Exit Drills" [ref=e67] [cursor=pointer]
+      - button "Attention 24" [ref=e868] [cursor=pointer]:
+        - text: Attention
+        - generic [ref=e69]: "24"
+    - button "Advanced" [ref=e71] [cursor=pointer]
+  - generic [ref=e72]:
+    - main [ref=e73]:
+      - generic [ref=e1300]:
+        - generic [ref=e1301]:
+          - generic [ref=e1302]:
+            - text: Evidence ledger
+            - heading "Trust conditions requiring attention" [level=1] [ref=e1303]
+          - button "Open full queue" [ref=e1305] [cursor=pointer]
+        - region "Five governance dimensions" [ref=e1306]:
+          - generic [ref=e1307]:
+            - generic [ref=e1308]: Context portability
+            - strong [ref=e1309]: fail
+            - generic [ref=e1310]: 2 fail / 4 warn / 0 unknown
+          - generic [ref=e1311]:
+            - generic [ref=e1312]: Skill portability
+            - strong [ref=e1313]: warn
+            - generic [ref=e1314]: 0 fail / 1 warn / 0 unknown
+          - generic [ref=e1315]:
+            - generic [ref=e1316]: Workflow continuity
+            - strong [ref=e1317]: fail
+            - generic [ref=e1318]: 2 fail / 3 warn / 0 unknown
+          - generic [ref=e1319]:
+            - generic [ref=e1320]: Runtime controls
+            - strong [ref=e1321]: fail
+            - generic [ref=e1322]: 1 fail / 6 warn / 1 unknown
+          - generic [ref=e1323]:
+            - generic [ref=e1324]: Evidence & ownership
+            - strong [ref=e1325]: fail
+            - generic [ref=e1326]: 1 fail / 2 warn / 0 unknown
+        - region "Evidence categories" [ref=e1327]:
+          - generic [ref=e1328]:
+            - generic [ref=e1329]: Recorded facts
+            - strong [ref=e1330]: "0"
+          - generic [ref=e1331]:
+            - generic [ref=e1332]: Deterministic findings
+            - strong [ref=e1333]: "113"
+          - generic [ref=e1334]:
+            - generic [ref=e1335]: Missing evidence
+            - strong [ref=e1336]: "0"
+          - generic [ref=e1337]:
+            - generic [ref=e1338]: Human decisions
+            - strong [ref=e1339]: "1"
+        - generic [ref=e1340]:
+          - generic [ref=e1341]:
+            - generic [ref=e1342]:
+              - text: Needs attention
+              - paragraph [ref=e1343]: Worst conditions first, grouped by owned asset.
+            - strong [ref=e1344]: 13 assets
+          - list [ref=e1345]:
+            - listitem [ref=e1346]:
+              - generic [ref=e1347]: FAIL
+              - button "Client style guide (custom GPT)" [ref=e1348] [cursor=pointer]
+              - generic [ref=e1349]: "Locked to chatgpt: custom GPT instruction store has no fallback"
+              - emphasis [ref=e1350]: "4"
+            - listitem [ref=e1351]:
+              - generic [ref=e1352]: FAIL
+              - button "Finance analysis brief" [ref=e1353] [cursor=pointer]
+              - generic [ref=e1354]: "Locked to claude: private retrieval connector has no fallback"
+              - emphasis [ref=e1355]: "3"
+            - listitem [ref=e1356]:
+              - generic [ref=e1357]: FAIL
+              - button "Kill-switch procedure" [ref=e1358] [cursor=pointer]
+              - generic [ref=e1359]: Shared but never verified anywhere — sharing without a retrieval test is a hope, not a control
+              - emphasis [ref=e1360]: "2"
+            - listitem [ref=e1361]:
+              - generic [ref=e1362]: FAIL
+              - button "Network analysis refresh" [ref=e1363] [cursor=pointer]
+              - generic [ref=e1364]: Concentrated on chatgpt with no fallback
+              - emphasis [ref=e1365]: "5"
+            - listitem [ref=e1366]:
+              - generic [ref=e1367]: WARN
+              - button "Agent Beacon" [ref=e1368] [cursor=pointer]
+              - generic [ref=e1369]: "Recorded data egress: unknown; trust boundary: Telemetry producer and collector boundary"
+              - emphasis [ref=e1370]: "1"
+            - listitem [ref=e1371]:
+              - generic [ref=e1372]: WARN
+              - button "AIMap" [ref=e1373] [cursor=pointer]
+              - generic [ref=e1374]: "Recorded data egress: network-required; trust boundary: Tester and explicitly authorized target systems"
+              - emphasis [ref=e1375]: "1"
+            - listitem [ref=e1376]:
+              - generic [ref=e1377]: WARN
+              - button "Interview transcripts pack" [ref=e1378] [cursor=pointer]
+              - generic [ref=e1379]: Only verified on chatgpt — single-platform asset
+              - emphasis [ref=e1380]: "2"
+            - listitem [ref=e1381]:
+              - generic [ref=e1382]: WARN
+              - button "Kiji Privacy Proxy" [ref=e1383] [cursor=pointer]
+              - generic [ref=e1384]: "Recorded data egress: network-required; trust boundary: Traffic crosses a local masking proxy before the external AI service"
+              - emphasis [ref=e1385]: "1"
+          - button "Show all 13 assets in attention queue" [ref=e1386] [cursor=pointer]
+        - group [ref=e1387]:
+          - generic [ref=e1388] [cursor=pointer]:
+            - generic [ref=e1389]:
+              - text: Accepted evidence
+              - paragraph [ref=e1390]: Normalized references, not copied raw telemetry.
+            - strong [ref=e1391]: "0"
+            - text: ＋
+    - complementary "Evidence sources" [ref=e974]:
+      - generic [ref=e976]:
+        - text: Evidence sources
+        - strong [ref=e977]: Hosted / manual viewer
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - button "Import snapshot" [ref=e980] [cursor=pointer]
+          - button "Export" [disabled] [ref=e984]
+          - button "Clear" [disabled] [ref=e988]
+        - list [ref=e992]:
+          - listitem [active] [ref=e993] [cursor=pointer]:
+            - generic [ref=e995]:
+              - strong [ref=e996]: Agent Beacon
+              - generic [ref=e997]: Runtime and inventory JSONL
+            - emphasis [ref=e998]: Not configured
+          - listitem [ref=e999] [cursor=pointer]:
+            - generic [ref=e1001]:
+              - strong [ref=e1002]: Runtime telemetry
+              - generic [ref=e1003]: Sanitized Codex, Claude, and Pi metadata JSONL
+            - emphasis [ref=e1004]: Not configured
+          - listitem [ref=e1005] [cursor=pointer]:
+            - generic [ref=e1007]:
+              - strong [ref=e1008]: Praxen
+              - generic [ref=e1009]: Canonical findings JSON 2.0
+            - emphasis [ref=e1010]: Not configured
+          - listitem [ref=e1011] [cursor=pointer]:
+            - generic [ref=e1013]:
+              - strong [ref=e1014]: Pipelock
+              - generic [ref=e1015]: Audit Packet v0
+            - emphasis [ref=e1016]: Not configured
+          - listitem [ref=e1017] [cursor=pointer]:
+            - generic [ref=e1019]:
+              - strong [ref=e1020]: RAMPART
+              - generic [ref=e1021]: Sanitized safety test results
+            - emphasis [ref=e1022]: Not configured
+          - listitem [ref=e1023] [cursor=pointer]:
+            - generic [ref=e1025]:
+              - strong [ref=e1026]: AIMap
+              - generic [ref=e1027]: Authorized completed scan findings
+            - emphasis [ref=e1028]: Not configured
+        - region "Agent Beacon source details" [ref=e1029]:
+          - generic [ref=e1030]:
+            - generic [ref=e1031]:
+              - term [ref=e1032]: Last accepted
+              - definition [ref=e1033]: None
+            - generic [ref=e1034]:
+              - term [ref=e1035]: Rejected
+              - definition [ref=e1036]: "0"
+          - paragraph [ref=e1037]: "Viewer only: import a snapshot here. Source files and credentials stay wherever the collector runs."
+        - group [ref=e1038]:
+          - generic "Later adapters" [ref=e1039] [cursor=pointer]
+  - contentinfo [ref=e328]:
+    - link "https://sancussight.vercel.app" [ref=e329] [cursor=pointer]:
+      - /url: https://sancussight.vercel.app

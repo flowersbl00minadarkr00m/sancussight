@@ -1,0 +1,85 @@
+{
+  "profileVersion": "praxen-draft-profile-v1",
+  "praxenVersion": "1.1.0",
+  "manifestFormatVersion": 1,
+  "skeletonFile": "draft-skeleton-v1.md",
+  "titleLine": "# Praxen draft manifest",
+  "authoredTopLevelOrder": [
+    "scan",
+    "intro_band",
+    "behavior_summary",
+    "raise_posture",
+    "remit_coverage",
+    "findings",
+    "positives",
+    "log_files"
+  ],
+  "staticSubsections": [
+    {
+      "parent": "intro_band",
+      "level": 3,
+      "order": [
+        "agent_remit_summary",
+        "agent_structure_summary"
+      ]
+    },
+    {
+      "parent": "raise_posture",
+      "level": 3,
+      "order": [
+        "weighted_rationale",
+        "categories"
+      ]
+    },
+    {
+      "parent": "remit_coverage",
+      "level": 3,
+      "order": [
+        "rules"
+      ]
+    },
+    {
+      "parent": "log_files",
+      "level": 3,
+      "order": [
+        "rows"
+      ]
+    }
+  ],
+  "dynamicHeadings": [
+    {
+      "parent": "remit_coverage/rules",
+      "level": 4,
+      "pattern": "^R-\\d+$"
+    },
+    {
+      "parent": "findings",
+      "level": 3,
+      "pattern": "^PRAX-\\d{4}-\\d{2}-\\d{2}-\\d{3} \\((Critical|High|Medium|Low|Informational)\\)$"
+    }
+  ],
+  "raiseCategoryOrder": [
+    "limit_your_domain",
+    "balance_your_knowledge_base",
+    "implement_zero_trust",
+    "manage_your_supply_chain",
+    "build_an_ai_red_team",
+    "monitor_continuously"
+  ],
+  "forbiddenDraftPatterns": {
+    "slot": "\\{\\{[A-Z0-9_]+\\}\\}",
+    "sentinel": "(?i)\\b(TBD|TODO|PLACEHOLDER)\\b",
+    "fence": "(?m)^\\s*```",
+    "structuralComment": "<!--|-->"
+  },
+  "fieldContract": {
+    "source": "draft-skeleton-v1.md",
+    "mode": "guidance-only",
+    "authority": "pinned manifest_to_findings.py",
+    "runnerValidation": "none"
+  },
+  "derivedNotAuthored": [
+    "footer",
+    "remit_coverage/stat_counts"
+  ]
+}

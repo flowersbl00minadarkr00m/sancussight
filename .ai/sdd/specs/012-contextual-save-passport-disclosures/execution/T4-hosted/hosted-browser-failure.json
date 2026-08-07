@@ -1,0 +1,39 @@
+{
+  "verdict": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Read:/. Input:\n\n'SancusSight\\n' +\n  'Demo data\\n' +\n  'Synthetic workspace\\n' +\n  '21 assets / 4 platforms\\n' +\n  'Connect file\\n' +\n  'Utilities'\n\n    at inspectDemo (file:///C:/Users/henry/sancussight/.ai/sdd/specs/012-contextual-save-passport-disclosures/execution/T4-hosted/hosted-browser-matrix.mjs:46:10)\n    at async file:///C:/Users/henry/sancussight/.ai/sdd/specs/012-contextual-save-passport-disclosures/execution/T4-hosted/hosted-browser-matrix.mjs:215:3",
+  "results": [],
+  "consoleIssues": [],
+  "pageErrors": [],
+  "requests": [
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/assets/index-BsHztiR0.js",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/assets/index-_Qn1zbwW.css",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "https://sancussight.vercel.app/favicon.svg",
+      "method": "GET"
+    }
+  ]
+}

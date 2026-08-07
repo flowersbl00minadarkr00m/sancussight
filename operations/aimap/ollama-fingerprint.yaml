@@ -1,0 +1,22 @@
+id: sancussight-authorized-ollama-fingerprint
+
+info:
+  name: Authorized loopback Ollama fingerprint
+  author: sancussight-operator
+  severity: info
+  description: Confirms only the fixed public Ollama health banner on an operator-owned loopback endpoint.
+  tags: ollama,fingerprint,sancussight-authorized
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/"
+    redirects: false
+    max-redirects: 0
+    matchers-condition: and
+    matchers:
+      - type: status
+        status: [200]
+      - type: word
+        part: body
+        words: ["Ollama is running"]

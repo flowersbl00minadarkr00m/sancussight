@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/governance-event.v1.schema.json",
+  "title": "GovernanceEventV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "type", "observedAt", "importedAt", "source", "subject", "context", "truth", "payload", "relations", "provenance"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "type": { "enum": ["inventory.observed", "inventory.removed", "work.intent-recorded", "action.proposed", "action.observed", "control.decided", "human.decided", "effect.observed", "outcome.observed", "outcome.verified", "finding.observed"] },
+    "observedAt": { "type": "string", "format": "date-time" },
+    "importedAt": { "type": "string", "format": "date-time" },
+    "source": { "$ref": "#/$defs/source" },
+    "subject": { "$ref": "#/$defs/ref" },
+    "context": { "$ref": "#/$defs/context" },
+    "truth": { "$ref": "#/$defs/truth" },
+    "payload": { "type": "object", "minProperties": 1, "maxProperties": 8 },
+    "relations": { "type": "array", "maxItems": 32, "items": { "$ref": "#/$defs/relation" } },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "token": { "type": "string", "minLength": 1, "maxLength": 160, "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$" },
+    "text": { "type": "string", "minLength": 1, "maxLength": 320 },
+    "ref": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "id", "namespace"],
+      "properties": {
+        "kind": { "enum": ["agent", "runtime", "model", "mcp-server", "tool", "plugin", "loop", "workflow", "policy", "permission-set", "data-object", "control", "work-case", "action", "approval", "effect", "outcome"] },
+        "id": { "$ref": "#/$defs/id" }, "namespace": { "$ref": "#/$defs/token" }, "label": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false, "required": ["id", "version"],
+      "properties": { "id": { "$ref": "#/$defs/token" }, "version": { "type": "string", "maxLength": 80 }, "recordType": { "type": "string", "maxLength": 80 } }
+    },
+    "context": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "caseId": { "$ref": "#/$defs/token" }, "actionId": { "$ref": "#/$defs/token" }, "workflowId": { "$ref": "#/$defs/token" }, "runtimeId": { "$ref": "#/$defs/token" }, "targetId": { "$ref": "#/$defs/token" } }
+    },
+    "truth": {
+      "type": "object", "additionalProperties": false, "required": ["assertion", "authority"],
+      "properties": {
+        "assertion": { "enum": ["declared", "observed", "inferred", "human-confirmed", "enforced", "verified"] },
+        "authority": { "enum": ["agent", "runtime", "workflow-system", "policy-engine", "human", "assurance-tool", "sancussight"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "relation": {
+      "type": "object", "additionalProperties": false, "required": ["type", "target", "basis"],
+      "properties": {
+        "type": { "enum": ["initiated-by", "part-of-case", "proposed-by", "evaluated-by", "approved-by", "executed-as", "produced", "validated-by", "supersedes"] },
+        "target": { "$ref": "#/$defs/ref" }, "basis": { "enum": ["observed", "confirmed", "inferred", "conflicting", "unresolved"] },
+        "evidenceRefs": { "type": "array", "maxItems": 32, "items": { "$ref": "#/$defs/id" } }
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["producerId", "producerVersion", "sourceRecordId", "artifactName", "artifactContentHash", "parserId", "parserVersion", "contractVersion", "qualification", "verification"],
+      "properties": {
+        "producerId": { "$ref": "#/$defs/token" }, "producerVersion": { "type": "string", "maxLength": 80 }, "sourceRecordId": { "$ref": "#/$defs/token" },
+        "artifactName": { "type": "string", "maxLength": 160, "pattern": "^[^\\\\/\\u0000-\\u001f\\u007f]+$" }, "artifactContentHash": { "$ref": "#/$defs/id" },
+        "parserId": { "$ref": "#/$defs/token" }, "parserVersion": { "type": "string", "maxLength": 80 }, "contractVersion": { "type": "string", "maxLength": 80 },
+        "qualification": { "enum": ["operational", "isolated-qa", "demo", "fixture", "replay", "manual"] }, "verification": { "enum": ["verified", "failed", "unavailable", "not-applicable"] }
+      }
+    }
+  }
+}

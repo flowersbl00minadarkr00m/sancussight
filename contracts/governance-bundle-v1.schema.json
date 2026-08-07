@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sancussight.local/contracts/governance-bundle-v1.schema.json",
+  "title": "SancusSightGovernanceBundleV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "bundleType", "mode", "qualification", "exportedAt", "generatedAt", "projection", "missingEvidence"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "bundleType": { "const": "sancussight-governance" },
+    "mode": { "enum": ["local-collector", "hosted-manual"] },
+    "qualification": { "enum": ["local", "manual"] },
+    "exportedAt": { "type": "string", "format": "date-time" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "projection": { "type": "object", "additionalProperties": true },
+    "missingEvidence": { "type": "array" },
+    "events": { "type": "array", "items": { "type": "object" } },
+    "bindings": { "type": "array", "items": { "type": "object" } }
+  }
+}

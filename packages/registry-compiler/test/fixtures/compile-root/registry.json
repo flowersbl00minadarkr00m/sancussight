@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "projects": [
+    {
+      "id": "demo",
+      "name": "Demo project",
+      "aliases": ["demo-project"],
+      "lifecycle": "active",
+      "root_id": "workspace",
+      "relative_path": "projects/demo",
+      "repository_url": "https://github.com/example/demo",
+      "production_urls": [],
+      "requirements": []
+    }
+  ]
+}

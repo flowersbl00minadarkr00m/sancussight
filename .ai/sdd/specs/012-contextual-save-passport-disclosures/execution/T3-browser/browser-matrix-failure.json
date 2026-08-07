@@ -1,0 +1,489 @@
+{
+  "verdict": "FAIL",
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.landing-gateway') to be visible\u001b[22m\n\n    at runRouteScenario (C:\\Users\\henry\\sancussight\\.ai\\sdd\\specs\\012-contextual-save-passport-disclosures\\execution\\T3-browser\\browser-matrix.mjs:466:42)\n    at async file:///C:/Users/henry/sancussight/.ai/sdd/specs/012-contextual-save-passport-disclosures/execution/T3-browser/browser-matrix.mjs:493:3",
+  "results": [
+    {
+      "name": "demo and snapshot expose no canonical-write action",
+      "verdict": "PASS",
+      "demoSaveActions": 0,
+      "snapshotSaveActions": 0
+    },
+    {
+      "name": "current -> mutation -> unsaved -> cancel -> confirm -> verified save",
+      "verdict": "PASS",
+      "source": "feature012-t3-1.json",
+      "selectedAsset": "Accept governed asset action",
+      "savedLastReviewed": "2026-07-24"
+    },
+    {
+      "name": "Header truth and single selected-Passport write ownership",
+      "verdict": "PASS",
+      "headerSaveActions": 0,
+      "passportStripsWhenDirty": 1
+    },
+    {
+      "name": "six native disclosures, keyboard marker/focus, content, rerender stability, and asset reset",
+      "verdict": "PASS",
+      "sections": [
+        "Summary",
+        "Portability",
+        "Dependencies",
+        "Evidence",
+        "Decisions",
+        "History"
+      ],
+      "marker": {
+        "display": "list-item",
+        "listStyleType": "disclosure-open",
+        "markerContent": "normal",
+        "focusVisible": true
+      },
+      "reset": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "selected row/Passport association, narrow focus entry, Back restoration, routes/footer basis",
+      "verdict": "PASS",
+      "selectedAsset": "FindMnemo ontology contract",
+      "footer": {
+        "children": 1,
+        "anchors": 1,
+        "text": "https://sancussight.vercel.app",
+        "href": "https://sancussight.vercel.app/"
+      }
+    },
+    {
+      "name": "permission-required feedback and recovery",
+      "verdict": "PASS",
+      "deniedFeedback": "Write permission was not granted.",
+      "recovered": true
+    },
+    {
+      "name": "write failure feedback and recovery",
+      "verdict": "PASS",
+      "failureText": "UNSAVED CHANGES\nThe browser blocked source access. Reauthorize the file or connect a replacement.\nSave to source",
+      "failureRetainedDirty": true,
+      "recovered": true
+    },
+    {
+      "name": "fresh preflight conflict block and recovery",
+      "verdict": "PASS",
+      "writerBlocked": true,
+      "recoveredBy": "Reload source"
+    },
+    {
+      "name": "320 CSS px and effective 200% layout",
+      "verdict": "PASS",
+      "innerWidth": 320,
+      "devicePixelRatio": 2.0000000298023224,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "pageOverflow": 0,
+      "passports": 1,
+      "strips": 1,
+      "disclosures": 6,
+      "contents": [
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        },
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        },
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        },
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        },
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        },
+        {
+          "clientWidth": 246,
+          "scrollWidth": 246
+        }
+      ],
+      "reducedMotion": true
+    }
+  ],
+  "consoleIssues": [],
+  "pageErrors": [],
+  "requests": [
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "fixture-export",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "demo-snapshot",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "primary",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "permission",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "failure",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "conflict",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "effective-200",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "http://127.0.0.1:4182/",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "http://127.0.0.1:4182/assets/index-BZcVFoTQ.js",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "http://127.0.0.1:4182/assets/index-DG2bH4_d.css",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "http://127.0.0.1:4182/sancussight-workspace.webp",
+      "method": "GET"
+    },
+    {
+      "label": "routes",
+      "url": "http://127.0.0.1:4182/favicon.svg",
+      "method": "GET"
+    }
+  ]
+}

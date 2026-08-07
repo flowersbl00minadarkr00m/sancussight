@@ -1,0 +1,40 @@
+- main [ref=e3]:
+  - region [ref=e4]:
+    - generic [ref=e5]:
+      - paragraph [ref=e6]: Read-only AI evidence workspace
+      - heading "SancusSight" [level=1] [ref=e7]
+      - paragraph [ref=e14]: See what your AI environment depends on, what remains portable, and what needs attention—without running upstream tools here.
+      - generic "Choose how to enter the workspace" [ref=e15]:
+        - article [ref=e16]:
+          - strong [ref=e17]: Explore sample
+          - paragraph [ref=e18]: Synthetic
+          - generic [ref=e19]: Demonstration data only, clearly labeled throughout.
+          - link "Explore sample" [ref=e20] [cursor=pointer]:
+            - /url: "#demo"
+        - article [ref=e21]:
+          - strong [ref=e22]: Open existing registry
+          - paragraph [ref=e23]: User-selected file or snapshot
+          - generic [ref=e24]: Choose one registry file. SancusSight validates it before replacing the current workspace.
+          - button "Open existing registry" [ref=e25] [cursor=pointer]
+        - group [ref=e26]:
+          - generic "Build with local compiler Compiler-created registry Run the checked-in compiler locally, review its proposed output, then confirm it yourself." [active] [ref=e27] [cursor=pointer]:
+            - strong [ref=e28]: Build with local compiler
+            - paragraph [ref=e29]: Compiler-created registry
+            - generic [ref=e30]: Run the checked-in compiler locally, review its proposed output, then confirm it yourself.
+          - generic [ref=e41]:
+            - code [ref=e42]: npx sancussight-registry compile --root "C:\path\to\approved\metadata-root"
+            - paragraph [ref=e43]:
+              - text: The compiler runs on your machine and opens a local review step. Review and confirm the proposed registry there, then use
+              - strong [ref=e44]: Open existing registry
+              - text: above to open the resulting registry through the existing file or snapshot path.
+            - paragraph [ref=e45]: This hosted page never executes the compiler or uploads your metadata.
+  - region "Trust properties" [ref=e31]:
+    - generic [ref=e32]:
+      - strong [ref=e33]: Local-only
+      - generic [ref=e34]: Registry data stays in this browser.
+    - generic [ref=e35]:
+      - strong [ref=e36]: Deterministic
+      - generic [ref=e37]: Every status traces to a recorded condition.
+    - generic [ref=e38]:
+      - strong [ref=e39]: Exportable
+      - generic [ref=e40]: Your evidence remains inspectable and portable.
