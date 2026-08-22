@@ -197,7 +197,7 @@ const evidenceRegistry: Registry = {
   updatedAt: NOW,
   assets: [{
     id: 'workflow-1', name: 'Invoice workflow', kind: 'workflow', format: 'json', location: 'registry.json',
-    owner: 'henry', sensitivity: 'internal', sharedByDesign: true, coverage: [], providerDependencies: [], evidence: [],
+    owner: 'Example Owner', sensitivity: 'internal', sharedByDesign: true, coverage: [], providerDependencies: [], evidence: [],
     stableId: 'workflow:invoice', evidenceBindings: [{ source: 'praxen', externalId: 'invoice-agent' }],
   }],
 }

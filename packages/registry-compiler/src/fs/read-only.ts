@@ -1,6 +1,6 @@
 import { lstatSync, readdirSync, readFileSync, realpathSync, statSync } from 'node:fs'
 import type { Stats } from 'node:fs'
-import { extname, relative } from 'node:path'
+import { extname, join, relative } from 'node:path'
 
 import type {
   ReadOnlyDirectoryEntry,
@@ -59,7 +59,7 @@ export class ReadOnlyFileSystem {
     if (names.length > this.root.maxEntryCount) throw new ReadOnlyLimitError('Directory entry limit exceeded')
 
     return names.map(name => {
-      const child = `${absolute}\\${name}`
+      const child = join(absolute, name)
       const childStats = lstatSync(child)
       if (childStats.isSymbolicLink()) {
         // Resolve the target only to prove it remains inside the authorized root;

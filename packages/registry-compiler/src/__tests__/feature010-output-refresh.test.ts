@@ -69,9 +69,9 @@ function version(): RegistryAssetVersionV1 {
       supportedVersion: '1.0',
       coverage: [{ platform: 'linux' }, { platform: 'windows', lastVerified: '2026-07-23' }],
       providerDependencies: [{
-        provider: 'C:\\Users\\henry\\secret-provider',
+        provider: 'C:\\Users\\ExampleUser\\secret-provider',
         capability: 'prompt capability',
-        fallback: 'henry@example.com',
+        fallback: 'operator@example.test',
       }],
       dependencyIds: ['dependency:portable'],
     },

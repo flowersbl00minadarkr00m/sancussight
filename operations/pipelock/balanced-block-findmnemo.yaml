@@ -8,15 +8,15 @@ mcp_input_scanning:
 logging:
   format: json
   output: file
-  file: C:\Users\henry\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\logs\findmnemo-balanced-block-operational.jsonl
+  file: C:\Users\ExampleUser\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\logs\findmnemo-balanced-block-operational.jsonl
   include_allowed: true
   include_blocked: true
 flight_recorder:
   enabled: true
-  dir: C:\Users\henry\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\evidence\findmnemo-balanced-block-operational
+  dir: C:\Users\ExampleUser\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\evidence\findmnemo-balanced-block-operational
   redact: true
   sign_checkpoints: true
-  signing_key_path: C:\Users\henry\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\keys\receipt-signing.json
+  signing_key_path: C:\Users\ExampleUser\AppData\Local\SancusSight\producers\pipelock\3.1.0\runtime\keys\receipt-signing.json
   require_receipts: false
   completeness:
     heartbeat_interval: 60s

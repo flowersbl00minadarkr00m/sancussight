@@ -21,3 +21,6 @@ AGENTS.md
 CLAUDE.md
 HANDOFF.md
 .agents/
+WORKER_REMIT.md
+__pycache__/
+*.py[cod]

@@ -11,7 +11,7 @@ const NOW = '2026-07-17T08:00:00.000Z'
 function model(): GovernanceReadModel {
   return {
     generatedAt: NOW,
-    inventory: [{ id: 'a'.repeat(64), title: 'C:\\Users\\henry\\private-agent', kind: 'agent', eventType: 'inventory.observed', observedAt: NOW, sourceIds: ['runtime-inventory'], eventIds: ['b'.repeat(64)], status: 'current', truth: { assertion: 'observed', authority: 'runtime' }, qualification: 'manual', verification: 'not-applicable', provenance: [{ producerId: 'runtime-inventory', producerVersion: '1.0.0', sourceRecordId: 'agent-001', artifactName: 'inventory.json', artifactContentHash: 'c'.repeat(64), parserId: 'runtime', parserVersion: '1.0.0', contractVersion: 'runtime-v1', qualification: 'manual', verification: 'not-applicable' }], gapCodes: [], asset: { kind: 'agent', id: 'a'.repeat(64), namespace: 'runtime-inventory', label: 'C:\\Users\\henry\\private-agent' }, historyEventIds: ['b'.repeat(64)], owner: 'henry@example.com' }],
+    inventory: [{ id: 'a'.repeat(64), title: 'C:\\Users\\ExampleUser\\private-agent', kind: 'agent', eventType: 'inventory.observed', observedAt: NOW, sourceIds: ['runtime-inventory'], eventIds: ['b'.repeat(64)], status: 'current', truth: { assertion: 'observed', authority: 'runtime' }, qualification: 'manual', verification: 'not-applicable', provenance: [{ producerId: 'runtime-inventory', producerVersion: '1.0.0', sourceRecordId: 'agent-001', artifactName: 'inventory.json', artifactContentHash: 'c'.repeat(64), parserId: 'runtime', parserVersion: '1.0.0', contractVersion: 'runtime-v1', qualification: 'manual', verification: 'not-applicable' }], gapCodes: [], asset: { kind: 'agent', id: 'a'.repeat(64), namespace: 'runtime-inventory', label: 'C:\\Users\\ExampleUser\\private-agent' }, historyEventIds: ['b'.repeat(64)], owner: 'operator@example.test' }],
     activity: [], controls: [], decisions: [], outcomes: [], lineage: [], sourceStates: [{ sourceId: 'runtime-inventory', health: 'current', eventCount: 1, gaps: [] }], gaps: [], eventCount: 1,
   }
 }
@@ -19,8 +19,8 @@ function model(): GovernanceReadModel {
 test('governance export sanitizes paths and user identifiers while preserving opaque references', () => {
   const bundle = createGovernanceBundle(model(), { mode: 'local-collector', exportedAt: NOW })
   const raw = JSON.stringify(bundle)
-  assert.equal(raw.includes('C:\\Users\\henry'), false)
-  assert.equal(raw.includes('henry@example.com'), false)
+  assert.equal(raw.includes('C:\\Users\\ExampleUser'), false)
+  assert.equal(raw.includes('operator@example.test'), false)
   assert.equal(bundle.projection.inventory[0].id, 'a'.repeat(64))
   assert.equal(bundle.projection.inventory[0].asset.id, 'a'.repeat(64))
   assert.equal(isGovernanceBundleSafe(bundle), true)
