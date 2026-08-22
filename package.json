@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "tsc -p tsconfig.collector.json && tsc -b && vite build",
     "preview": "vite preview",
+    "test": "npm run verify:core && npm run test:collector && npm run test:feature008 && npm run test:feature009 && npm run test:feature010 && npm run test:feature011 && npm run test:feature012 && npm run test:registry-compiler",
     "verify:core": "node scripts/verify-core.ts",
     "test:collector": "node --test collector/__tests__/*.test.ts",
     "test:feature008": "node --test src/lib/__tests__/asset-catalog.test.mjs",

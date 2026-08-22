@@ -48,12 +48,9 @@ export function mergeActivityEntries(...groups: ActivityEntry[][]): ActivityEntr
   return [...entries.values()].sort((left, right) => right.ts.localeCompare(left.ts))
 }
 
-// Default embedded activity log (this session + project context)
+// Default embedded activity log for the fictional demo registry.
 export const EMBEDDED_ACTIVITY_LOG = `\
-{"ts":"2026-07-01T23:00:00Z","agent":"pi","action":"diagnostic","asset":"sancussight","summary":"Design diagnostic of SancusSight v1 — identified 5 weaknesses: no shared/non-shared distinction, dimension-concept mismatch, no activity log, no gotchas, not self-registered","session":"pi-2026-07-01-sancussight"}
-{"ts":"2026-07-01T22:45:00Z","agent":"pi","action":"verify","asset":"findmnemo","summary":"Verified FindMnemo v3 build passes TypeScript + Vite, added demo data, wrote shared-brain memories, superseded v0 memories","session":"pi-2026-07-01-sancussight"}
-{"ts":"2026-07-01T22:30:00Z","agent":"pi","action":"review","asset":"findmnemo","summary":"Reviewed FindMnemo v3 Hephaestus-style dashboard — confirmed file structure, storage architecture, component hierarchy","session":"pi-2026-07-01-sancussight"}
-{"ts":"2026-07-01T22:00:00Z","agent":"pi","action":"review","asset":"findmnemo","summary":"Retrieved FindMnemo v0 from OneDrive (JSX kanban), discovered v3 at C:/Users/henry/mnemosync/ (TypeScript, Hephaestus-style)","session":"pi-2026-07-01-sancussight"}
-{"ts":"2026-06-30T17:00:00Z","agent":"claude","action":"build","asset":"sancussight","summary":"Built SancusSight v1 — local-first portability registry with 5 dimensions, coverage matrix, exit tests, and share card","session":"claude-fable-5-sancussight"}
-{"ts":"2026-06-30T17:00:00Z","agent":"claude","action":"build","asset":"findmnemo","summary":"Built FindMnemo v3 Hephaestus-style dashboard with collapsible sidebar, agent activity tracking, auto-ticket creation, and Gmail integration","session":"claude-fable-5-findmnemo-v3"}
+{"ts":"2026-07-01T23:00:00Z","agent":"reviewer","action":"diagnostic","asset":"demo-registry","summary":"Reviewed continuity coverage and recorded missing fallbacks for the quarterly exercise","session":"demo-review-003"}
+{"ts":"2026-07-01T22:45:00Z","agent":"verifier","action":"verify","asset":"invoice-workflow","summary":"Verified the portable workflow fixture against two approved environments","session":"demo-verify-002"}
+{"ts":"2026-07-01T22:30:00Z","agent":"operator","action":"review","asset":"context-pack","summary":"Reviewed the synthetic context pack and refreshed its evidence date","session":"demo-review-001"}
 `

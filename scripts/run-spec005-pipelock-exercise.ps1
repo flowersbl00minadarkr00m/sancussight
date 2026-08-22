@@ -2,6 +2,7 @@
 param(
   [Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9._-]{1,160}$')][string]$ReleaseRunId,
   [ValidateSet('haiku', 'sonnet', 'opus')][string]$ClaudeModel = 'haiku',
+  [string]$FindMnemoMcpPath = (Join-Path $env:USERPROFILE 'findmnemo\dist-companion\server\mcp\findmnemo-mcp.js'),
   [switch]$ReuseExistingEvidence
 )
 
@@ -22,7 +23,7 @@ $configPath = Join-Path $runRoot 'pipelock-balanced.yaml'
 $mcpPath = Join-Path $runRoot 'pipelock-mcp.json'
 $settingsPath = Join-Path $operationRoot 'pipelock\findmnemo\approve-temp-mcp.settings.json'
 
-foreach ($required in @($binary, $verifier, $signingKey, $settingsPath)) {
+foreach ($required in @($binary, $verifier, $signingKey, $settingsPath, $FindMnemoMcpPath)) {
   if (-not (Test-Path -LiteralPath $required -PathType Leaf)) { throw "Required pinned Pipelock input is unavailable: $required" }
 }
 New-Item -ItemType Directory -Force -Path $runRoot, $exportRoot | Out-Null
@@ -61,7 +62,7 @@ $mcp = [ordered]@{
         'mcp', 'proxy', '--server-name', 'findmnemo-routing', '--config', $configPath,
         '--env', 'LOCALAPPDATA', '--env', 'APPDATA', '--env', 'USERPROFILE', '--',
         (Get-Command node).Source,
-        'C:\Users\henry\mnemosync\dist-companion\server\mcp\findmnemo-mcp.js',
+        $FindMnemoMcpPath,
         '--origin=claude-code-mcp'
       )
     }

@@ -22,7 +22,7 @@ function proposal(id: string, sensitivity: AssetProposal['sensitivity'] = 'inter
     lifecycle: 'active',
     sensitivity,
     platforms: ['windows', 'macos'],
-    locations: [{ rootId: 'workspace', relativePath: `skills/${id}.json`, localPath: `C:/Users/henry/.sancussight/skills/${id}.json`, portableAlias: `project:skill-${id}` }],
+    locations: [{ rootId: 'workspace', relativePath: `skills/${id}.json`, localPath: `C:/Users/ExampleUser/.sancussight/skills/${id}.json`, portableAlias: `project:skill-${id}` }],
     provenance: [{ sourceType: 'skills', sourceId: id, adapterId: 'skills-manifest', adapterVersion: '1.0.0', rootId: 'workspace', platform: 'windows', relativePath: 'skills.json', observedAt: '2026-07-20T00:00:00.000Z' }],
     selectedByDefault: true,
     warnings: [],
